@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-21T20:03:00.849Z",
+  "updatedAt": "2026-11-21T20:16:35.181Z",
   "combos": {
     "2027-03-12_4": {
       "depart": "2027-03-12",
       "return": "2027-03-16",
       "nights": 4,
-      "fetchedAt": "2026-11-21T19:58:58.402Z",
+      "fetchedAt": "2026-11-21T20:16:34.286Z",
       "googleFlightsUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTEyagcIARIDQ0lEagcIARIDTUxJagcIARIDRFNNcgcIARIDUFNQGjASCjIwMjctMDMtMTZqBwgBEgNQU1ByBwgBEgNDSURyBwgBEgNNTElyBwgBEgNEU01AAUABQAFIAXABmAEB&tfu=EgIIAQ",
       "options": [
         {
@@ -271,7 +271,7 @@
       "depart": "2027-03-12",
       "return": "2027-03-17",
       "nights": 5,
-      "fetchedAt": "2026-11-21T19:59:06.544Z",
+      "fetchedAt": "2026-11-21T20:16:34.441Z",
       "googleFlightsUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTEyagcIARIDQ0lEagcIARIDTUxJagcIARIDRFNNcgcIARIDUFNQGjASCjIwMjctMDMtMTdqBwgBEgNQU1ByBwgBEgNDSURyBwgBEgNNTElyBwgBEgNEU01AAUABQAFIAXABmAEB&tfu=EgIIAQ",
       "options": [
         {
@@ -537,7 +537,7 @@
       "depart": "2027-03-12",
       "return": "2027-03-18",
       "nights": 6,
-      "fetchedAt": "2026-11-21T19:59:12.670Z",
+      "fetchedAt": "2026-11-21T20:16:34.568Z",
       "googleFlightsUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTEyagcIARIDQ0lEagcIARIDTUxJagcIARIDRFNNcgcIARIDUFNQGjASCjIwMjctMDMtMThqBwgBEgNQU1ByBwgBEgNDSURyBwgBEgNNTElyBwgBEgNEU01AAUABQAFIAXABmAEB&tfu=EgIIAQ",
       "options": [
         {
@@ -803,7 +803,7 @@
       "depart": "2027-03-13",
       "return": "2027-03-17",
       "nights": 4,
-      "fetchedAt": "2026-11-21T19:59:20.684Z",
+      "fetchedAt": "2026-11-21T20:16:34.717Z",
       "googleFlightsUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTEzagcIARIDQ0lEagcIARIDTUxJagcIARIDRFNNcgcIARIDUFNQGjASCjIwMjctMDMtMTdqBwgBEgNQU1ByBwgBEgNDSURyBwgBEgNNTElyBwgBEgNEU01AAUABQAFIAXABmAEB&tfu=EgIIAQ",
       "options": [
         {
@@ -1091,7 +1091,7 @@
       "depart": "2027-03-13",
       "return": "2027-03-18",
       "nights": 5,
-      "fetchedAt": "2026-11-21T19:59:28.483Z",
+      "fetchedAt": "2026-11-21T20:16:34.873Z",
       "googleFlightsUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTEzagcIARIDQ0lEagcIARIDTUxJagcIARIDRFNNcgcIARIDUFNQGjASCjIwMjctMDMtMThqBwgBEgNQU1ByBwgBEgNDSURyBwgBEgNNTElyBwgBEgNEU01AAUABQAFIAXABmAEB&tfu=EgIIAQ",
       "options": [
         {
@@ -1379,7 +1379,7 @@
       "depart": "2027-03-13",
       "return": "2027-03-19",
       "nights": 6,
-      "fetchedAt": "2026-11-21T19:59:42.102Z",
+      "fetchedAt": "2026-11-21T20:16:35.044Z",
       "googleFlightsUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTEzagcIARIDQ0lEagcIARIDTUxJagcIARIDRFNNcgcIARIDUFNQGjASCjIwMjctMDMtMTlqBwgBEgNQU1ByBwgBEgNDSURyBwgBEgNNTElyBwgBEgNEU01AAUABQAFIAXABmAEB&tfu=EgIIAQ",
       "options": [
         {
@@ -1668,7 +1668,7 @@
       "depart": "2027-03-14",
       "return": "2027-03-18",
       "nights": 4,
-      "fetchedAt": "2026-11-21T19:59:46.844Z",
+      "fetchedAt": "2026-11-21T20:16:35.181Z",
       "googleFlightsUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTE0agcIARIDQ0lEagcIARIDTUxJagcIARIDRFNNcgcIARIDUFNQGjASCjIwMjctMDMtMThqBwgBEgNQU1ByBwgBEgNDSURyBwgBEgNNTElyBwgBEgNEU01AAUABQAFIAXABmAEB&tfu=EgIIAQ",
       "options": [
         {
