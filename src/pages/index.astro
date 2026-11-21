@@ -1,0 +1,269 @@
+---
+import { Image } from 'astro:assets';
+import '../styles/global.css';
+import beckyPhoto from '../assets/becky.jpg';
+import kidsPhoto from '../assets/kids.jpg';
+import trip from '../data/trip.json';
+import realFlights from '../data/flights.json';
+import realHistory from '../data/history.json';
+import sampleFlights from '../data/sample-flights.json';
+import sampleHistory from '../data/sample-history.json';
+import {
+  formatDay,
+  formatMoney,
+  googleFlightsSearchUrl,
+  type FlightsData,
+  type HistoryPoint,
+  type Row,
+} from '../lib/flights';
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const originCodes = trip.origins.map((o) => o.code);
+
+// `npm run dev` shows made-up sample prices until real ones have been fetched. Production never does.
+const hasReal = Object.keys((realFlights as FlightsData).combos).length > 0;
+const useSample = import.meta.env.DEV && !hasReal;
+const flights = (useSample ? sampleFlights : realFlights) as FlightsData;
+const history = (useSample ? sampleHistory : realHistory) as HistoryPoint[];
+
+const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Chicago' }).format(new Date());
+const tripOver = trip.lastDepart < today;
+
+const rows: Row[] = Object.values(flights.combos)
+  .filter((c) => c.depart >= today)
+  .flatMap((c) =>
+    c.options.map((o) => ({
+      ...o,
+      depart: c.depart,
+      return: c.return,
+      nights: c.nights,
+      fetchedAt: c.fetchedAt,
+      url: c.googleFlightsUrl ?? googleFlightsSearchUrl(originCodes, trip.to, c.depart, c.return, trip.adults),
+    })),
+  )
+  .sort((a, b) => a.price - b.price);
+
+const best = rows[0];
+const airlines = [...new Set(rows.flatMap((r) => r.airlines))].sort();
+const departDays = [...new Set(rows.map((r) => r.depart))].sort();
+
+// Price trend sparkline from the daily cheapest price.
+const points = history.slice(-30);
+let spark: { path: string; area: string; change: number; days: number } | null = null;
+if (points.length >= 2) {
+  const w = 300;
+  const h = 56;
+  const prices = points.map((p) => p.cheapest);
+  const min = Math.min(...prices);
+  const max = Math.max(...prices);
+  const xy = prices.map((p, i) => [
+    (i / (prices.length - 1)) * w,
+    max === min ? h / 2 : 4 + (1 - (p - min) / (max - min)) * (h - 8),
+  ]);
+  const path = xy.map(([x, y], i) => `${i ? 'L' : 'M'}${x.toFixed(1)},${y.toFixed(1)}`).join(' ');
+  spark = {
+    path,
+    area: `${path} L${w},${h} L0,${h} Z`,
+    change: prices.at(-1)! - prices[0],
+    days: points.length,
+  };
+}
+
+const json = JSON.stringify({ rows, adults: trip.adults, origins: trip.origins }).replace(/</g, '\\u003c');
+const originsWithFlights = trip.origins.filter((o) => rows.some((r) => r.origin === o.code));
+const bestOrigin = trip.origins.find((o) => o.code === best?.origin);
+const tripLine = `${formatDay(trip.firstDepart).slice(5)} – ${formatDay(trip.lastDepart).slice(5)}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#6d28d9" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Becky's Flights" />
+    <meta name="description" content={`Cheapest flights from the Cedar Rapids area to ${trip.destinationLabel}, updated daily.`} />
+    <title>Becky's Flight Site</title>
+    <link rel="icon" href={`${base}icon.svg`} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={`${base}apple-touch-icon.png`} />
+    <link rel="manifest" href={`${base}manifest.webmanifest`} />
+  </head>
+  <body class="min-h-dvh pb-[env(safe-area-inset-bottom)]">
+    <header class="relative overflow-hidden bg-gradient-to-b from-violet-700 via-rose-500 to-orange-400 px-4 pb-28 pt-[calc(env(safe-area-inset-top)+1.25rem)] text-white">
+      <!-- Desert sunset scene: sun, mountains and palm trees. -->
+      <svg class="pointer-events-none absolute inset-x-0 bottom-0 h-32 w-full" viewBox="0 0 400 160" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <circle cx="300" cy="104" r="46" fill="#fde68a" opacity="0.85" />
+        <path d="M0 120 L70 78 L120 104 L190 62 L260 108 L330 84 L400 112 L400 160 L0 160 Z" fill="#9f1239" opacity="0.45" />
+        <path d="M0 140 L90 112 L170 132 L250 110 L340 136 L400 124 L400 160 L0 160 Z" fill="#7c2d12" opacity="0.55" />
+        <g fill="#431407" opacity="0.8">
+          <path d="M42 160 Q46 118 40 82 L44 82 Q52 118 48 160 Z" />
+          <path d="M42 84 Q22 70 4 78 Q24 74 42 86 Z M42 84 Q30 62 14 58 Q34 66 43 84 Z M43 84 Q50 60 68 56 Q54 68 45 85 Z M44 85 Q66 72 82 80 Q62 76 44 87 Z M43 84 Q44 64 40 52 Q48 66 45 84 Z" />
+          <path d="M356 160 Q359 128 354 102 L357 102 Q364 128 361 160 Z" />
+          <path d="M356 104 Q340 94 326 100 Q342 96 356 106 Z M356 104 Q346 88 334 85 Q350 91 357 104 Z M357 104 Q362 86 376 83 Q365 92 358 105 Z M358 105 Q375 95 388 101 Q372 98 358 107 Z" />
+        </g>
+      </svg>
+
+      <div class="relative mx-auto max-w-xl [text-shadow:0_1px_3px_rgb(0_0_0/0.35)]">
+        <div class="flex items-center gap-3">
+          <div class="flex -space-x-4">
+            <Image src={beckyPhoto} alt="Becky" width={72} height={72} densities={[1, 2]} loading="eager"
+              class="size-18 rounded-full object-cover ring-4 ring-white/90 shadow-lg" />
+            <Image src={kidsPhoto} alt="Becky's girls" width={72} height={72} densities={[1, 2]} loading="eager"
+              class="size-18 rounded-full object-cover ring-4 ring-white/90 shadow-lg" />
+          </div>
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-widest text-amber-100">Palm Desert or bust 🌴</p>
+            <h1 class="text-2xl font-extrabold leading-tight tracking-tight drop-shadow">Becky's Flight Site</h1>
+          </div>
+        </div>
+        <p class="mt-4 text-base font-medium">
+          {originCodes.join(' · ')} → {trip.to} <span class="text-white/80">({trip.destinationLabel})</span>
+        </p>
+        <p class="text-sm text-white/85">
+          Leave {tripLine} · {trip.nights[0]}–{trip.nights.at(-1)} nights · {trip.travelersLabel}
+        </p>
+      </div>
+    </header>
+
+    <main class="relative mx-auto -mt-12 max-w-xl px-3">
+      {useSample && (
+        <p class="mb-3 rounded-xl bg-yellow-100 px-4 py-2 text-sm text-yellow-900">
+          Sample prices for local testing. Real prices appear after the first update.
+        </p>
+      )}
+
+      <section class="rounded-2xl bg-white p-4 shadow-lg shadow-orange-900/10" aria-label="Summary">
+        {tripOver ? (
+          <p class="text-lg font-semibold">This trip's travel dates have passed.</p>
+        ) : best ? (
+          <>
+            <p class="text-sm font-medium uppercase tracking-wide text-orange-700">Cheapest right now</p>
+            <div class="mt-1 flex items-baseline justify-between gap-3">
+              <p class="text-4xl font-extrabold tracking-tight">{formatMoney(best.price)}</p>
+              <p class="text-right text-sm text-gray-600">
+                {formatMoney(Math.round(best.price / trip.adults))}/person
+              </p>
+            </div>
+            <p class="mt-1 text-base">
+              {formatDay(best.depart)} → {formatDay(best.return)} · {best.airlines.join(', ')} ·{' '}
+              {best.stops === 0 ? 'Nonstop' : `${best.stops} stop${best.stops > 1 ? 's' : ''}`}
+            </p>
+            {bestOrigin && (
+              <p class="mt-0.5 text-sm text-gray-600">
+                From {bestOrigin.name} ({bestOrigin.code}){bestOrigin.drive && ` · ${bestOrigin.drive}`}
+              </p>
+            )}
+          </>
+        ) : (
+          <>
+            <p class="text-lg font-semibold">Prices are on the way</p>
+            <p class="mt-1 text-base text-gray-600">They'll show up here after the first daily update.</p>
+          </>
+        )}
+
+        {spark && !tripOver && (
+          <div class="mt-4 border-t border-gray-100 pt-3">
+            <div class="flex items-baseline justify-between text-sm">
+              <span class="font-medium text-gray-700">Lowest price, last {spark.days} days</span>
+              <span class={spark.change < 0 ? 'font-semibold text-emerald-700' : spark.change > 0 ? 'font-semibold text-rose-700' : 'text-gray-600'}>
+                {spark.change < 0 ? `▼ ${formatMoney(-spark.change)}` : spark.change > 0 ? `▲ ${formatMoney(spark.change)}` : 'No change'}
+              </span>
+            </div>
+            <svg viewBox="0 0 300 56" preserveAspectRatio="none" class="mt-2 h-14 w-full" role="img" aria-label="Price trend chart">
+              <path d={spark.area} fill="#fed7aa" opacity="0.6" />
+              <path d={spark.path} fill="none" stroke="#ea580c" stroke-width="2.5" vector-effect="non-scaling-stroke" stroke-linejoin="round" />
+            </svg>
+          </div>
+        )}
+
+        {flights.updatedAt && (
+          <p class="mt-3 text-sm text-gray-500">
+            Prices checked <time data-ago={flights.updatedAt}>recently</time>. They're updated every day.
+          </p>
+        )}
+      </section>
+
+      {rows.length > 0 && (
+        <>
+          <div class="sticky top-0 z-10 -mx-3 mt-4 bg-sand/95 px-3 pb-2 pt-[calc(env(safe-area-inset-top)+0.5rem)] backdrop-blur">
+            <div class="grid grid-cols-3 gap-2">
+              <label class="block">
+                <span class="sr-only">Sort</span>
+                <select id="sort" class="field">
+                  <option value="price">Cheapest</option>
+                  <option value="duration">Shortest</option>
+                  <option value="date">Earliest</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="sr-only">Leave on</span>
+                <select id="day" class="field">
+                  <option value="">Any day</option>
+                  {departDays.map((d) => <option value={d}>{formatDay(d)}</option>)}
+                </select>
+              </label>
+              <label class="block">
+                <span class="sr-only">Airline</span>
+                <select id="airline" class="field">
+                  <option value="">Airline</option>
+                  {airlines.map((a) => <option value={a}>{a}</option>)}
+                </select>
+              </label>
+            </div>
+            <div class="no-scrollbar -mx-3 mt-2 flex gap-2 overflow-x-auto px-3" role="group" aria-label="Filters">
+              <button type="button" class="chip" data-filter="nonstop" aria-pressed="false">Nonstop</button>
+              {originsWithFlights.length > 1 && originsWithFlights.map((o) => (
+                <button type="button" class="chip" data-filter="origin" data-value={o.code} aria-pressed="false">
+                  From {o.code}
+                </button>
+              ))}
+              {trip.nights.map((n) => (
+                <button type="button" class="chip" data-filter="nights" data-value={String(n)} aria-pressed="false">
+                  {n} nights
+                </button>
+              ))}
+              <button type="button" class="chip" data-filter="time" data-value="morning" aria-pressed="false">Morning</button>
+              <button type="button" class="chip" data-filter="time" data-value="afternoon" aria-pressed="false">Afternoon</button>
+              <button type="button" class="chip" data-filter="time" data-value="evening" aria-pressed="false">Evening</button>
+            </div>
+          </div>
+
+          <div class="mt-2 flex min-h-11 items-center justify-between">
+            <p id="count" class="text-sm text-gray-600" aria-live="polite"></p>
+            <button type="button" id="clear" class="hidden min-h-11 px-2 text-base font-medium text-orange-700">Clear filters</button>
+          </div>
+
+          <ol id="list" class="space-y-3"></ol>
+          <p id="empty" class="hidden rounded-2xl bg-white p-6 text-center text-base text-gray-600">
+            No flights match these filters.
+          </p>
+          <button type="button" id="more" class="mt-4 hidden min-h-12 w-full rounded-2xl border border-orange-300 bg-white text-base font-semibold text-orange-700">
+            Show more flights
+          </button>
+
+          <noscript>
+            <p class="rounded-2xl bg-white p-6 text-center">Turn on JavaScript to see the flight list.</p>
+          </noscript>
+        </>
+      )}
+
+      <footer class="mb-6 mt-8 space-y-2 px-1 text-sm text-gray-500">
+        <p>
+          Prices are round trip for all {trip.adults} travelers in economy, from Google Flights. Fares change often,
+          so check the final price before you book. Palm Springs (PSP) is about 20 minutes from Palm Desert.
+        </p>
+        <p>
+          Flights from Cedar Rapids (CID) and nearby {trip.origins.filter((o) => o.drive).map((o) => `${o.name} (${o.code}, ${o.drive})`).join(' and ')} are included.
+        </p>
+        <p>The return flight options are on Google Flights after you tap Book.</p>
+      </footer>
+    </main>
+
+    <script type="application/json" id="flight-data" set:html={json} />
+    <script>
+      import '../scripts/app';
+    </script>
+  </body>
+</html>

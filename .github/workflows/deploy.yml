@@ -1,0 +1,69 @@
+name: Update prices and deploy
+
+on:
+  schedule:
+    # Every day at 11:00 UTC (6 AM in Iowa during daylight saving time, 5 AM otherwise).
+    - cron: '0 11 * * *'
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      refresh_all:
+        description: Refresh every date combination (uses about 30 searches)
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      # Pushes only rebuild the site; scheduled and manual runs also use SerpApi searches.
+      - name: Fetch latest prices
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: npm run fetch
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          FETCH_ALL: ${{ inputs.refresh_all && '1' || '' }}
+
+      - name: Save prices to the repo
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898499+github-actions[bot]@users.noreply.github.com"
+          git add src/data/flights.json src/data/history.json
+          if git diff --cached --quiet; then
+            echo "No price changes."
+          else
+            git commit -m "Update flight prices"
+            git push
+          fi
+
+      - name: Build
+        run: npm run build
+        env:
+          SITE_URL: https://${{ github.repository_owner }}.github.io
+          BASE_PATH: /${{ github.event.repository.name }}
+
+      # Publishes dist/ to the gh-pages branch, which GitHub Pages serves.
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true

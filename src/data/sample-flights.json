@@ -1,0 +1,4202 @@
+{
+  "updatedAt": "2026-11-21T19:37:01.838Z",
+  "combos": {
+    "2027-03-12_4": {
+      "depart": "2027-03-12",
+      "return": "2027-03-16",
+      "nights": 4,
+      "fetchedAt": "2026-11-21T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "MLI",
+          "price": 1041,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1370",
+            "UA 1021"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 399,
+          "departTime": "2027-03-12 10:30",
+          "arriveTime": "2027-03-12 15:09"
+        },
+        {
+          "origin": "DSM",
+          "price": 1110,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 134",
+            "AA 164"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 474,
+          "departTime": "2027-03-12 11:15",
+          "arriveTime": "2027-03-12 17:09"
+        },
+        {
+          "origin": "CID",
+          "price": 1122,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 792",
+            "UA 627"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 552,
+          "departTime": "2027-03-12 17:15",
+          "arriveTime": "2027-03-13 00:27"
+        },
+        {
+          "origin": "DSM",
+          "price": 1461,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 1063",
+            "UA 1151",
+            "UA 847"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 582,
+          "departTime": "2027-03-12 16:45",
+          "arriveTime": "2027-03-13 00:27"
+        },
+        {
+          "origin": "CID",
+          "price": 1563,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 319",
+            "UA 1609"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 486,
+          "departTime": "2027-03-12 17:45",
+          "arriveTime": "2027-03-12 23:51"
+        },
+        {
+          "origin": "MLI",
+          "price": 1779,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 1534",
+            "DL 1585"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 457,
+          "departTime": "2027-03-12 08:00",
+          "arriveTime": "2027-03-12 13:37"
+        }
+      ]
+    },
+    "2027-03-12_5": {
+      "depart": "2027-03-12",
+      "return": "2027-03-17",
+      "nights": 5,
+      "fetchedAt": "2026-11-20T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "DSM",
+          "price": 870,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 1884"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-12 06:00",
+          "arriveTime": "2027-03-12 07:55"
+        },
+        {
+          "origin": "DSM",
+          "price": 1290,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2064",
+            "AA 622"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 406,
+          "departTime": "2027-03-12 13:45",
+          "arriveTime": "2027-03-12 18:31"
+        },
+        {
+          "origin": "DSM",
+          "price": 1296,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 2191",
+            "DL 598"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 513,
+          "departTime": "2027-03-12 07:15",
+          "arriveTime": "2027-03-12 13:48"
+        },
+        {
+          "origin": "DSM",
+          "price": 1644,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1587",
+            "UA 960"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 523,
+          "departTime": "2027-03-12 17:30",
+          "arriveTime": "2027-03-13 00:13"
+        },
+        {
+          "origin": "MLI",
+          "price": 1728,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1408",
+            "UA 2836"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 473,
+          "departTime": "2027-03-12 18:15",
+          "arriveTime": "2027-03-13 00:08"
+        },
+        {
+          "origin": "CID",
+          "price": 1785,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1076",
+            "UA 2251"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 483,
+          "departTime": "2027-03-12 12:00",
+          "arriveTime": "2027-03-12 18:03"
+        }
+      ]
+    },
+    "2027-03-12_6": {
+      "depart": "2027-03-12",
+      "return": "2027-03-18",
+      "nights": 6,
+      "fetchedAt": "2026-11-19T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "CID",
+          "price": 969,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1773",
+            "AA 1042"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 536,
+          "departTime": "2027-03-12 06:15",
+          "arriveTime": "2027-03-12 13:11"
+        },
+        {
+          "origin": "MLI",
+          "price": 1101,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 936",
+            "DL 570"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 412,
+          "departTime": "2027-03-12 16:15",
+          "arriveTime": "2027-03-12 21:07"
+        },
+        {
+          "origin": "CID",
+          "price": 1155,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2869",
+            "UA 649"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 500,
+          "departTime": "2027-03-12 09:00",
+          "arriveTime": "2027-03-12 15:20"
+        },
+        {
+          "origin": "MLI",
+          "price": 1230,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 921",
+            "UA 1191",
+            "UA 1243"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 573,
+          "departTime": "2027-03-12 13:15",
+          "arriveTime": "2027-03-12 20:48"
+        },
+        {
+          "origin": "CID",
+          "price": 1284,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 919",
+            "DL 1250"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 558,
+          "departTime": "2027-03-12 11:00",
+          "arriveTime": "2027-03-12 18:18"
+        },
+        {
+          "origin": "CID",
+          "price": 1329,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2400",
+            "AA 1591"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 558,
+          "departTime": "2027-03-12 15:00",
+          "arriveTime": "2027-03-12 22:18"
+        },
+        {
+          "origin": "CID",
+          "price": 1341,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1377",
+            "UA 126"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 507,
+          "departTime": "2027-03-12 13:00",
+          "arriveTime": "2027-03-12 19:27"
+        }
+      ]
+    },
+    "2027-03-13_4": {
+      "depart": "2027-03-13",
+      "return": "2027-03-17",
+      "nights": 4,
+      "fetchedAt": "2026-11-18T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "CID",
+          "price": 909,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1083",
+            "UA 1602"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 521,
+          "departTime": "2027-03-13 06:15",
+          "arriveTime": "2027-03-13 12:56"
+        },
+        {
+          "origin": "CID",
+          "price": 1017,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 1133",
+            "UA 213",
+            "UA 1620"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 659,
+          "departTime": "2027-03-13 15:45",
+          "arriveTime": "2027-03-14 00:44"
+        },
+        {
+          "origin": "MLI",
+          "price": 1095,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1045",
+            "AA 2187"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 532,
+          "departTime": "2027-03-13 07:15",
+          "arriveTime": "2027-03-13 14:07"
+        },
+        {
+          "origin": "DSM",
+          "price": 1110,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1527",
+            "AA 652"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 563,
+          "departTime": "2027-03-13 18:45",
+          "arriveTime": "2027-03-14 02:08"
+        },
+        {
+          "origin": "DSM",
+          "price": 1209,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1189",
+            "AA 721"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 492,
+          "departTime": "2027-03-13 07:30",
+          "arriveTime": "2027-03-13 13:42"
+        },
+        {
+          "origin": "DSM",
+          "price": 1317,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 1988"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-13 19:15",
+          "arriveTime": "2027-03-13 21:10"
+        },
+        {
+          "origin": "DSM",
+          "price": 1743,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1479",
+            "UA 1388"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 471,
+          "departTime": "2027-03-13 13:30",
+          "arriveTime": "2027-03-13 19:21"
+        }
+      ]
+    },
+    "2027-03-13_5": {
+      "depart": "2027-03-13",
+      "return": "2027-03-18",
+      "nights": 5,
+      "fetchedAt": "2026-11-17T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "DSM",
+          "price": 828,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 1337"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-13 19:15",
+          "arriveTime": "2027-03-13 21:10"
+        },
+        {
+          "origin": "MLI",
+          "price": 1032,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 1430",
+            "UA 258",
+            "UA 928"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 613,
+          "departTime": "2027-03-13 18:45",
+          "arriveTime": "2027-03-14 02:58"
+        },
+        {
+          "origin": "MLI",
+          "price": 1323,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1881",
+            "AA 2562"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 500,
+          "departTime": "2027-03-13 08:00",
+          "arriveTime": "2027-03-13 14:20"
+        },
+        {
+          "origin": "CID",
+          "price": 1383,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 219",
+            "AA 1908"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 522,
+          "departTime": "2027-03-13 11:45",
+          "arriveTime": "2027-03-13 18:27"
+        },
+        {
+          "origin": "MLI",
+          "price": 1425,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1838",
+            "UA 462"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 487,
+          "departTime": "2027-03-13 11:30",
+          "arriveTime": "2027-03-13 17:37"
+        },
+        {
+          "origin": "MLI",
+          "price": 1506,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 525",
+            "UA 2345"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 400,
+          "departTime": "2027-03-13 12:30",
+          "arriveTime": "2027-03-13 17:10"
+        },
+        {
+          "origin": "DSM",
+          "price": 1617,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 1146",
+            "UA 959",
+            "UA 299"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 539,
+          "departTime": "2027-03-13 11:45",
+          "arriveTime": "2027-03-13 18:44"
+        },
+        {
+          "origin": "CID",
+          "price": 1662,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2660",
+            "UA 1649"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 458,
+          "departTime": "2027-03-13 10:45",
+          "arriveTime": "2027-03-13 16:23"
+        },
+        {
+          "origin": "DSM",
+          "price": 1698,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 169",
+            "UA 203"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 471,
+          "departTime": "2027-03-13 19:15",
+          "arriveTime": "2027-03-14 01:06"
+        }
+      ]
+    },
+    "2027-03-13_6": {
+      "depart": "2027-03-13",
+      "return": "2027-03-19",
+      "nights": 6,
+      "fetchedAt": "2026-11-21T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "CID",
+          "price": 1041,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 1183",
+            "DL 206"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 459,
+          "departTime": "2027-03-13 16:00",
+          "arriveTime": "2027-03-13 21:39"
+        },
+        {
+          "origin": "CID",
+          "price": 1137,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2047",
+            "UA 2468"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 395,
+          "departTime": "2027-03-13 18:00",
+          "arriveTime": "2027-03-13 22:35"
+        },
+        {
+          "origin": "CID",
+          "price": 1233,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 450",
+            "UA 1596"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 411,
+          "departTime": "2027-03-13 14:30",
+          "arriveTime": "2027-03-13 19:21"
+        },
+        {
+          "origin": "DSM",
+          "price": 1341,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 750"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-13 09:00",
+          "arriveTime": "2027-03-13 10:55"
+        },
+        {
+          "origin": "MLI",
+          "price": 1557,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 903",
+            "DL 1581"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 567,
+          "departTime": "2027-03-13 16:15",
+          "arriveTime": "2027-03-13 23:42"
+        },
+        {
+          "origin": "MLI",
+          "price": 1584,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 367",
+            "UA 2539"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 399,
+          "departTime": "2027-03-13 07:30",
+          "arriveTime": "2027-03-13 12:09"
+        },
+        {
+          "origin": "MLI",
+          "price": 1611,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1849",
+            "UA 1481"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 433,
+          "departTime": "2027-03-13 15:15",
+          "arriveTime": "2027-03-13 20:28"
+        }
+      ]
+    },
+    "2027-03-14_4": {
+      "depart": "2027-03-14",
+      "return": "2027-03-18",
+      "nights": 4,
+      "fetchedAt": "2026-11-20T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "MLI",
+          "price": 1221,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 2478",
+            "DL 2728"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 422,
+          "departTime": "2027-03-14 07:45",
+          "arriveTime": "2027-03-14 12:47"
+        },
+        {
+          "origin": "CID",
+          "price": 1293,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 1312",
+            "DL 986"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 529,
+          "departTime": "2027-03-14 15:45",
+          "arriveTime": "2027-03-14 22:34"
+        },
+        {
+          "origin": "MLI",
+          "price": 1302,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 517",
+            "UA 496",
+            "UA 991"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 613,
+          "departTime": "2027-03-14 07:15",
+          "arriveTime": "2027-03-14 15:28"
+        },
+        {
+          "origin": "DSM",
+          "price": 1317,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 1701",
+            "UA 1904",
+            "UA 711"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 611,
+          "departTime": "2027-03-14 15:15",
+          "arriveTime": "2027-03-14 23:26"
+        },
+        {
+          "origin": "CID",
+          "price": 1461,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2261",
+            "AA 853"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 512,
+          "departTime": "2027-03-14 09:45",
+          "arriveTime": "2027-03-14 16:17"
+        },
+        {
+          "origin": "CID",
+          "price": 1464,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1547",
+            "AA 114"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 562,
+          "departTime": "2027-03-14 16:45",
+          "arriveTime": "2027-03-15 00:07"
+        },
+        {
+          "origin": "CID",
+          "price": 1512,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1078",
+            "AA 1463"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 498,
+          "departTime": "2027-03-14 13:15",
+          "arriveTime": "2027-03-14 19:33"
+        },
+        {
+          "origin": "CID",
+          "price": 1599,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 2361",
+            "UA 2477",
+            "UA 1132"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 527,
+          "departTime": "2027-03-14 09:30",
+          "arriveTime": "2027-03-14 16:17"
+        }
+      ]
+    },
+    "2027-03-14_5": {
+      "depart": "2027-03-14",
+      "return": "2027-03-19",
+      "nights": 5,
+      "fetchedAt": "2026-11-19T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "DSM",
+          "price": 912,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 706",
+            "AA 846"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 446,
+          "departTime": "2027-03-14 16:00",
+          "arriveTime": "2027-03-14 21:26"
+        },
+        {
+          "origin": "DSM",
+          "price": 963,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 2788",
+            "DL 752"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 470,
+          "departTime": "2027-03-14 11:45",
+          "arriveTime": "2027-03-14 17:35"
+        },
+        {
+          "origin": "MLI",
+          "price": 1230,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 1564"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-14 07:00",
+          "arriveTime": "2027-03-14 08:55"
+        },
+        {
+          "origin": "CID",
+          "price": 1326,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 450",
+            "UA 289"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 521,
+          "departTime": "2027-03-14 19:15",
+          "arriveTime": "2027-03-15 01:56"
+        },
+        {
+          "origin": "CID",
+          "price": 1542,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 1743"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-14 10:15",
+          "arriveTime": "2027-03-14 12:10"
+        },
+        {
+          "origin": "CID",
+          "price": 1614,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1555",
+            "UA 909"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 553,
+          "departTime": "2027-03-14 18:45",
+          "arriveTime": "2027-03-15 01:58"
+        },
+        {
+          "origin": "CID",
+          "price": 1692,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1679",
+            "AA 2401"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 426,
+          "departTime": "2027-03-14 19:45",
+          "arriveTime": "2027-03-15 00:51"
+        },
+        {
+          "origin": "MLI",
+          "price": 1779,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 301",
+            "AA 2763"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 560,
+          "departTime": "2027-03-14 09:00",
+          "arriveTime": "2027-03-14 16:20"
+        }
+      ]
+    },
+    "2027-03-14_6": {
+      "depart": "2027-03-14",
+      "return": "2027-03-20",
+      "nights": 6,
+      "fetchedAt": "2026-11-18T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "CID",
+          "price": 786,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 1906"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-14 16:30",
+          "arriveTime": "2027-03-14 18:25"
+        },
+        {
+          "origin": "MLI",
+          "price": 927,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 1908"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-14 08:30",
+          "arriveTime": "2027-03-14 10:25"
+        },
+        {
+          "origin": "DSM",
+          "price": 981,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 1635"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-14 09:45",
+          "arriveTime": "2027-03-14 11:40"
+        },
+        {
+          "origin": "DSM",
+          "price": 996,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 947",
+            "UA 2894"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 431,
+          "departTime": "2027-03-14 09:30",
+          "arriveTime": "2027-03-14 14:41"
+        },
+        {
+          "origin": "CID",
+          "price": 1074,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2565",
+            "AA 785"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 527,
+          "departTime": "2027-03-14 18:00",
+          "arriveTime": "2027-03-15 00:47"
+        },
+        {
+          "origin": "DSM",
+          "price": 1101,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 584"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-14 19:15",
+          "arriveTime": "2027-03-14 21:10"
+        },
+        {
+          "origin": "CID",
+          "price": 1203,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 334",
+            "DL 1189"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 434,
+          "departTime": "2027-03-14 17:45",
+          "arriveTime": "2027-03-14 22:59"
+        },
+        {
+          "origin": "DSM",
+          "price": 1284,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2813",
+            "UA 806"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 469,
+          "departTime": "2027-03-14 14:45",
+          "arriveTime": "2027-03-14 20:34"
+        },
+        {
+          "origin": "CID",
+          "price": 1515,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 968",
+            "UA 1862"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 531,
+          "departTime": "2027-03-14 14:30",
+          "arriveTime": "2027-03-14 21:21"
+        }
+      ]
+    },
+    "2027-03-15_4": {
+      "depart": "2027-03-15",
+      "return": "2027-03-19",
+      "nights": 4,
+      "fetchedAt": "2026-11-17T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "CID",
+          "price": 1086,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1945",
+            "AA 416"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 440,
+          "departTime": "2027-03-15 10:15",
+          "arriveTime": "2027-03-15 15:35"
+        },
+        {
+          "origin": "CID",
+          "price": 1101,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1833",
+            "UA 2469"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 523,
+          "departTime": "2027-03-15 17:45",
+          "arriveTime": "2027-03-16 00:28"
+        },
+        {
+          "origin": "CID",
+          "price": 1146,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 765",
+            "UA 2579"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 417,
+          "departTime": "2027-03-15 15:00",
+          "arriveTime": "2027-03-15 19:57"
+        },
+        {
+          "origin": "CID",
+          "price": 1263,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1881",
+            "AA 479"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 445,
+          "departTime": "2027-03-15 11:45",
+          "arriveTime": "2027-03-15 17:10"
+        },
+        {
+          "origin": "DSM",
+          "price": 1467,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1292",
+            "AA 2154"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 542,
+          "departTime": "2027-03-15 17:15",
+          "arriveTime": "2027-03-16 00:17"
+        },
+        {
+          "origin": "CID",
+          "price": 1506,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 576"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-15 12:30",
+          "arriveTime": "2027-03-15 14:25"
+        },
+        {
+          "origin": "MLI",
+          "price": 1551,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 2182",
+            "DL 1269"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 426,
+          "departTime": "2027-03-15 19:00",
+          "arriveTime": "2027-03-16 00:06"
+        }
+      ]
+    },
+    "2027-03-15_5": {
+      "depart": "2027-03-15",
+      "return": "2027-03-20",
+      "nights": 5,
+      "fetchedAt": "2026-11-21T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "MLI",
+          "price": 1230,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 340"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-15 17:30",
+          "arriveTime": "2027-03-15 19:25"
+        },
+        {
+          "origin": "DSM",
+          "price": 1284,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 2254",
+            "DL 984"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 549,
+          "departTime": "2027-03-15 19:45",
+          "arriveTime": "2027-03-16 02:54"
+        },
+        {
+          "origin": "MLI",
+          "price": 1416,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 1329"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-15 13:45",
+          "arriveTime": "2027-03-15 15:40"
+        },
+        {
+          "origin": "MLI",
+          "price": 1431,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2165",
+            "AA 1183"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 394,
+          "departTime": "2027-03-15 17:15",
+          "arriveTime": "2027-03-15 21:49"
+        },
+        {
+          "origin": "MLI",
+          "price": 1518,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 218",
+            "UA 1529"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 441,
+          "departTime": "2027-03-15 13:15",
+          "arriveTime": "2027-03-15 18:36"
+        },
+        {
+          "origin": "CID",
+          "price": 1800,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 1020",
+            "DL 1873"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 510,
+          "departTime": "2027-03-15 05:15",
+          "arriveTime": "2027-03-15 11:45"
+        }
+      ]
+    },
+    "2027-03-15_6": {
+      "depart": "2027-03-15",
+      "return": "2027-03-21",
+      "nights": 6,
+      "fetchedAt": "2026-11-20T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "CID",
+          "price": 906,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2153",
+            "AA 1598"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 399,
+          "departTime": "2027-03-15 14:45",
+          "arriveTime": "2027-03-15 19:24"
+        },
+        {
+          "origin": "MLI",
+          "price": 948,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2307",
+            "UA 2734"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 467,
+          "departTime": "2027-03-15 15:30",
+          "arriveTime": "2027-03-15 21:17"
+        },
+        {
+          "origin": "CID",
+          "price": 951,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 2023",
+            "DL 2061"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 434,
+          "departTime": "2027-03-15 05:30",
+          "arriveTime": "2027-03-15 10:44"
+        },
+        {
+          "origin": "MLI",
+          "price": 1110,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2617",
+            "UA 2507"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 468,
+          "departTime": "2027-03-15 15:00",
+          "arriveTime": "2027-03-15 20:48"
+        },
+        {
+          "origin": "CID",
+          "price": 1122,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2261",
+            "AA 2539"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 393,
+          "departTime": "2027-03-15 05:45",
+          "arriveTime": "2027-03-15 10:18"
+        },
+        {
+          "origin": "CID",
+          "price": 1143,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1223",
+            "AA 2373"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 554,
+          "departTime": "2027-03-15 08:30",
+          "arriveTime": "2027-03-15 15:44"
+        },
+        {
+          "origin": "MLI",
+          "price": 1179,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2801",
+            "AA 1815"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 553,
+          "departTime": "2027-03-15 16:30",
+          "arriveTime": "2027-03-15 23:43"
+        },
+        {
+          "origin": "DSM",
+          "price": 1188,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 1050",
+            "DL 144"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 412,
+          "departTime": "2027-03-15 19:15",
+          "arriveTime": "2027-03-16 00:07"
+        },
+        {
+          "origin": "DSM",
+          "price": 1203,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 2781",
+            "DL 277"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 449,
+          "departTime": "2027-03-15 15:45",
+          "arriveTime": "2027-03-15 21:14"
+        }
+      ]
+    },
+    "2027-03-16_4": {
+      "depart": "2027-03-16",
+      "return": "2027-03-20",
+      "nights": 4,
+      "fetchedAt": "2026-11-19T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "MLI",
+          "price": 1029,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 1681"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-16 10:00",
+          "arriveTime": "2027-03-16 11:55"
+        },
+        {
+          "origin": "CID",
+          "price": 1035,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2448",
+            "UA 1321"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 410,
+          "departTime": "2027-03-16 09:15",
+          "arriveTime": "2027-03-16 14:05"
+        },
+        {
+          "origin": "DSM",
+          "price": 1035,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1979",
+            "AA 197"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 502,
+          "departTime": "2027-03-16 14:15",
+          "arriveTime": "2027-03-16 20:37"
+        },
+        {
+          "origin": "CID",
+          "price": 1152,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 1290",
+            "DL 1646"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 404,
+          "departTime": "2027-03-16 07:30",
+          "arriveTime": "2027-03-16 12:14"
+        },
+        {
+          "origin": "CID",
+          "price": 1266,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 2583",
+            "DL 1126"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 487,
+          "departTime": "2027-03-16 16:15",
+          "arriveTime": "2027-03-16 22:22"
+        },
+        {
+          "origin": "MLI",
+          "price": 1320,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1422",
+            "AA 928"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 420,
+          "departTime": "2027-03-16 09:45",
+          "arriveTime": "2027-03-16 14:45"
+        },
+        {
+          "origin": "MLI",
+          "price": 1344,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1510",
+            "AA 1031"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 441,
+          "departTime": "2027-03-16 05:00",
+          "arriveTime": "2027-03-16 10:21"
+        }
+      ]
+    },
+    "2027-03-16_5": {
+      "depart": "2027-03-16",
+      "return": "2027-03-21",
+      "nights": 5,
+      "fetchedAt": "2026-11-18T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "MLI",
+          "price": 990,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 318",
+            "AA 1428"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 506,
+          "departTime": "2027-03-16 12:15",
+          "arriveTime": "2027-03-16 18:41"
+        },
+        {
+          "origin": "DSM",
+          "price": 1143,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1948",
+            "UA 2859"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 516,
+          "departTime": "2027-03-16 17:15",
+          "arriveTime": "2027-03-16 23:51"
+        },
+        {
+          "origin": "DSM",
+          "price": 1188,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 2164",
+            "DL 2712"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 421,
+          "departTime": "2027-03-16 10:00",
+          "arriveTime": "2027-03-16 15:01"
+        },
+        {
+          "origin": "DSM",
+          "price": 1374,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 675",
+            "AA 2064"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 453,
+          "departTime": "2027-03-16 09:45",
+          "arriveTime": "2027-03-16 15:18"
+        },
+        {
+          "origin": "CID",
+          "price": 1596,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 2237",
+            "UA 1515",
+            "UA 239"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 645,
+          "departTime": "2027-03-16 17:00",
+          "arriveTime": "2027-03-17 01:45"
+        },
+        {
+          "origin": "CID",
+          "price": 1638,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 708",
+            "AA 2597"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 474,
+          "departTime": "2027-03-16 12:15",
+          "arriveTime": "2027-03-16 18:09"
+        },
+        {
+          "origin": "CID",
+          "price": 1731,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 978",
+            "UA 1940"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 480,
+          "departTime": "2027-03-16 10:45",
+          "arriveTime": "2027-03-16 16:45"
+        },
+        {
+          "origin": "CID",
+          "price": 1764,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 691",
+            "DL 644"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 568,
+          "departTime": "2027-03-16 11:00",
+          "arriveTime": "2027-03-16 18:28"
+        }
+      ]
+    },
+    "2027-03-16_6": {
+      "depart": "2027-03-16",
+      "return": "2027-03-22",
+      "nights": 6,
+      "fetchedAt": "2026-11-17T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "CID",
+          "price": 951,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 675",
+            "AA 205"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 422,
+          "departTime": "2027-03-16 13:15",
+          "arriveTime": "2027-03-16 18:17"
+        },
+        {
+          "origin": "CID",
+          "price": 978,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2738",
+            "AA 1003"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 454,
+          "departTime": "2027-03-16 06:00",
+          "arriveTime": "2027-03-16 11:34"
+        },
+        {
+          "origin": "DSM",
+          "price": 1026,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 1838",
+            "UA 1145",
+            "UA 2463"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 512,
+          "departTime": "2027-03-16 06:30",
+          "arriveTime": "2027-03-16 13:02"
+        },
+        {
+          "origin": "DSM",
+          "price": 1104,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 152",
+            "DL 270"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 548,
+          "departTime": "2027-03-16 06:00",
+          "arriveTime": "2027-03-16 13:08"
+        },
+        {
+          "origin": "DSM",
+          "price": 1116,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 1808"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-16 11:45",
+          "arriveTime": "2027-03-16 13:40"
+        },
+        {
+          "origin": "CID",
+          "price": 1293,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 785",
+            "AA 780"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 391,
+          "departTime": "2027-03-16 11:15",
+          "arriveTime": "2027-03-16 15:46"
+        },
+        {
+          "origin": "CID",
+          "price": 1488,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 2601",
+            "DL 1308"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 446,
+          "departTime": "2027-03-16 18:30",
+          "arriveTime": "2027-03-16 23:56"
+        }
+      ]
+    },
+    "2027-03-17_4": {
+      "depart": "2027-03-17",
+      "return": "2027-03-21",
+      "nights": 4,
+      "fetchedAt": "2026-11-21T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "CID",
+          "price": 906,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2573",
+            "UA 708"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 405,
+          "departTime": "2027-03-17 06:00",
+          "arriveTime": "2027-03-17 10:45"
+        },
+        {
+          "origin": "DSM",
+          "price": 1011,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 1369",
+            "DL 1403"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 459,
+          "departTime": "2027-03-17 12:30",
+          "arriveTime": "2027-03-17 18:09"
+        },
+        {
+          "origin": "CID",
+          "price": 1113,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2413",
+            "AA 1630"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 507,
+          "departTime": "2027-03-17 08:00",
+          "arriveTime": "2027-03-17 14:27"
+        },
+        {
+          "origin": "DSM",
+          "price": 1278,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1001",
+            "AA 2111"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 554,
+          "departTime": "2027-03-17 09:30",
+          "arriveTime": "2027-03-17 16:44"
+        },
+        {
+          "origin": "CID",
+          "price": 1404,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2478",
+            "UA 162"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 417,
+          "departTime": "2027-03-17 17:00",
+          "arriveTime": "2027-03-17 21:57"
+        },
+        {
+          "origin": "CID",
+          "price": 1524,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1407",
+            "AA 362"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 511,
+          "departTime": "2027-03-17 08:00",
+          "arriveTime": "2027-03-17 14:31"
+        }
+      ]
+    },
+    "2027-03-17_5": {
+      "depart": "2027-03-17",
+      "return": "2027-03-22",
+      "nights": 5,
+      "fetchedAt": "2026-11-20T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "MLI",
+          "price": 951,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 2102",
+            "UA 2000",
+            "UA 119"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 623,
+          "departTime": "2027-03-17 08:00",
+          "arriveTime": "2027-03-17 16:23"
+        },
+        {
+          "origin": "CID",
+          "price": 993,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 384",
+            "AA 1508"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 485,
+          "departTime": "2027-03-17 16:30",
+          "arriveTime": "2027-03-17 22:35"
+        },
+        {
+          "origin": "DSM",
+          "price": 1026,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 1808"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-17 16:15",
+          "arriveTime": "2027-03-17 18:10"
+        },
+        {
+          "origin": "CID",
+          "price": 1233,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1967",
+            "AA 220"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 479,
+          "departTime": "2027-03-17 16:15",
+          "arriveTime": "2027-03-17 22:14"
+        },
+        {
+          "origin": "MLI",
+          "price": 1353,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1198",
+            "AA 2740"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 467,
+          "departTime": "2027-03-17 05:15",
+          "arriveTime": "2027-03-17 11:02"
+        },
+        {
+          "origin": "CID",
+          "price": 1422,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 1652",
+            "DL 1836"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 495,
+          "departTime": "2027-03-17 18:30",
+          "arriveTime": "2027-03-18 00:45"
+        },
+        {
+          "origin": "CID",
+          "price": 1533,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 594",
+            "AA 1904"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 434,
+          "departTime": "2027-03-17 14:45",
+          "arriveTime": "2027-03-17 19:59"
+        },
+        {
+          "origin": "DSM",
+          "price": 1785,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 378",
+            "UA 1528",
+            "UA 1109"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 502,
+          "departTime": "2027-03-17 12:15",
+          "arriveTime": "2027-03-17 18:37"
+        }
+      ]
+    },
+    "2027-03-17_6": {
+      "depart": "2027-03-17",
+      "return": "2027-03-23",
+      "nights": 6,
+      "fetchedAt": "2026-11-19T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "CID",
+          "price": 1014,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 1144"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-17 13:00",
+          "arriveTime": "2027-03-17 14:55"
+        },
+        {
+          "origin": "CID",
+          "price": 1059,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 728",
+            "AA 685"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 410,
+          "departTime": "2027-03-17 17:15",
+          "arriveTime": "2027-03-17 22:05"
+        },
+        {
+          "origin": "CID",
+          "price": 1125,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2678",
+            "UA 1591"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 554,
+          "departTime": "2027-03-17 11:30",
+          "arriveTime": "2027-03-17 18:44"
+        },
+        {
+          "origin": "MLI",
+          "price": 1254,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1241",
+            "UA 354"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 543,
+          "departTime": "2027-03-17 05:00",
+          "arriveTime": "2027-03-17 12:03"
+        },
+        {
+          "origin": "MLI",
+          "price": 1515,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2008",
+            "UA 2773"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 463,
+          "departTime": "2027-03-17 13:45",
+          "arriveTime": "2027-03-17 19:28"
+        },
+        {
+          "origin": "CID",
+          "price": 1602,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 688",
+            "AA 1551"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 554,
+          "departTime": "2027-03-17 16:30",
+          "arriveTime": "2027-03-17 23:44"
+        }
+      ]
+    },
+    "2027-03-18_4": {
+      "depart": "2027-03-18",
+      "return": "2027-03-22",
+      "nights": 4,
+      "fetchedAt": "2026-11-18T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "MLI",
+          "price": 999,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2823",
+            "UA 2699"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 488,
+          "departTime": "2027-03-18 06:00",
+          "arriveTime": "2027-03-18 12:08"
+        },
+        {
+          "origin": "MLI",
+          "price": 1086,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 617",
+            "AA 1748"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 469,
+          "departTime": "2027-03-18 08:45",
+          "arriveTime": "2027-03-18 14:34"
+        },
+        {
+          "origin": "DSM",
+          "price": 1140,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 387",
+            "AA 1206"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 524,
+          "departTime": "2027-03-18 11:30",
+          "arriveTime": "2027-03-18 18:14"
+        },
+        {
+          "origin": "DSM",
+          "price": 1203,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1164",
+            "UA 101"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 396,
+          "departTime": "2027-03-18 08:00",
+          "arriveTime": "2027-03-18 12:36"
+        },
+        {
+          "origin": "CID",
+          "price": 1707,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 549",
+            "AA 2187"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 560,
+          "departTime": "2027-03-18 14:15",
+          "arriveTime": "2027-03-18 21:35"
+        },
+        {
+          "origin": "CID",
+          "price": 1743,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 331",
+            "AA 2222"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 410,
+          "departTime": "2027-03-18 17:15",
+          "arriveTime": "2027-03-18 22:05"
+        }
+      ]
+    },
+    "2027-03-18_5": {
+      "depart": "2027-03-18",
+      "return": "2027-03-23",
+      "nights": 5,
+      "fetchedAt": "2026-11-17T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "DSM",
+          "price": 966,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 2751",
+            "DL 1520"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 414,
+          "departTime": "2027-03-18 06:15",
+          "arriveTime": "2027-03-18 11:09"
+        },
+        {
+          "origin": "DSM",
+          "price": 1101,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1189",
+            "AA 188"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 475,
+          "departTime": "2027-03-18 17:45",
+          "arriveTime": "2027-03-18 23:40"
+        },
+        {
+          "origin": "CID",
+          "price": 1122,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 2368"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-18 09:45",
+          "arriveTime": "2027-03-18 11:40"
+        },
+        {
+          "origin": "CID",
+          "price": 1245,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 211",
+            "AA 837"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 454,
+          "departTime": "2027-03-18 09:15",
+          "arriveTime": "2027-03-18 14:49"
+        },
+        {
+          "origin": "DSM",
+          "price": 1770,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 462",
+            "DL 973"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 551,
+          "departTime": "2027-03-18 06:00",
+          "arriveTime": "2027-03-18 13:11"
+        },
+        {
+          "origin": "CID",
+          "price": 1785,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2517",
+            "UA 2861"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 443,
+          "departTime": "2027-03-18 08:45",
+          "arriveTime": "2027-03-18 14:08"
+        }
+      ]
+    },
+    "2027-03-18_6": {
+      "depart": "2027-03-18",
+      "return": "2027-03-24",
+      "nights": 6,
+      "fetchedAt": "2026-11-21T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "CID",
+          "price": 1161,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 2111"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-18 05:30",
+          "arriveTime": "2027-03-18 07:25"
+        },
+        {
+          "origin": "CID",
+          "price": 1275,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2558",
+            "UA 1241"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 443,
+          "departTime": "2027-03-18 17:30",
+          "arriveTime": "2027-03-18 22:53"
+        },
+        {
+          "origin": "MLI",
+          "price": 1281,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 1687",
+            "DL 693"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 546,
+          "departTime": "2027-03-18 18:15",
+          "arriveTime": "2027-03-19 01:21"
+        },
+        {
+          "origin": "MLI",
+          "price": 1365,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1561",
+            "UA 2843"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 569,
+          "departTime": "2027-03-18 13:15",
+          "arriveTime": "2027-03-18 20:44"
+        },
+        {
+          "origin": "MLI",
+          "price": 1572,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1229",
+            "UA 2871"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 395,
+          "departTime": "2027-03-18 05:45",
+          "arriveTime": "2027-03-18 10:20"
+        },
+        {
+          "origin": "DSM",
+          "price": 1641,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1788",
+            "UA 935"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 533,
+          "departTime": "2027-03-18 09:30",
+          "arriveTime": "2027-03-18 16:23"
+        },
+        {
+          "origin": "DSM",
+          "price": 1662,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2702",
+            "AA 1917"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 554,
+          "departTime": "2027-03-18 14:30",
+          "arriveTime": "2027-03-18 21:44"
+        },
+        {
+          "origin": "MLI",
+          "price": 1704,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 697",
+            "UA 1653"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 494,
+          "departTime": "2027-03-18 14:30",
+          "arriveTime": "2027-03-18 20:44"
+        }
+      ]
+    },
+    "2027-03-19_4": {
+      "depart": "2027-03-19",
+      "return": "2027-03-23",
+      "nights": 4,
+      "fetchedAt": "2026-11-20T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "CID",
+          "price": 1068,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 221",
+            "UA 114"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 556,
+          "departTime": "2027-03-19 13:15",
+          "arriveTime": "2027-03-19 20:31"
+        },
+        {
+          "origin": "CID",
+          "price": 1134,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 427"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-19 12:15",
+          "arriveTime": "2027-03-19 14:10"
+        },
+        {
+          "origin": "CID",
+          "price": 1137,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 1961",
+            "DL 471"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 564,
+          "departTime": "2027-03-19 17:00",
+          "arriveTime": "2027-03-20 00:24"
+        },
+        {
+          "origin": "DSM",
+          "price": 1179,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 764",
+            "AA 1295"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 498,
+          "departTime": "2027-03-19 16:45",
+          "arriveTime": "2027-03-19 23:03"
+        },
+        {
+          "origin": "MLI",
+          "price": 1437,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 2720",
+            "UA 683",
+            "UA 1395"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 497,
+          "departTime": "2027-03-19 17:15",
+          "arriveTime": "2027-03-19 23:32"
+        },
+        {
+          "origin": "CID",
+          "price": 1596,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2207",
+            "AA 541"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 453,
+          "departTime": "2027-03-19 13:15",
+          "arriveTime": "2027-03-19 18:48"
+        },
+        {
+          "origin": "DSM",
+          "price": 1626,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 688",
+            "AA 621"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 491,
+          "departTime": "2027-03-19 10:00",
+          "arriveTime": "2027-03-19 16:11"
+        },
+        {
+          "origin": "DSM",
+          "price": 1779,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1594",
+            "AA 2427"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 472,
+          "departTime": "2027-03-19 06:30",
+          "arriveTime": "2027-03-19 12:22"
+        }
+      ]
+    },
+    "2027-03-19_5": {
+      "depart": "2027-03-19",
+      "return": "2027-03-24",
+      "nights": 5,
+      "fetchedAt": "2026-11-19T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "DSM",
+          "price": 1182,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2242",
+            "UA 355"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 424,
+          "departTime": "2027-03-19 15:00",
+          "arriveTime": "2027-03-19 20:04"
+        },
+        {
+          "origin": "MLI",
+          "price": 1203,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 762",
+            "AA 1733"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 419,
+          "departTime": "2027-03-19 07:45",
+          "arriveTime": "2027-03-19 12:44"
+        },
+        {
+          "origin": "DSM",
+          "price": 1221,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 628",
+            "AA 526"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 435,
+          "departTime": "2027-03-19 16:30",
+          "arriveTime": "2027-03-19 21:45"
+        },
+        {
+          "origin": "DSM",
+          "price": 1419,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1229",
+            "AA 1603"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 474,
+          "departTime": "2027-03-19 13:00",
+          "arriveTime": "2027-03-19 18:54"
+        },
+        {
+          "origin": "CID",
+          "price": 1506,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 783",
+            "DL 1161"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 489,
+          "departTime": "2027-03-19 10:45",
+          "arriveTime": "2027-03-19 16:54"
+        },
+        {
+          "origin": "CID",
+          "price": 1521,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1378",
+            "UA 1102"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 563,
+          "departTime": "2027-03-19 19:00",
+          "arriveTime": "2027-03-20 02:23"
+        },
+        {
+          "origin": "MLI",
+          "price": 1593,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1235",
+            "AA 2210"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 523,
+          "departTime": "2027-03-19 18:30",
+          "arriveTime": "2027-03-20 01:13"
+        },
+        {
+          "origin": "MLI",
+          "price": 1752,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 399",
+            "AA 803"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 475,
+          "departTime": "2027-03-19 18:45",
+          "arriveTime": "2027-03-20 00:40"
+        },
+        {
+          "origin": "MLI",
+          "price": 1800,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 1064",
+            "DL 123"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 418,
+          "departTime": "2027-03-19 09:15",
+          "arriveTime": "2027-03-19 14:13"
+        }
+      ]
+    },
+    "2027-03-19_6": {
+      "depart": "2027-03-19",
+      "return": "2027-03-25",
+      "nights": 6,
+      "fetchedAt": "2026-11-18T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "CID",
+          "price": 1098,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 1627",
+            "DL 2874"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 548,
+          "departTime": "2027-03-19 05:00",
+          "arriveTime": "2027-03-19 12:08"
+        },
+        {
+          "origin": "MLI",
+          "price": 1209,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 2758",
+            "UA 1479",
+            "UA 2044"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 494,
+          "departTime": "2027-03-19 15:15",
+          "arriveTime": "2027-03-19 21:29"
+        },
+        {
+          "origin": "MLI",
+          "price": 1290,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 2490"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-19 18:45",
+          "arriveTime": "2027-03-19 20:40"
+        },
+        {
+          "origin": "CID",
+          "price": 1407,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 1930",
+            "DL 1950"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 504,
+          "departTime": "2027-03-19 17:15",
+          "arriveTime": "2027-03-19 23:39"
+        },
+        {
+          "origin": "MLI",
+          "price": 1587,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 1584"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-19 14:15",
+          "arriveTime": "2027-03-19 16:10"
+        },
+        {
+          "origin": "CID",
+          "price": 1620,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2548",
+            "AA 1991"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 425,
+          "departTime": "2027-03-19 05:30",
+          "arriveTime": "2027-03-19 10:35"
+        },
+        {
+          "origin": "MLI",
+          "price": 1659,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 2297",
+            "UA 2250",
+            "UA 1964"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 615,
+          "departTime": "2027-03-19 09:45",
+          "arriveTime": "2027-03-19 18:00"
+        },
+        {
+          "origin": "MLI",
+          "price": 1662,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 2619",
+            "UA 2520",
+            "UA 419"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 519,
+          "departTime": "2027-03-19 18:30",
+          "arriveTime": "2027-03-20 01:09"
+        },
+        {
+          "origin": "CID",
+          "price": 1698,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 652",
+            "UA 814"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 451,
+          "departTime": "2027-03-19 10:00",
+          "arriveTime": "2027-03-19 15:31"
+        }
+      ]
+    },
+    "2027-03-20_4": {
+      "depart": "2027-03-20",
+      "return": "2027-03-24",
+      "nights": 4,
+      "fetchedAt": "2026-11-17T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "MLI",
+          "price": 1407,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 264",
+            "UA 2225",
+            "UA 1680"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 517,
+          "departTime": "2027-03-20 15:15",
+          "arriveTime": "2027-03-20 21:52"
+        },
+        {
+          "origin": "MLI",
+          "price": 1410,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1447",
+            "AA 970"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 494,
+          "departTime": "2027-03-20 19:00",
+          "arriveTime": "2027-03-21 01:14"
+        },
+        {
+          "origin": "CID",
+          "price": 1425,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1815",
+            "UA 1428"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 448,
+          "departTime": "2027-03-20 06:30",
+          "arriveTime": "2027-03-20 11:58"
+        },
+        {
+          "origin": "CID",
+          "price": 1476,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2779",
+            "AA 781"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 399,
+          "departTime": "2027-03-20 12:45",
+          "arriveTime": "2027-03-20 17:24"
+        },
+        {
+          "origin": "DSM",
+          "price": 1494,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 356",
+            "DL 1217"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 500,
+          "departTime": "2027-03-20 16:00",
+          "arriveTime": "2027-03-20 22:20"
+        },
+        {
+          "origin": "CID",
+          "price": 1767,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 549",
+            "DL 1233"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 551,
+          "departTime": "2027-03-20 06:30",
+          "arriveTime": "2027-03-20 13:41"
+        },
+        {
+          "origin": "CID",
+          "price": 1791,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 794",
+            "AA 1376"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 430,
+          "departTime": "2027-03-20 08:15",
+          "arriveTime": "2027-03-20 13:25"
+        }
+      ]
+    },
+    "2027-03-20_5": {
+      "depart": "2027-03-20",
+      "return": "2027-03-25",
+      "nights": 5,
+      "fetchedAt": "2026-11-21T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "DSM",
+          "price": 942,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 392",
+            "DL 305"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 527,
+          "departTime": "2027-03-20 08:45",
+          "arriveTime": "2027-03-20 15:32"
+        },
+        {
+          "origin": "MLI",
+          "price": 1113,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1141",
+            "UA 468"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 402,
+          "departTime": "2027-03-20 15:45",
+          "arriveTime": "2027-03-20 20:27"
+        },
+        {
+          "origin": "CID",
+          "price": 1179,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 2180"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-20 06:30",
+          "arriveTime": "2027-03-20 08:25"
+        },
+        {
+          "origin": "CID",
+          "price": 1179,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 172",
+            "AA 2151"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 548,
+          "departTime": "2027-03-20 17:00",
+          "arriveTime": "2027-03-21 00:08"
+        },
+        {
+          "origin": "DSM",
+          "price": 1587,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 2252"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-20 17:00",
+          "arriveTime": "2027-03-20 18:55"
+        },
+        {
+          "origin": "DSM",
+          "price": 1656,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1584",
+            "UA 2738"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 566,
+          "departTime": "2027-03-20 05:45",
+          "arriveTime": "2027-03-20 13:11"
+        },
+        {
+          "origin": "CID",
+          "price": 1665,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 1855",
+            "UA 353",
+            "UA 1819"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 493,
+          "departTime": "2027-03-20 13:15",
+          "arriveTime": "2027-03-20 19:28"
+        }
+      ]
+    },
+    "2027-03-20_6": {
+      "depart": "2027-03-20",
+      "return": "2027-03-26",
+      "nights": 6,
+      "fetchedAt": "2026-11-20T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "DSM",
+          "price": 1068,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 104",
+            "UA 2759",
+            "UA 1442"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 536,
+          "departTime": "2027-03-20 13:30",
+          "arriveTime": "2027-03-20 20:26"
+        },
+        {
+          "origin": "DSM",
+          "price": 1290,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 301"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-20 15:00",
+          "arriveTime": "2027-03-20 16:55"
+        },
+        {
+          "origin": "DSM",
+          "price": 1494,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 2698"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-20 17:45",
+          "arriveTime": "2027-03-20 19:40"
+        },
+        {
+          "origin": "MLI",
+          "price": 1545,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 741",
+            "UA 1286"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 415,
+          "departTime": "2027-03-20 08:00",
+          "arriveTime": "2027-03-20 12:55"
+        },
+        {
+          "origin": "CID",
+          "price": 1578,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 607",
+            "DL 407"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 503,
+          "departTime": "2027-03-20 13:15",
+          "arriveTime": "2027-03-20 19:38"
+        },
+        {
+          "origin": "CID",
+          "price": 1593,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 547",
+            "UA 1274"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 402,
+          "departTime": "2027-03-20 18:00",
+          "arriveTime": "2027-03-20 22:42"
+        },
+        {
+          "origin": "DSM",
+          "price": 1767,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 488",
+            "UA 1597",
+            "UA 1103"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 534,
+          "departTime": "2027-03-20 18:45",
+          "arriveTime": "2027-03-21 01:39"
+        },
+        {
+          "origin": "CID",
+          "price": 1785,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 817",
+            "UA 831",
+            "UA 2036"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 616,
+          "departTime": "2027-03-20 18:15",
+          "arriveTime": "2027-03-21 02:31"
+        }
+      ]
+    },
+    "2027-03-21_4": {
+      "depart": "2027-03-21",
+      "return": "2027-03-25",
+      "nights": 4,
+      "fetchedAt": "2026-11-19T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "CID",
+          "price": 918,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 2659",
+            "DL 1238"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 393,
+          "departTime": "2027-03-21 18:15",
+          "arriveTime": "2027-03-21 22:48"
+        },
+        {
+          "origin": "DSM",
+          "price": 948,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2568",
+            "AA 2634"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 395,
+          "departTime": "2027-03-21 17:30",
+          "arriveTime": "2027-03-21 22:05"
+        },
+        {
+          "origin": "DSM",
+          "price": 1035,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 2522"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-21 15:15",
+          "arriveTime": "2027-03-21 17:10"
+        },
+        {
+          "origin": "CID",
+          "price": 1116,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 816",
+            "UA 1594",
+            "UA 2258"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 523,
+          "departTime": "2027-03-21 07:45",
+          "arriveTime": "2027-03-21 14:28"
+        },
+        {
+          "origin": "CID",
+          "price": 1140,
+          "airlines": [
+            "Allegiant"
+          ],
+          "flightNumbers": [
+            "G4 1990"
+          ],
+          "stops": 0,
+          "layovers": [],
+          "durationMin": 235,
+          "departTime": "2027-03-21 19:45",
+          "arriveTime": "2027-03-21 21:40"
+        },
+        {
+          "origin": "CID",
+          "price": 1593,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 368",
+            "AA 1803"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 479,
+          "departTime": "2027-03-21 08:45",
+          "arriveTime": "2027-03-21 14:44"
+        }
+      ]
+    },
+    "2027-03-21_5": {
+      "depart": "2027-03-21",
+      "return": "2027-03-26",
+      "nights": 5,
+      "fetchedAt": "2026-11-18T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "CID",
+          "price": 1038,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2106",
+            "AA 1719"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 522,
+          "departTime": "2027-03-21 05:45",
+          "arriveTime": "2027-03-21 12:27"
+        },
+        {
+          "origin": "DSM",
+          "price": 1044,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 240",
+            "UA 1239"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 548,
+          "departTime": "2027-03-21 16:45",
+          "arriveTime": "2027-03-21 23:53"
+        },
+        {
+          "origin": "CID",
+          "price": 1047,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1451",
+            "AA 1570"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 429,
+          "departTime": "2027-03-21 06:15",
+          "arriveTime": "2027-03-21 11:24"
+        },
+        {
+          "origin": "DSM",
+          "price": 1191,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 2225",
+            "UA 886"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 547,
+          "departTime": "2027-03-21 12:15",
+          "arriveTime": "2027-03-21 19:22"
+        },
+        {
+          "origin": "CID",
+          "price": 1527,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1344",
+            "AA 1971"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 523,
+          "departTime": "2027-03-21 17:15",
+          "arriveTime": "2027-03-21 23:58"
+        },
+        {
+          "origin": "DSM",
+          "price": 1530,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 1827",
+            "AA 2593"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 477,
+          "departTime": "2027-03-21 11:15",
+          "arriveTime": "2027-03-21 17:12"
+        },
+        {
+          "origin": "DSM",
+          "price": 1719,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 2670",
+            "DL 821"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 513,
+          "departTime": "2027-03-21 06:45",
+          "arriveTime": "2027-03-21 13:18"
+        }
+      ]
+    },
+    "2027-03-21_6": {
+      "depart": "2027-03-21",
+      "return": "2027-03-27",
+      "nights": 6,
+      "fetchedAt": "2026-11-17T18:37:01.838Z",
+      "googleFlightsUrl": null,
+      "options": [
+        {
+          "origin": "CID",
+          "price": 984,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 642",
+            "DL 1898"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 485,
+          "departTime": "2027-03-21 12:45",
+          "arriveTime": "2027-03-21 18:50"
+        },
+        {
+          "origin": "MLI",
+          "price": 1170,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 2492",
+            "DL 310"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 512,
+          "departTime": "2027-03-21 15:45",
+          "arriveTime": "2027-03-21 22:17"
+        },
+        {
+          "origin": "DSM",
+          "price": 1314,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 938",
+            "UA 2571"
+          ],
+          "stops": 1,
+          "layovers": [
+            "ORD"
+          ],
+          "durationMin": 446,
+          "departTime": "2027-03-21 05:45",
+          "arriveTime": "2027-03-21 11:11"
+        },
+        {
+          "origin": "DSM",
+          "price": 1641,
+          "airlines": [
+            "United",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "UA 2643",
+            "UA 1399",
+            "UA 484"
+          ],
+          "stops": 2,
+          "layovers": [
+            "DEN",
+            "SEA"
+          ],
+          "durationMin": 636,
+          "departTime": "2027-03-21 15:00",
+          "arriveTime": "2027-03-21 23:36"
+        },
+        {
+          "origin": "CID",
+          "price": 1725,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 2824",
+            "AA 962"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 522,
+          "departTime": "2027-03-21 07:00",
+          "arriveTime": "2027-03-21 13:42"
+        },
+        {
+          "origin": "MLI",
+          "price": 1734,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1862",
+            "UA 2844"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 553,
+          "departTime": "2027-03-21 19:15",
+          "arriveTime": "2027-03-22 02:28"
+        },
+        {
+          "origin": "CID",
+          "price": 1794,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 1905",
+            "DL 1413"
+          ],
+          "stops": 1,
+          "layovers": [
+            "SLC"
+          ],
+          "durationMin": 392,
+          "departTime": "2027-03-21 07:15",
+          "arriveTime": "2027-03-21 11:47"
+        }
+      ]
+    }
+  }
+}
