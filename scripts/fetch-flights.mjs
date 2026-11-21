@@ -68,6 +68,15 @@ const topRows = () => {
   const byShortest = [...rows].sort((a, b) => travelMinutes(a.o) - travelMinutes(b.o) || a.o.price - b.o.price);
   return [...new Set([...byBest.slice(0, 2), ...byShortest.slice(0, 1), ...rows.slice(0, trip.returnTop)])];
 };
+// The trips on the top card (Cheapest, Shortest, Best pick).
+const topCardRows = () => {
+  const rows = allRows();
+  if (!rows.length) return [];
+  const best = [...rows].sort((a, b) => bestScore(a.o, trip.origins) - bestScore(b.o, trip.origins))[0];
+  const shortest = [...rows].sort((a, b) => travelMinutes(a.o) - travelMinutes(b.o) || a.o.price - b.o.price)[0];
+  return [rows[0], shortest, best];
+};
+const chicagoDay = (iso) => new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Chicago' }).format(new Date(iso));
 
 const neverFetched = upcoming.filter((c) => !flights.combos[c.key]);
 let queue;
@@ -77,12 +86,16 @@ if (process.env.FETCH_ALL === '1') {
   queue = neverFetched;
 } else {
   const limit = process.env.FETCH_LIMIT ? Number(process.env.FETCH_LIMIT) : trip.refreshPerRun;
-  // Cheap trips saved before return lookups existed have no departure token, so refresh their dates first.
+  // The dates behind the top card are re-checked every day so its prices are never more than a day old.
+  const topCard = topCardRows()
+    .filter((r) => chicagoDay(r.combo.fetchedAt) !== today)
+    .map((r) => r.comboKey);
+  // Cheap trips saved before return lookups existed have no departure token, so refresh their dates next.
   const needToken = [...new Set(topRows().filter((r) => !r.o.departureToken).map((r) => r.comboKey))];
   const stalest = [...upcoming]
     .sort((a, b) => flights.combos[a.key].fetchedAt.localeCompare(flights.combos[b.key].fetchedAt))
     .map((c) => c.key);
-  const keys = [...new Set([...needToken, ...stalest])].slice(0, limit);
+  const keys = [...new Set([...topCard, ...needToken, ...stalest])].slice(0, limit);
   queue = upcoming.filter((c) => keys.includes(c.key));
 }
 
