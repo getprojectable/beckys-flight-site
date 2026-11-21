@@ -52,6 +52,15 @@ if (upcoming.length === 0) {
   process.exit(0);
 }
 
+
+const optionId = (o) => `${o.origin}|${o.flightNumbers.join('-')}`;
+const allRows = () =>
+  Object.entries(flights.combos)
+    .flatMap(([comboKey, c]) => c.options.map((o) => ({ comboKey, combo: c, o })))
+    .sort((a, b) => a.o.price - b.o.price);
+// Return flights are looked up for the cheapest few trips, which are the ones Becky is most likely to book.
+const topRows = () => allRows().slice(0, trip.returnTop);
+
 const neverFetched = upcoming.filter((c) => !flights.combos[c.key]);
 let queue;
 if (process.env.FETCH_ALL === '1') {
@@ -60,9 +69,13 @@ if (process.env.FETCH_ALL === '1') {
   queue = neverFetched;
 } else {
   const limit = Number(process.env.FETCH_LIMIT) || trip.refreshPerRun;
-  queue = [...upcoming]
+  // Cheap trips saved before return lookups existed have no departure token, so refresh their dates first.
+  const needToken = [...new Set(topRows().filter((r) => !r.o.departureToken).map((r) => r.comboKey))];
+  const stalest = [...upcoming]
     .sort((a, b) => flights.combos[a.key].fetchedAt.localeCompare(flights.combos[b.key].fetchedAt))
-    .slice(0, limit);
+    .map((c) => c.key);
+  const keys = [...new Set([...needToken, ...stalest])].slice(0, limit);
+  queue = upcoming.filter((c) => keys.includes(c.key));
 }
 
 function normalize(item) {
@@ -70,6 +83,7 @@ function normalize(item) {
   if (!legs.length || typeof item.price !== 'number') return null;
   return {
     origin: legs[0].departure_airport?.id ?? null,
+    destination: legs.at(-1).arrival_airport?.id ?? null,
     price: item.price,
     airlines: [...new Set(legs.map((l) => l.airline).filter(Boolean))],
     flightNumbers: legs.map((l) => l.flight_number).filter(Boolean),
@@ -78,10 +92,11 @@ function normalize(item) {
     durationMin: item.total_duration ?? legs.reduce((sum, l) => sum + (l.duration ?? 0), 0),
     departTime: legs[0].departure_airport?.time ?? null,
     arriveTime: legs.at(-1).arrival_airport?.time ?? null,
+    departureToken: item.departure_token ?? null,
   };
 }
 
-async function search(combo) {
+async function search(combo, extra = {}) {
   const params = new URLSearchParams({
     engine: 'google_flights',
     // One search covers every nearby airport, so extra airports cost no extra searches.
@@ -94,6 +109,7 @@ async function search(combo) {
     currency: trip.currency,
     hl: 'en',
     gl: 'us',
+    ...extra,
     api_key: key,
   });
   const res = await fetch(`https://serpapi.com/search.json?${params}`);
@@ -111,56 +127,92 @@ async function search(combo) {
     .map(normalize)
     .filter((o) => {
       if (!o) return false;
-      const id = `${o.origin}|${o.flightNumbers.join('-')}|${o.price}`;
+      const id = `${optionId(o)}|${o.price}`;
       if (seen.has(id)) return false;
       seen.add(id);
       return true;
     })
-    .sort((a, b) => a.price - b.price)
-    .slice(0, trip.optionsPerCombo);
+    .sort((a, b) => a.price - b.price);
   return { options, url: body.search_metadata?.google_flights_url };
+}
+
+let searches = 0;
+let stopped = false;
+async function guarded(label, fn) {
+  if (stopped) return false;
+  try {
+    searches++;
+    await fn();
+    return true;
+  } catch (err) {
+    console.warn(`  ${label}: failed (${err.message})`);
+    if (err.fatal) {
+      console.warn('Stopping early because the API key or search quota is unusable.');
+      stopped = true;
+    }
+    return false;
+  }
 }
 
 console.log(`Refreshing ${queue.length} of ${upcoming.length} date combinations...`);
 let refreshed = 0;
 for (const combo of queue) {
-  try {
+  // On failure the combo keeps its previous data so prices don't disappear.
+  const ok = await guarded(combo.key, async () => {
     const { options, url } = await search(combo);
+    const previous = new Map((flights.combos[combo.key]?.options ?? []).map((o) => [optionId(o), o]));
+    const kept = options.slice(0, trip.optionsPerCombo).map((o) => {
+      // Keep a return flight found earlier for the same outbound flight.
+      const old = previous.get(optionId(o));
+      return old?.returnFlight ? { ...o, returnFlight: old.returnFlight, returnUrl: old.returnUrl } : o;
+    });
     flights.combos[combo.key] = {
       depart: combo.depart,
       return: combo.return,
       nights: combo.nights,
       fetchedAt: new Date().toISOString(),
       googleFlightsUrl: url ?? null,
-      options,
+      options: kept,
     };
-    refreshed++;
-    console.log(`  ${combo.key}: ${options.length} options${options[0] ? `, from $${options[0].price}` : ''}`);
-  } catch (err) {
-    // Keep the combo's previous data so prices don't disappear.
-    console.warn(`  ${combo.key}: failed (${err.message})`);
-    if (err.fatal) {
-      console.warn('Stopping early because the API key or search quota is unusable.');
-      break;
-    }
-  }
+    console.log(`  ${combo.key}: ${kept.length} options${kept[0] ? `, from $${kept[0].price}` : ''}`);
+  });
+  if (ok) refreshed++;
 }
+
+const needReturn = topRows()
+  .filter((r) => r.o.departureToken && !r.o.returnFlight)
+  .slice(0, Number(process.env.RETURN_LIMIT ?? trip.returnsPerRun));
+if (needReturn.length) console.log(`Looking up return flights for ${needReturn.length} of the cheapest trips...`);
+for (const { comboKey, combo, o } of needReturn) {
+  await guarded(`${comboKey} return`, async () => {
+    const { options, url } = await search(combo, { departure_token: o.departureToken });
+    // Prefer a return to the airport she left from, since that's where the car is.
+    const best = options.find((r) => r.destination === o.origin) ?? options[0];
+    if (!best) {
+      console.log(`  ${comboKey}: no return flights found`);
+      return;
+    }
+    const { departureToken: _unused, ...returnFlight } = best;
+    o.returnFlight = returnFlight;
+    o.returnUrl = url ?? null;
+    // The round-trip total depends on the chosen return flight.
+    o.price = best.price;
+    console.log(`  ${comboKey} ${o.flightNumbers.join('>')}: back ${best.flightNumbers.join('>')} to ${best.destination}, total $${best.price}`);
+  });
+}
+for (const c of Object.values(flights.combos)) c.options.sort((a, b) => a.price - b.price);
 
 if (refreshed > 0) flights.updatedAt = new Date().toISOString();
 
-let cheapest = null;
-for (const [comboKey, combo] of Object.entries(flights.combos)) {
-  for (const o of combo.options) {
-    if (!cheapest || o.price < cheapest.cheapest) cheapest = { date: today, cheapest: o.price, comboKey };
-  }
-}
+const cheapest = allRows()[0];
 if (cheapest) {
+  const point = { date: today, cheapest: cheapest.o.price, comboKey: cheapest.comboKey };
   const i = history.findIndex((h) => h.date === today);
-  if (i >= 0) history[i] = cheapest;
-  else history.push(cheapest);
+  if (i >= 0) history[i] = point;
+  else history.push(point);
 }
 
 await writeFile(flightsFile, JSON.stringify(flights, null, 2) + '\n');
 await writeFile(historyFile, JSON.stringify(history, null, 2) + '\n');
-console.log(`Done. Refreshed ${refreshed} of ${queue.length}.`);
+console.log(`Done. Refreshed ${refreshed} of ${queue.length} date combinations using ${searches} searches.`);
 if (refreshed === 0 && queue.length > 0) process.exitCode = 1;

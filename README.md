@@ -6,6 +6,7 @@ A small, phone-first website listing round-trip flights from the **Cedar Rapids 
 - Leave any day **Mar 12–21, 2027** and stay **4–6 nights** (30 date combinations)
 - **3 travelers** (Becky + 2 teens). Google Flights counts anyone 12 or older as an adult, so searches use 3 adults
 - Filters: nonstop, departure airport, nights, time of day, departure day and airline. Sort by cheapest, shortest or earliest
+- Each card shows the flight out and, for the cheapest trips, the flight back. A warning appears if the return lands at a different airport
 - Price-trend chart, how old each price is, and a **Book on Google Flights** button on every flight
 - Can be added to a phone's home screen like an app
 
@@ -19,10 +20,13 @@ three departure airports.
 
 `.github/workflows/deploy.yml` runs every day:
 
-1. `scripts/fetch-flights.mjs` refreshes the **7 date combinations with the oldest prices**. The first run loads all 30.
-   That stays under SerpApi's free 250 searches a month, and every combination is refreshed about every 4–5 days.
-2. The results are committed to `src/data/flights.json`, and the daily cheapest price goes into `src/data/history.json`.
-3. The site is rebuilt and published to the `gh-pages` branch.
+1. `scripts/fetch-flights.mjs` refreshes the **5 date combinations with the oldest prices**. The first run loads all 30.
+   Every combination is refreshed about every 6 days.
+2. It then looks up return flights for up to **3 of the 6 cheapest trips** that don't have one yet. It prefers a return to
+   the airport she left from. Each lookup costs one search, so the total is at most 8 searches a day, under SerpApi's free
+   250 a month.
+3. The results are committed to `src/data/flights.json`, and the daily cheapest price goes into `src/data/history.json`.
+4. The site is rebuilt and published to the `gh-pages` branch.
 
 If a search fails, that combination keeps its previous prices. Once every departure date has passed, the script stops
 using searches.
@@ -63,7 +67,7 @@ Keep `(number of departure days × nights options)` and `refreshPerRun` within y
 
 - Prices are the round-trip total for all travelers in economy. Fares change often, so check the price on Google Flights
   before booking.
-- Return-flight details would need an extra search for every flight, so the page shows the outbound flight and the
-  round-trip price. The return options are on Google Flights.
+- Each return-flight lookup costs a search, so only the cheapest trips have them. Other cards say the return is "not
+  checked yet", and Google Flights shows those options.
 - The site is marked `noindex`, so search engines won't list it. It is still public to anyone who has the link, and the
   GitHub repo is public unless you make it private.

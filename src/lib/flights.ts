@@ -1,5 +1,6 @@
 export interface FlightOption {
   origin: string | null;
+  destination?: string | null;
   price: number;
   airlines: string[];
   flightNumbers: string[];
@@ -8,7 +9,12 @@ export interface FlightOption {
   durationMin: number;
   departTime: string | null;
   arriveTime: string | null;
+  departureToken?: string | null;
+  returnFlight?: Leg;
+  returnUrl?: string | null;
 }
+
+export type Leg = Omit<FlightOption, 'price' | 'departureToken' | 'returnFlight' | 'returnUrl'>;
 
 export interface Combo {
   depart: string;

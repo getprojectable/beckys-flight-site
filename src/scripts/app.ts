@@ -1,4 +1,4 @@
-import { formatDay, formatDuration, formatMoney, formatTime, timeAgo, type Row } from '../lib/flights';
+import { formatDay, formatDuration, formatMoney, formatTime, timeAgo, type Leg, type Row } from '../lib/flights';
 
 const PAGE_SIZE = 20;
 type ListKey = 'nights' | 'time' | 'origin';
@@ -107,18 +107,56 @@ function init({ rows, adults, origins }: { rows: Row[]; adults: number; origins:
     return `<span class="rounded-full px-2 py-0.5 font-semibold ${cls}">${esc(label)}</span><span aria-hidden="true">·</span>`;
   }
 
+  function stopsLabel(leg: Leg) {
+    return leg.stops === 0
+      ? '<span class="rounded-full bg-emerald-100 px-2 py-0.5 font-semibold text-emerald-800">Nonstop</span>'
+      : `<span>${leg.stops} stop${leg.stops > 1 ? 's' : ''}${leg.layovers.length ? ` · ${esc(leg.layovers.join(', '))}` : ''}</span>`;
+  }
+
+  function legBlock(label: string, day: string, leg: Leg, badge: string) {
+    const nextDay = leg.departTime && leg.arriveTime && leg.arriveTime.slice(0, 10) > leg.departTime.slice(0, 10);
+    return `
+        <div class="mt-3">
+          <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">${label} · ${formatDay(day)}</p>
+          <div class="mt-1 flex items-center gap-2 text-base">
+            <span class="font-semibold">${formatTime(leg.departTime)}</span>
+            <span class="h-px flex-1 bg-gray-300" aria-hidden="true"></span>
+            <span class="text-sm text-gray-500">${formatDuration(leg.durationMin)}</span>
+            <span class="h-px flex-1 bg-gray-300" aria-hidden="true"></span>
+            <span class="font-semibold">${formatTime(leg.arriveTime)}${nextDay ? '<sup class="text-rose-600">+1</sup>' : ''}</span>
+          </div>
+          <div class="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-700">
+            ${badge}
+            <span class="font-medium">${esc(leg.airlines.join(' + '))}</span>
+            <span aria-hidden="true">·</span>
+            ${stopsLabel(leg)}
+          </div>
+        </div>`;
+  }
+
+  function returnBlock(r: Row) {
+    const back = r.returnFlight;
+    if (!back) {
+      return `
+        <div class="mt-3 rounded-xl bg-gray-50 px-3 py-2">
+          <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">Back · ${formatDay(r.return)}</p>
+          <p class="mt-0.5 text-sm text-gray-600">Return flight not checked yet. You can pick one on Google Flights, and it's included in the price.</p>
+        </div>`;
+    }
+    const elsewhere = back.destination && r.origin && back.destination !== r.origin;
+    const warn = elsewhere
+      ? `<p class="mt-1 text-sm font-semibold text-rose-700">⚠ Lands at ${esc(back.destination!)}, not ${esc(r.origin!)}</p>`
+      : '';
+    return legBlock('Back', r.return, back, '') + warn;
+  }
+
   function card(r: Row) {
-    const nextDay = r.departTime && r.arriveTime && r.arriveTime.slice(0, 10) > r.departTime.slice(0, 10);
-    const stops =
-      r.stops === 0
-        ? '<span class="rounded-full bg-emerald-100 px-2 py-0.5 font-semibold text-emerald-800">Nonstop</span>'
-        : `<span>${r.stops} stop${r.stops > 1 ? 's' : ''}${r.layovers.length ? ` · ${esc(r.layovers.join(', '))}` : ''}</span>`;
     return `
       <li class="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-orange-100">
         <div class="flex items-start justify-between gap-3">
           <div>
             <p class="text-base font-semibold">${formatDay(r.depart)} → ${formatDay(r.return)}</p>
-            <p class="text-sm text-gray-600">${r.nights} nights</p>
+            <p class="text-sm text-gray-600">${r.nights} nights · round trip</p>
           </div>
           <div class="text-right">
             <p class="text-2xl font-extrabold leading-none tracking-tight">${formatMoney(r.price)}</p>
@@ -126,27 +164,15 @@ function init({ rows, adults, origins }: { rows: Row[]; adults: number; origins:
           </div>
         </div>
         ${r.price === lowest ? '<p class="mt-2 inline-block rounded-full bg-orange-100 px-2 py-0.5 text-sm font-semibold text-orange-800">Lowest price</p>' : ''}
-        <div class="mt-3 flex items-center gap-2 text-base">
-          <span class="font-semibold">${formatTime(r.departTime)}</span>
-          <span class="h-px flex-1 bg-gray-300" aria-hidden="true"></span>
-          <span class="text-sm text-gray-500">${formatDuration(r.durationMin)}</span>
-          <span class="h-px flex-1 bg-gray-300" aria-hidden="true"></span>
-          <span class="font-semibold">${formatTime(r.arriveTime)}${nextDay ? '<sup class="text-rose-600">+1</sup>' : ''}</span>
-        </div>
-        <div class="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-700">
-          ${originBadge(r.origin)}
-          <span class="font-medium">${esc(r.airlines.join(' + '))}</span>
-          <span aria-hidden="true">·</span>
-          ${stops}
-        </div>
-        <p class="mt-2 text-xs text-gray-500">Outbound flight shown · price checked ${timeAgo(r.fetchedAt)}</p>
+        ${legBlock('Out', r.depart, r, originBadge(r.origin))}
+        ${returnBlock(r)}
+        <p class="mt-3 text-xs text-gray-500">Total for all ${adults} travelers, both ways · price checked ${timeAgo(r.fetchedAt)}</p>
         <a href="${esc(r.url)}" target="_blank" rel="noopener"
           class="mt-3 flex min-h-12 items-center justify-center rounded-xl bg-orange-600 text-base font-semibold text-white active:bg-orange-700">
           Book on Google Flights ↗
         </a>
       </li>`;
   }
-
   sortEl.addEventListener('change', () => {
     filters.sort = sortEl.value as Filters['sort'];
     shown = PAGE_SIZE;

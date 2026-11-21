@@ -32,13 +32,13 @@ const tripOver = trip.lastDepart < today;
 const rows: Row[] = Object.values(flights.combos)
   .filter((c) => c.depart >= today)
   .flatMap((c) =>
-    c.options.map((o) => ({
+    c.options.map(({ departureToken: _token, ...o }) => ({
       ...o,
       depart: c.depart,
       return: c.return,
       nights: c.nights,
       fetchedAt: c.fetchedAt,
-      url: c.googleFlightsUrl ?? googleFlightsSearchUrl(originCodes, trip.to, c.depart, c.return, trip.adults),
+      url: o.returnUrl ?? c.googleFlightsUrl ?? googleFlightsSearchUrl(originCodes, trip.to, c.depart, c.return, trip.adults),
     })),
   )
   .sort((a, b) => a.price - b.price);
@@ -155,6 +155,13 @@ const tripLine = `${formatDay(trip.firstDepart).slice(5)} – ${formatDay(trip.l
                 From {bestOrigin.name} ({bestOrigin.code}){bestOrigin.drive && ` · ${bestOrigin.drive}`}
               </p>
             )}
+            {best.returnFlight && (
+              <p class="mt-0.5 text-sm text-gray-600">
+                Back on {best.returnFlight.airlines.join(', ')},{' '}
+                {best.returnFlight.stops === 0 ? 'nonstop' : `${best.returnFlight.stops} stop${best.returnFlight.stops > 1 ? 's' : ''}`}
+                {best.returnFlight.destination && best.returnFlight.destination !== best.origin && ` · lands at ${best.returnFlight.destination}`}
+              </p>
+            )}
           </>
         ) : (
           <>
@@ -257,7 +264,10 @@ const tripLine = `${formatDay(trip.firstDepart).slice(5)} – ${formatDay(trip.l
         <p>
           Flights from Cedar Rapids (CID) and nearby {trip.origins.filter((o) => o.drive).map((o) => `${o.name} (${o.code}, ${o.drive})`).join(' and ')} are included.
         </p>
-        <p>The return flight options are on Google Flights after you tap Book.</p>
+        <p>
+          Return flights are checked for the cheapest trips first, and more are added each day. When a return flight
+          isn't shown yet, you can pick one on Google Flights after you tap Book.
+        </p>
       </footer>
     </main>
 

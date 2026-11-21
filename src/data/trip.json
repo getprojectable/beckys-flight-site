@@ -13,6 +13,8 @@
   "adults": 3,
   "travelersLabel": "Becky + 2 teens",
   "currency": "USD",
-  "refreshPerRun": 7,
+  "refreshPerRun": 5,
+  "returnsPerRun": 3,
+  "returnTop": 6,
   "optionsPerCombo": 15
 }
