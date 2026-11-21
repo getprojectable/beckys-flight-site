@@ -2,6 +2,8 @@
 // Run: SERPAPI_KEY=... node scripts/fetch-flights.mjs
 // Optional env: FETCH_LIMIT (combos to refresh this run), FETCH_ALL=1 (refresh every combo).
 import { readFile, writeFile } from 'node:fs/promises';
+// Node 22.18+ runs TypeScript directly, so the site's own ranking is reused here.
+import { bestScore, travelMinutes } from '../src/lib/picks.ts';
 
 const dataDir = new URL('../src/data/', import.meta.url);
 const trip = JSON.parse(await readFile(new URL('trip.json', dataDir), 'utf8'));
@@ -58,8 +60,14 @@ const allRows = () =>
   Object.entries(flights.combos)
     .flatMap(([comboKey, c]) => c.options.map((o) => ({ comboKey, combo: c, o })))
     .sort((a, b) => a.o.price - b.o.price);
-// Return flights are looked up for the cheapest few trips, which are the ones Becky is most likely to book.
-const topRows = () => allRows().slice(0, trip.returnTop);
+// Return flights are looked up for the trips Becky is most likely to book: the cheapest few, plus the
+// "Best pick" and "Shortest" trips shown at the top of the page.
+const topRows = () => {
+  const rows = allRows();
+  const byBest = [...rows].sort((a, b) => bestScore(a.o, trip.origins) - bestScore(b.o, trip.origins));
+  const byShortest = [...rows].sort((a, b) => travelMinutes(a.o) - travelMinutes(b.o) || a.o.price - b.o.price);
+  return [...new Set([...byBest.slice(0, 2), ...byShortest.slice(0, 1), ...rows.slice(0, trip.returnTop)])];
+};
 
 const neverFetched = upcoming.filter((c) => !flights.combos[c.key]);
 let queue;
@@ -68,7 +76,7 @@ if (process.env.FETCH_ALL === '1') {
 } else if (neverFetched.length > 0) {
   queue = neverFetched;
 } else {
-  const limit = Number(process.env.FETCH_LIMIT) || trip.refreshPerRun;
+  const limit = process.env.FETCH_LIMIT ? Number(process.env.FETCH_LIMIT) : trip.refreshPerRun;
   // Cheap trips saved before return lookups existed have no departure token, so refresh their dates first.
   const needToken = [...new Set(topRows().filter((r) => !r.o.departureToken).map((r) => r.comboKey))];
   const stalest = [...upcoming]
@@ -182,7 +190,7 @@ for (const combo of queue) {
 const needReturn = topRows()
   .filter((r) => r.o.departureToken && !r.o.returnFlight)
   .slice(0, Number(process.env.RETURN_LIMIT ?? trip.returnsPerRun));
-if (needReturn.length) console.log(`Looking up return flights for ${needReturn.length} of the cheapest trips...`);
+if (needReturn.length) console.log(`Looking up return flights for ${needReturn.length} of the top trips...`);
 for (const { comboKey, combo, o } of needReturn) {
   await guarded(`${comboKey} return`, async () => {
     const { options, url } = await search(combo, { departure_token: o.departureToken });

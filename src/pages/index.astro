@@ -10,12 +10,15 @@ import sampleFlights from '../data/sample-flights.json';
 import sampleHistory from '../data/sample-history.json';
 import {
   formatDay,
+  formatDuration,
   formatMoney,
+  formatTime,
   googleFlightsSearchUrl,
   type FlightsData,
   type HistoryPoint,
   type Row,
 } from '../lib/flights';
+import { makePicks } from '../lib/picks';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const originCodes = trip.origins.map((o) => o.code);
@@ -43,7 +46,9 @@ const rows: Row[] = Object.values(flights.combos)
   )
   .sort((a, b) => a.price - b.price);
 
-const best = rows[0];
+const picks = makePicks(rows, trip.origins);
+const stopsText = (n: number) => (n === 0 ? 'Nonstop' : `${n} stop${n > 1 ? 's' : ''}`);
+const originOf = (code: string | null) => trip.origins.find((o) => o.code === code);
 const airlines = [...new Set(rows.flatMap((r) => r.airlines))].sort();
 const departDays = [...new Set(rows.map((r) => r.depart))].sort();
 
@@ -71,7 +76,6 @@ if (points.length >= 2) {
 
 const json = JSON.stringify({ rows, adults: trip.adults, origins: trip.origins }).replace(/</g, '\\u003c');
 const originsWithFlights = trip.origins.filter((o) => rows.some((r) => r.origin === o.code));
-const bestOrigin = trip.origins.find((o) => o.code === best?.origin);
 const tripLine = `${formatDay(trip.firstDepart).slice(5)} – ${formatDay(trip.lastDepart).slice(5)}`;
 ---
 
@@ -134,44 +138,84 @@ const tripLine = `${formatDay(trip.firstDepart).slice(5)} – ${formatDay(trip.l
         </p>
       )}
 
-      <section class="rounded-2xl bg-white p-4 shadow-lg shadow-orange-900/10" aria-label="Summary">
+      <section class="overflow-hidden rounded-2xl bg-white shadow-lg shadow-orange-900/10" aria-label="Top picks">
         {tripOver ? (
-          <p class="text-lg font-semibold">This trip's travel dates have passed.</p>
-        ) : best ? (
+          <p class="p-4 text-lg font-semibold">This trip's travel dates have passed.</p>
+        ) : picks.length ? (
           <>
-            <p class="text-sm font-medium uppercase tracking-wide text-orange-700">Cheapest right now</p>
-            <div class="mt-1 flex items-baseline justify-between gap-3">
-              <p class="text-4xl font-extrabold tracking-tight">{formatMoney(best.price)}</p>
-              <p class="text-right text-sm text-gray-600">
-                {formatMoney(Math.round(best.price / trip.adults))}/person
-              </p>
+            <div id="picks" class="no-scrollbar flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain" aria-roledescription="carousel">
+              {picks.map((p, i) => {
+                const r = p.row;
+                const back = r.returnFlight;
+                const o = originOf(r.origin);
+                return (
+                  <article class="flex w-full shrink-0 snap-center flex-col p-4" aria-roledescription="slide" aria-label={`${i + 1} of ${picks.length}: ${p.label}`} data-slide={p.id}>
+                    <div class="flex items-center justify-between gap-2">
+                      <p class="inline-flex items-center gap-1 rounded-full bg-orange-100 px-2.5 py-0.5 text-sm font-bold uppercase tracking-wide text-orange-800">
+                        <span aria-hidden="true">{p.emoji}</span> {p.label}
+                      </p>
+                      <p class="text-xs text-gray-500">{p.blurb}</p>
+                    </div>
+                    <div class="mt-2 flex items-baseline justify-between gap-3">
+                      <p class="text-4xl font-extrabold tracking-tight">{formatMoney(r.price)}</p>
+                      <p class="text-right text-sm text-gray-600">{formatMoney(Math.round(r.price / trip.adults))}/person</p>
+                    </div>
+                    <p class="mt-1 text-base font-semibold">
+                      {formatDay(r.depart)} → {formatDay(r.return)} <span class="font-normal text-gray-600">· {r.nights} nights</span>
+                    </p>
+                    <dl class="mt-2 space-y-1 text-sm text-gray-700">
+                      <div class="flex gap-2">
+                        <dt class="w-10 shrink-0 font-semibold text-gray-500">Out</dt>
+                        <dd><span class="font-medium text-ink">{formatTime(r.departTime)} → {formatTime(r.arriveTime)}</span> · {formatDuration(r.durationMin)}<br />{r.airlines.join(', ')} · {stopsText(r.stops)}</dd>
+                      </div>
+                      <div class="flex gap-2">
+                        <dt class="w-10 shrink-0 font-semibold text-gray-500">Back</dt>
+                        <dd>
+                          {back
+                            ? <><span class="font-medium text-ink">{formatTime(back.departTime)} → {formatTime(back.arriveTime)}</span> · {formatDuration(back.durationMin)}<br />{back.airlines.join(', ')} · {stopsText(back.stops)}</>
+                            : 'Not checked yet. Pick it on Google Flights.'}
+                          {back?.destination && back.destination !== r.origin && (
+                            <span class="font-semibold text-rose-700"> · lands at {back.destination}</span>
+                          )}
+                        </dd>
+                      </div>
+                    </dl>
+                    {o && (
+                      <p class="mt-1 text-sm text-gray-600">From {o.name} ({o.code}){o.drive && ` · ${o.drive}`}</p>
+                    )}
+                    <div class="h-3 shrink-0" aria-hidden="true" />
+                    {p.reasons.length > 0 && (
+                      <ul class="-mt-1 mb-3 flex flex-wrap gap-1.5">
+                        {p.reasons.map((reason) => (
+                          <li class="rounded-full bg-emerald-50 px-2 py-0.5 text-sm font-medium text-emerald-800">✓ {reason}</li>
+                        ))}
+                      </ul>
+                    )}
+                    <a href={r.url} target="_blank" rel="noopener"
+                      class="mt-auto flex min-h-11 items-center justify-center rounded-xl bg-orange-600 text-base font-semibold text-white active:bg-orange-700">
+                      Book on Google Flights ↗
+                    </a>
+                  </article>
+                );
+              })}
             </div>
-            <p class="mt-1 text-base">
-              {formatDay(best.depart)} → {formatDay(best.return)} · {best.airlines.join(', ')} ·{' '}
-              {best.stops === 0 ? 'Nonstop' : `${best.stops} stop${best.stops > 1 ? 's' : ''}`}
-            </p>
-            {bestOrigin && (
-              <p class="mt-0.5 text-sm text-gray-600">
-                From {bestOrigin.name} ({bestOrigin.code}){bestOrigin.drive && ` · ${bestOrigin.drive}`}
-              </p>
-            )}
-            {best.returnFlight && (
-              <p class="mt-0.5 text-sm text-gray-600">
-                Back on {best.returnFlight.airlines.join(', ')},{' '}
-                {best.returnFlight.stops === 0 ? 'nonstop' : `${best.returnFlight.stops} stop${best.returnFlight.stops > 1 ? 's' : ''}`}
-                {best.returnFlight.destination && best.returnFlight.destination !== best.origin && ` · lands at ${best.returnFlight.destination}`}
-              </p>
-            )}
+            <div class="flex justify-center" role="tablist" aria-label="Choose a pick">
+              {picks.map((p, i) => (
+                <button type="button" role="tab" class="group flex min-h-11 min-w-11 items-center justify-center" data-dot={i} aria-label={`Show ${p.label}`} aria-selected={i === 0 ? 'true' : 'false'}>
+                  <span class="block h-2.5 w-2.5 rounded-full bg-gray-300 transition-all group-aria-selected:w-6 group-aria-selected:bg-orange-600" />
+                </button>
+              ))}
+            </div>
           </>
         ) : (
-          <>
+          <div class="p-4">
             <p class="text-lg font-semibold">Prices are on the way</p>
             <p class="mt-1 text-base text-gray-600">They'll show up here after the first daily update.</p>
-          </>
+          </div>
         )}
 
-        {spark && !tripOver && (
-          <div class="mt-4 border-t border-gray-100 pt-3">
+        <div class="px-4 pb-4">        {spark && !tripOver && (
+          <div class="border-t border-gray-100 pt-3">
             <div class="flex items-baseline justify-between text-sm">
               <span class="font-medium text-gray-700">Lowest price, last {spark.days} days</span>
               <span class={spark.change < 0 ? 'font-semibold text-emerald-700' : spark.change > 0 ? 'font-semibold text-rose-700' : 'text-gray-600'}>
@@ -190,6 +234,7 @@ const tripLine = `${formatDay(trip.firstDepart).slice(5)} – ${formatDay(trip.l
             Prices checked <time data-ago={flights.updatedAt}>recently</time>. They're updated every day.
           </p>
         )}
+        </div>
       </section>
 
       {rows.length > 0 && (
@@ -274,6 +319,7 @@ const tripLine = `${formatDay(trip.firstDepart).slice(5)} – ${formatDay(trip.l
     <script type="application/json" id="flight-data" set:html={json} />
     <script>
       import '../scripts/app';
+      import '../scripts/carousel';
     </script>
   </body>
 </html>

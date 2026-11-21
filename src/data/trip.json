@@ -1,8 +1,8 @@
 {
   "origins": [
-    { "code": "CID", "name": "Cedar Rapids", "drive": null },
-    { "code": "MLI", "name": "Moline", "drive": "1.5 hr drive" },
-    { "code": "DSM", "name": "Des Moines", "drive": "2 hr drive" }
+    { "code": "CID", "name": "Cedar Rapids", "drive": null, "driveHours": 0 },
+    { "code": "MLI", "name": "Moline", "drive": "1.5 hr drive", "driveHours": 1.5 },
+    { "code": "DSM", "name": "Des Moines", "drive": "2 hr drive", "driveHours": 2 }
   ],
   "to": "PSP",
   "toName": "Palm Springs",

@@ -3809,7 +3809,29 @@
           "durationMin": 345,
           "departTime": "2027-03-16 08:55",
           "arriveTime": "2027-03-16 12:40",
-          "departureToken": "WyJDalJJUzBVd01ETkJXbTVRUkZWQlRGVjVlVUZDUnkwdExTMHRMUzB0TFhCcVluTmpPVUZCUVVGQlIzTkNMVWhaVDJKRFMwZEJFZzFWUVRFMU1EQjhWVUV5TVRFeUdnc0l4ZWtHRUFJYUExVlRSRGdjY01YcEJnPT0iLFtbIkNJRCIsIjIwMjctMDMtMTYiLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0xNiIsIlBTUCIsbnVsbCwiVUEiLCIyMTEyIl1dXQ=="
+          "departureToken": "WyJDalJJUzBVd01ETkJXbTVRUkZWQlRGVjVlVUZDUnkwdExTMHRMUzB0TFhCcVluTmpPVUZCUVVGQlIzTkNMVWhaVDJKRFMwZEJFZzFWUVRFMU1EQjhWVUV5TVRFeUdnc0l4ZWtHRUFJYUExVlRSRGdjY01YcEJnPT0iLFtbIkNJRCIsIjIwMjctMDMtMTYiLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0xNiIsIlBTUCIsbnVsbCwiVUEiLCIyMTEyIl1dXQ==",
+          "returnFlight": {
+            "origin": "PSP",
+            "destination": "CID",
+            "price": 1119,
+            "airlines": [
+              "United"
+            ],
+            "flightNumbers": [
+              "UA 1870",
+              "UA 2799",
+              "UA 5723"
+            ],
+            "stops": 2,
+            "layovers": [
+              "SFO",
+              "ORD"
+            ],
+            "durationMin": 693,
+            "departTime": "2027-03-22 19:35",
+            "arriveTime": "2027-03-23 09:08"
+          },
+          "returnUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhp0EgoyMDI3LTAzLTE2IiAKA0NJRBIKMjAyNy0wMy0xNhoDREVOKgJVQTIEMTUwMCIgCgNERU4SCjIwMjctMDMtMTYaA1BTUCoCVUEyBDIxMTJqBwgBEgNDSURqBwgBEgNNTElqBwgBEgNEU01yBwgBEgNQU1AaMBIKMjAyNy0wMy0yMmoHCAESA1BTUHIHCAESA0NJRHIHCAESA01MSXIHCAESA0RTTUABQAFAAUgBcAGYAQE&tfu=EgIIAQ"
         },
         {
           "origin": "CID",
@@ -4662,7 +4684,27 @@
           "durationMin": 577,
           "departTime": "2027-03-17 09:50",
           "arriveTime": "2027-03-17 17:27",
-          "departureToken": "WyJDalJJV0ZaRFR5MUtOVFpsVVVGQlRtRkhXbWRDUnkwdExTMHRMVzlyZEc4eU5pMXVNa0ZCUVVGQlIzTkNMVXBKUjFCVlJqSkJFaFJWUVRRMk56TjhWVUV4TXpZemZGVkJOVFF3TlJvTENON1BCaEFDR2dOVlUwUTRISERlendZPSIsW1siQ0lEIiwiMjAyNy0wMy0xNyIsIk9SRCIsbnVsbCwiVUEiLCI0NjczIl0sWyJPUkQiLCIyMDI3LTAzLTE3IiwiTEFYIixudWxsLCJVQSIsIjEzNjMiXSxbIkxBWCIsIjIwMjctMDMtMTciLCJQU1AiLG51bGwsIlVBIiwiNTQwNSJdXV0="
+          "departureToken": "WyJDalJJV0ZaRFR5MUtOVFpsVVVGQlRtRkhXbWRDUnkwdExTMHRMVzlyZEc4eU5pMXVNa0ZCUVVGQlIzTkNMVXBKUjFCVlJqSkJFaFJWUVRRMk56TjhWVUV4TXpZemZGVkJOVFF3TlJvTENON1BCaEFDR2dOVlUwUTRISERlendZPSIsW1siQ0lEIiwiMjAyNy0wMy0xNyIsIk9SRCIsbnVsbCwiVUEiLCI0NjczIl0sWyJPUkQiLCIyMDI3LTAzLTE3IiwiTEFYIixudWxsLCJVQSIsIjEzNjMiXSxbIkxBWCIsIjIwMjctMDMtMTciLCJQU1AiLG51bGwsIlVBIiwiNTQwNSJdXV0=",
+          "returnFlight": {
+            "origin": "PSP",
+            "destination": "CID",
+            "price": 1086,
+            "airlines": [
+              "United"
+            ],
+            "flightNumbers": [
+              "UA 1418",
+              "UA 2742"
+            ],
+            "stops": 1,
+            "layovers": [
+              "DEN"
+            ],
+            "durationMin": 393,
+            "departTime": "2027-03-23 05:15",
+            "arriveTime": "2027-03-23 13:48"
+          },
+          "returnUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhqWARIKMjAyNy0wMy0xNyIgCgNDSUQSCjIwMjctMDMtMTcaA09SRCoCVUEyBDQ2NzMiIAoDT1JEEgoyMDI3LTAzLTE3GgNMQVgqAlVBMgQxMzYzIiAKA0xBWBIKMjAyNy0wMy0xNxoDUFNQKgJVQTIENTQwNWoHCAESA0NJRGoHCAESA01MSWoHCAESA0RTTXIHCAESA1BTUBowEgoyMDI3LTAzLTIzagcIARIDUFNQcgcIARIDQ0lEcgcIARIDTUxJcgcIARIDRFNNQAFAAUABSAFwAZgBAQ&tfu=EgIIAQ"
         },
         {
           "origin": "MLI",
