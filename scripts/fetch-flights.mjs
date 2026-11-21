@@ -3,7 +3,7 @@
 // Optional env: FETCH_LIMIT (combos to refresh this run), FETCH_ALL=1 (refresh every combo).
 import { readFile, writeFile } from 'node:fs/promises';
 // Node 22.18+ runs TypeScript directly, so the site's own ranking is reused here.
-import { bestScore, travelMinutes } from '../src/lib/picks.ts';
+import { bestScore, tripMinutes } from '../src/lib/picks.ts';
 
 const dataDir = new URL('../src/data/', import.meta.url);
 const trip = JSON.parse(await readFile(new URL('trip.json', dataDir), 'utf8'));
@@ -65,7 +65,7 @@ const allRows = () =>
 const topRows = () => {
   const rows = allRows();
   const byBest = [...rows].sort((a, b) => bestScore(a.o, trip.origins) - bestScore(b.o, trip.origins));
-  const byShortest = [...rows].sort((a, b) => travelMinutes(a.o) - travelMinutes(b.o) || a.o.price - b.o.price);
+  const byShortest = [...rows].sort((a, b) => tripMinutes(a.o, trip.origins) - tripMinutes(b.o, trip.origins) || a.o.price - b.o.price);
   return [...new Set([...byBest.slice(0, 2), ...byShortest.slice(0, 1), ...rows.slice(0, trip.returnTop)])];
 };
 // The trips on the top card (Cheapest, Shortest, Best pick).
@@ -73,7 +73,7 @@ const topCardRows = () => {
   const rows = allRows();
   if (!rows.length) return [];
   const best = [...rows].sort((a, b) => bestScore(a.o, trip.origins) - bestScore(b.o, trip.origins))[0];
-  const shortest = [...rows].sort((a, b) => travelMinutes(a.o) - travelMinutes(b.o) || a.o.price - b.o.price)[0];
+  const shortest = [...rows].sort((a, b) => tripMinutes(a.o, trip.origins) - tripMinutes(b.o, trip.origins) || a.o.price - b.o.price)[0];
   return [rows[0], shortest, best];
 };
 const chicagoDay = (iso) => new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Chicago' }).format(new Date(iso));

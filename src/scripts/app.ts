@@ -1,4 +1,5 @@
 import { formatDay, formatDuration, formatMoney, formatTime, timeAgo, type Leg, type Row } from '../lib/flights';
+import { tripMinutes, type Origin } from '../lib/picks';
 
 const PAGE_SIZE = 20;
 type ListKey = 'nights' | 'time' | 'origin';
@@ -12,12 +13,6 @@ interface Filters {
   nights: string[];
   time: string[];
   origin: string[];
-}
-
-interface Origin {
-  code: string;
-  name: string;
-  drive: string | null;
 }
 
 const dataEl = document.getElementById('flight-data');
@@ -73,7 +68,8 @@ function init({ rows, adults, origins }: { rows: Row[]; adults: number; origins:
 
   const sorters: Record<Filters['sort'], (a: Row, b: Row) => number> = {
     price: (a, b) => a.price - b.price || a.durationMin - b.durationMin,
-    duration: (a, b) => a.durationMin - b.durationMin || a.price - b.price,
+    // Door to door from Cedar Rapids, so a short flight from a farther airport includes the drive.
+    duration: (a, b) => tripMinutes(a, origins) - tripMinutes(b, origins) || a.price - b.price,
     date: (a, b) => a.depart.localeCompare(b.depart) || a.nights - b.nights || a.price - b.price,
   };
 
