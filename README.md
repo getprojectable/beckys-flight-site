@@ -1,13 +1,13 @@
 # Becky's Flight Site
 
-A small, phone-first website listing round-trip flights from the **Cedar Rapids area (CID, plus nearby MLI and DSM)** to
+A small, phone-first website listing round-trip flights from **Cedar Rapids (CID)** to
 **Palm Desert (Palm Springs airport, PSP)**, sorted from cheapest to most expensive.
 
 - Leave any day **Mar 12–21, 2027** and stay **4–6 nights** (30 date combinations)
 - **3 travelers** (Becky + 2 teens). Google Flights counts anyone 12 or older as an adult, so searches use 3 adults
-- Filters: nonstop, departure airport, nights, time of day, departure day and airline. Sort by cheapest, shortest or earliest
+- Filters: nonstop, nights, time of day, departure day and airline. Sort by cheapest, shortest or earliest
 - A swipeable top card that rotates between **Cheapest**, **Shortest** (least time in the air) and **Best pick**. Best pick
-  scores each trip on price plus flight time, stops, very early or overnight flights, the drive to MLI/DSM, and whether
+  scores each trip on price plus flight time, stops, very early or overnight flights, and whether
   the return lands at the same airport. The scoring is in `src/lib/picks.ts`
 - Each card shows the flight out and, for the top trips, the flight back. A warning appears if the return lands at a different airport
 - Price-trend chart, how old each price is, and a **Book on Google Flights** button on every flight
@@ -18,8 +18,8 @@ with no server or database.
 
 ## How prices stay up to date
 
-Prices come from the [SerpApi Google Flights API](https://serpapi.com/google-flights-api). A single search covers all
-three departure airports.
+Prices come from the [SerpApi Google Flights API](https://serpapi.com/google-flights-api). Searches are limited to
+Cedar Rapids (CID).
 
 `.github/workflows/deploy.yml` runs every day:
 

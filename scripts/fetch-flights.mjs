@@ -59,6 +59,7 @@ const optionId = (o) => `${o.origin}|${o.flightNumbers.join('-')}`;
 const allRows = () =>
   Object.entries(flights.combos)
     .flatMap(([comboKey, c]) => c.options.map((o) => ({ comboKey, combo: c, o })))
+    .filter(({ o }) => trip.origins.some((origin) => origin.code === o.origin))
     .sort((a, b) => a.o.price - b.o.price);
 // Return flights are looked up for the trips Becky is most likely to book: the cheapest few, plus the
 // "Best pick" and "Shortest" trips shown at the top of the page.
