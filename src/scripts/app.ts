@@ -1,8 +1,8 @@
 import { formatDay, formatDuration, formatMoney, formatTime, timeAgo, type Leg, type Row } from '../lib/flights';
-import { tripMinutes, type Origin } from '../lib/picks';
+import { tripMinutes } from '../lib/picks';
 
 const PAGE_SIZE = 20;
-type ListKey = 'nights' | 'time' | 'origin';
+type ListKey = 'nights' | 'time';
 const STORAGE_KEY = 'becky-flight-filters';
 
 interface Filters {
@@ -12,7 +12,6 @@ interface Filters {
   nonstop: boolean;
   nights: string[];
   time: string[];
-  origin: string[];
 }
 
 const dataEl = document.getElementById('flight-data');
@@ -24,7 +23,7 @@ document.querySelectorAll<HTMLElement>('[data-ago]').forEach((el) => {
 
 if (dataEl && list) init(JSON.parse(dataEl.textContent || '{}'), list);
 
-function init({ rows, adults, origins }: { rows: Row[]; adults: number; origins: Origin[] }, list: HTMLElement) {
+function init({ rows, adults }: { rows: Row[]; adults: number }, list: HTMLElement) {
   const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
   const sortEl = $<HTMLSelectElement>('sort');
   const dayEl = $<HTMLSelectElement>('day');
@@ -40,10 +39,13 @@ function init({ rows, adults, origins }: { rows: Row[]; adults: number; origins:
   rows = rows.filter((r) => r.depart >= today);
   const lowest = Math.min(...rows.map((r) => r.price));
 
-  const defaults: Filters = { sort: 'price', day: '', airline: '', nonstop: false, nights: [], time: [], origin: [] };
+  const defaults: Filters = { sort: 'price', day: '', airline: '', nonstop: false, nights: [], time: [] };
   let filters: Filters = { ...defaults };
   try {
-    filters = { ...defaults, ...JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') };
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    for (const key of Object.keys(defaults) as (keyof Filters)[]) {
+      if (key in saved) Object.assign(filters, { [key]: saved[key] });
+    }
   } catch {
     // Ignore saved filters that can't be read.
   }
@@ -63,13 +65,11 @@ function init({ rows, adults, origins }: { rows: Row[]; adults: number; origins:
     (!filters.airline || r.airlines.includes(filters.airline)) &&
     (!filters.nonstop || r.stops === 0) &&
     (!filters.nights.length || filters.nights.includes(String(r.nights))) &&
-    (!filters.time.length || filters.time.includes(timeBucket(r.departTime))) &&
-    (!filters.origin.length || filters.origin.includes(r.origin ?? ''));
+    (!filters.time.length || filters.time.includes(timeBucket(r.departTime)));
 
   const sorters: Record<Filters['sort'], (a: Row, b: Row) => number> = {
     price: (a, b) => a.price - b.price || a.durationMin - b.durationMin,
-    // Door to door from Cedar Rapids, so a short flight from a farther airport includes the drive.
-    duration: (a, b) => tripMinutes(a, origins) - tripMinutes(b, origins) || a.price - b.price,
+    duration: (a, b) => tripMinutes(a) - tripMinutes(b) || a.price - b.price,
     date: (a, b) => a.depart.localeCompare(b.depart) || a.nights - b.nights || a.price - b.price,
   };
 
@@ -95,21 +95,13 @@ function init({ rows, adults, origins }: { rows: Row[]; adults: number; origins:
     list.innerHTML = results.slice(0, shown).map(card).join('');
   }
 
-  function originBadge(code: string | null) {
-    const o = origins.find((x) => x.code === code);
-    if (!o) return '';
-    const cls = o.drive ? 'bg-violet-100 text-violet-800' : 'bg-gray-100 text-gray-800';
-    const label = o.drive ? `From ${o.code} · ${o.drive}` : `From ${o.code}`;
-    return `<span class="rounded-full px-2 py-0.5 font-semibold ${cls}">${esc(label)}</span><span aria-hidden="true">·</span>`;
-  }
-
   function stopsLabel(leg: Leg) {
     return leg.stops === 0
       ? '<span class="rounded-full bg-emerald-100 px-2 py-0.5 font-semibold text-emerald-800">Nonstop</span>'
       : `<span>${leg.stops} stop${leg.stops > 1 ? 's' : ''}${leg.layovers.length ? ` · ${esc(leg.layovers.join(', '))}` : ''}</span>`;
   }
 
-  function legBlock(label: string, day: string, leg: Leg, badge: string) {
+  function legBlock(label: string, day: string, leg: Leg) {
     const nextDay = leg.departTime && leg.arriveTime && leg.arriveTime.slice(0, 10) > leg.departTime.slice(0, 10);
     return `
         <div class="mt-3">
@@ -122,7 +114,6 @@ function init({ rows, adults, origins }: { rows: Row[]; adults: number; origins:
             <span class="font-semibold">${formatTime(leg.arriveTime)}${nextDay ? '<sup class="text-rose-600">+1</sup>' : ''}</span>
           </div>
           <div class="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-700">
-            ${badge}
             <span class="font-medium">${esc(leg.airlines.join(' + '))}</span>
             <span aria-hidden="true">·</span>
             ${stopsLabel(leg)}
@@ -143,7 +134,7 @@ function init({ rows, adults, origins }: { rows: Row[]; adults: number; origins:
     const warn = elsewhere
       ? `<p class="mt-1 text-sm font-semibold text-rose-700">⚠ Lands at ${esc(back.destination!)}, not ${esc(r.origin!)}</p>`
       : '';
-    return legBlock('Back', r.return, back, '') + warn;
+    return legBlock('Back', r.return, back) + warn;
   }
 
   function card(r: Row) {
@@ -160,7 +151,7 @@ function init({ rows, adults, origins }: { rows: Row[]; adults: number; origins:
           </div>
         </div>
         ${r.price === lowest ? '<p class="mt-2 inline-block rounded-full bg-orange-100 px-2 py-0.5 text-sm font-semibold text-orange-800">Lowest price</p>' : ''}
-        ${legBlock('Out', r.depart, r, originBadge(r.origin))}
+        ${legBlock('Out', r.depart, r)}
         ${returnBlock(r)}
         <p class="mt-3 text-xs text-gray-500">Total for all ${adults} travelers, both ways · price checked ${timeAgo(r.fetchedAt)}</p>
         <a href="${esc(r.url)}" target="_blank" rel="noopener"

@@ -32,7 +32,6 @@ for (let depart = trip.firstDepart; depart <= trip.lastDepart; depart = addDays(
   for (const nights of trip.nights) {
     const options = Array.from({ length: 6 + Math.floor(rand() * 4) }, () => {
       const r = pick(routes);
-      const origin = pick(['CID', 'CID', 'MLI', 'DSM']);
       const hour = 5 + Math.floor(rand() * 15);
       const durationMin = r.via.length === 0 ? 235 : 300 + r.via.length * 90 + Math.floor(rand() * 180);
       const arrive = new Date(`${depart}T${pad(hour)}:${pad(Math.floor(rand() * 4) * 15)}:00Z`);
@@ -40,7 +39,7 @@ for (let depart = trip.firstDepart; depart <= trip.lastDepart; depart = addDays(
       // CID is UTC-5 and PSP is UTC-7 in March, so local arrival is duration minus 2 hours.
       arrive.setUTCMinutes(arrive.getUTCMinutes() + durationMin - 120);
       return {
-        origin,
+        origin: trip.from,
         price: Math.round((900 + rand() * 900 - (r.via.length === 0 ? 150 : 0)) / 3) * 3,
         airlines: r.airlines,
         flightNumbers: [r.via, '-'].flat().map(() => `${r.code} ${100 + Math.floor(rand() * 2800)}`),

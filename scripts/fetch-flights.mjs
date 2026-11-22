@@ -1,9 +1,10 @@
 // Refreshes flight prices from SerpApi (Google Flights) into src/data/flights.json and src/data/history.json.
 // Run: SERPAPI_KEY=... node scripts/fetch-flights.mjs
-// Optional env: FETCH_LIMIT (combos to refresh this run), FETCH_ALL=1 (refresh every combo).
+// Optional env: FETCH_LIMIT, RETURN_LIMIT (lower per-run caps), FETCH_ALL=1 (refresh every combo).
 import { readFile, writeFile } from 'node:fs/promises';
 // Node 22.18+ runs TypeScript directly, so the site's own ranking is reused here.
 import { bestScore, tripMinutes } from '../src/lib/picks.ts';
+import { searchAllowance, selectRefreshQueue } from './refresh-policy.mjs';
 
 const dataDir = new URL('../src/data/', import.meta.url);
 const trip = JSON.parse(await readFile(new URL('trip.json', dataDir), 'utf8'));
@@ -12,15 +13,16 @@ const historyFile = new URL('history.json', dataDir);
 
 const key = process.env.SERPAPI_KEY;
 if (!key) {
-  console.log('SERPAPI_KEY is not set. Skipping the price refresh.');
-  process.exit(0);
+  console.error('SERPAPI_KEY is not set. Cannot refresh prices.');
+  process.exit(1);
 }
 
 async function readJson(file, fallback) {
   try {
     return JSON.parse(await readFile(file, 'utf8'));
-  } catch {
-    return fallback;
+  } catch (err) {
+    if (err.code === 'ENOENT') return fallback;
+    throw err;
   }
 }
 
@@ -44,61 +46,69 @@ const upcoming = allCombos.filter((c) => c.depart >= today);
 const flights = await readJson(flightsFile, { updatedAt: null, combos: {} });
 const history = await readJson(historyFile, []);
 
-for (const k of Object.keys(flights.combos)) {
-  if (!upcoming.some((c) => c.key === k)) delete flights.combos[k];
-}
-
 if (upcoming.length === 0) {
   console.log('Every departure date has passed. Nothing to refresh.');
+  flights.combos = {};
   await writeFile(flightsFile, JSON.stringify(flights, null, 2) + '\n');
   process.exit(0);
 }
 
+function lowerLimit(name, maximum) {
+  const value = process.env[name] === undefined ? maximum : Number(process.env[name]);
+  if (!Number.isSafeInteger(value) || value < 0 || value > maximum) {
+    throw new Error(`${name} must be an integer between 0 and ${maximum}.`);
+  }
+  return value;
+}
+
+const outboundLimit = lowerLimit('FETCH_LIMIT', trip.refreshPerRun);
+const returnLimit = lowerLimit('RETURN_LIMIT', trip.returnsPerRun);
+const accountUrl = new URL('https://serpapi.com/account.json');
+accountUrl.searchParams.set('api_key', key);
+const accountResponse = await fetch(accountUrl);
+if (!accountResponse.ok) throw new Error(`SerpApi account check failed (HTTP ${accountResponse.status}).`);
+const account = await accountResponse.json();
+const allowance = searchAllowance(account.total_searches_left);
+const fullRefresh = process.env.FETCH_ALL === '1';
+if (fullRefresh && allowance < upcoming.length + returnLimit) {
+  throw new Error(`Full refresh needs ${upcoming.length + returnLimit} searches plus the 10-credit reserve; ${account.total_searches_left} remain.`);
+}
+if (!allowance) throw new Error('No SerpApi searches are available after the 10-credit reserve.');
+
+for (const k of Object.keys(flights.combos)) {
+  if (!upcoming.some((c) => c.key === k)) delete flights.combos[k];
+  else flights.combos[k].options = flights.combos[k].options.filter((o) => o.origin === trip.from);
+}
 
 const optionId = (o) => `${o.origin}|${o.flightNumbers.join('-')}`;
 const allRows = () =>
   Object.entries(flights.combos)
     .flatMap(([comboKey, c]) => c.options.map((o) => ({ comboKey, combo: c, o })))
-    .filter(({ o }) => trip.origins.some((origin) => origin.code === o.origin))
     .sort((a, b) => a.o.price - b.o.price);
 // Return flights are looked up for the trips Becky is most likely to book: the cheapest few, plus the
 // "Best pick" and "Shortest" trips shown at the top of the page.
 const topRows = () => {
   const rows = allRows();
-  const byBest = [...rows].sort((a, b) => bestScore(a.o, trip.origins) - bestScore(b.o, trip.origins));
-  const byShortest = [...rows].sort((a, b) => tripMinutes(a.o, trip.origins) - tripMinutes(b.o, trip.origins) || a.o.price - b.o.price);
+  const byBest = [...rows].sort((a, b) => bestScore(a.o) - bestScore(b.o));
+  const byShortest = [...rows].sort((a, b) => tripMinutes(a.o) - tripMinutes(b.o) || a.o.price - b.o.price);
   return [...new Set([...byBest.slice(0, 2), ...byShortest.slice(0, 1), ...rows.slice(0, trip.returnTop)])];
 };
 // The trips on the top card (Cheapest, Shortest, Best pick).
 const topCardRows = () => {
   const rows = allRows();
   if (!rows.length) return [];
-  const best = [...rows].sort((a, b) => bestScore(a.o, trip.origins) - bestScore(b.o, trip.origins))[0];
-  const shortest = [...rows].sort((a, b) => tripMinutes(a.o, trip.origins) - tripMinutes(b.o, trip.origins) || a.o.price - b.o.price)[0];
+  const best = [...rows].sort((a, b) => bestScore(a.o) - bestScore(b.o))[0];
+  const shortest = [...rows].sort((a, b) => tripMinutes(a.o) - tripMinutes(b.o) || a.o.price - b.o.price)[0];
   return [rows[0], shortest, best];
 };
 const chicagoDay = (iso) => new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Chicago' }).format(new Date(iso));
 
-const neverFetched = upcoming.filter((c) => !flights.combos[c.key]);
-let queue;
-if (process.env.FETCH_ALL === '1') {
-  queue = upcoming;
-} else if (neverFetched.length > 0) {
-  queue = neverFetched;
-} else {
-  const limit = process.env.FETCH_LIMIT ? Number(process.env.FETCH_LIMIT) : trip.refreshPerRun;
-  // The dates behind the top card are re-checked every day so its prices are never more than a day old.
-  const topCard = topCardRows()
-    .filter((r) => chicagoDay(r.combo.fetchedAt) !== today)
-    .map((r) => r.comboKey);
-  // Cheap trips saved before return lookups existed have no departure token, so refresh their dates next.
-  const needToken = [...new Set(topRows().filter((r) => !r.o.departureToken).map((r) => r.comboKey))];
-  const stalest = [...upcoming]
-    .sort((a, b) => flights.combos[a.key].fetchedAt.localeCompare(flights.combos[b.key].fetchedAt))
-    .map((c) => c.key);
-  const keys = [...new Set([...topCard, ...needToken, ...stalest])].slice(0, limit);
-  queue = upcoming.filter((c) => keys.includes(c.key));
-}
+const topCard = topCardRows()
+  .filter((r) => chicagoDay(r.combo.fetchedAt) !== today)
+  .map((r) => r.comboKey);
+const queue = fullRefresh
+  ? upcoming
+  : selectRefreshQueue(upcoming, flights.combos, topCard, Math.min(outboundLimit, allowance));
 
 function normalize(item) {
   const legs = item.flights ?? [];
@@ -121,8 +131,7 @@ function normalize(item) {
 async function search(combo, extra = {}) {
   const params = new URLSearchParams({
     engine: 'google_flights',
-    // One search covers every nearby airport, so extra airports cost no extra searches.
-    departure_id: trip.origins.map((o) => o.code).join(','),
+    departure_id: trip.from,
     arrival_id: trip.to,
     outbound_date: combo.depart,
     return_date: combo.return,
@@ -135,13 +144,18 @@ async function search(combo, extra = {}) {
     api_key: key,
   });
   const res = await fetch(`https://serpapi.com/search.json?${params}`);
-  const body = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    const err = new Error(`HTTP ${res.status}`);
+    err.fatal = res.status === 401 || res.status === 403 || res.status === 429;
+    throw err;
+  }
+  const body = await res.json();
   if (body.error && /hasn't returned any results/i.test(body.error)) {
     return { options: [], url: body.search_metadata?.google_flights_url };
   }
-  if (!res.ok || body.error) {
-    const err = new Error(body.error ?? `HTTP ${res.status}`);
-    err.fatal = res.status === 401 || res.status === 429 || /run out of searches|invalid api key/i.test(err.message);
+  if (body.error) {
+    const err = new Error(body.error);
+    err.fatal = /run out of searches|invalid api key/i.test(err.message);
     throw err;
   }
   const seen = new Set();
@@ -160,13 +174,15 @@ async function search(combo, extra = {}) {
 
 let searches = 0;
 let stopped = false;
+let failed = false;
 async function guarded(label, fn) {
-  if (stopped) return false;
+  if (stopped || searches >= allowance) return false;
   try {
     searches++;
     await fn();
     return true;
   } catch (err) {
+    failed = true;
     console.warn(`  ${label}: failed (${err.message})`);
     if (err.fatal) {
       console.warn('Stopping early because the API key or search quota is unusable.');
@@ -183,7 +199,7 @@ for (const combo of queue) {
   const ok = await guarded(combo.key, async () => {
     const { options, url } = await search(combo);
     const previous = new Map((flights.combos[combo.key]?.options ?? []).map((o) => [optionId(o), o]));
-    const kept = options.slice(0, trip.optionsPerCombo).map((o) => {
+    const kept = options.filter((o) => o.origin === trip.from).slice(0, trip.optionsPerCombo).map((o) => {
       // Keep a return flight found earlier for the same outbound flight.
       const old = previous.get(optionId(o));
       return old?.returnFlight ? { ...o, returnFlight: old.returnFlight, returnUrl: old.returnUrl } : o;
@@ -203,7 +219,7 @@ for (const combo of queue) {
 
 const needReturn = topRows()
   .filter((r) => r.o.departureToken && !r.o.returnFlight)
-  .slice(0, Number(process.env.RETURN_LIMIT ?? trip.returnsPerRun));
+  .slice(0, Math.min(returnLimit, allowance - searches));
 if (needReturn.length) console.log(`Looking up return flights for ${needReturn.length} of the top trips...`);
 for (const { comboKey, combo, o } of needReturn) {
   await guarded(`${comboKey} return`, async () => {
@@ -237,4 +253,4 @@ if (cheapest) {
 await writeFile(flightsFile, JSON.stringify(flights, null, 2) + '\n');
 await writeFile(historyFile, JSON.stringify(history, null, 2) + '\n');
 console.log(`Done. Refreshed ${refreshed} of ${queue.length} date combinations using ${searches} searches.`);
-if (refreshed === 0 && queue.length > 0) process.exitCode = 1;
+if (failed || (refreshed === 0 && queue.length > 0)) process.exitCode = 1;

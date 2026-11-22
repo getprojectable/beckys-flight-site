@@ -35,6 +35,7 @@ jobs:
 
       # Pushes only rebuild the site; scheduled and manual runs also use SerpApi searches.
       - name: Fetch latest prices
+        id: fetch
         if: github.event_name != 'push'
         continue-on-error: true
         run: npm run fetch
@@ -67,3 +68,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           force_orphan: true
+
+      - name: Report price refresh failure
+        if: steps.fetch.outcome == 'failure'
+        run: exit 1

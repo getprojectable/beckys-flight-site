@@ -23,20 +23,22 @@ Cedar Rapids (CID).
 
 `.github/workflows/deploy.yml` runs every day:
 
-1. `scripts/fetch-flights.mjs` refreshes the **5 date combinations with the oldest prices**. The first run loads all 30.
-   Every combination is refreshed about every 6 days.
-2. It then looks up return flights for up to **3 top trips** that don't have one yet: the Best pick, the Shortest, and the
-   6 cheapest. It prefers a return to
-   the airport she left from. Each lookup costs one search, so the total is at most 8 searches a day, under SerpApi's free
-   250 a month.
+1. `scripts/fetch-flights.mjs` refreshes up to **4 date combinations**, including up to two stale top-card dates and
+   at least two of the oldest or never-checked combinations when quota allows. Unused top-card slots go to the oldest combinations.
+2. It looks up returns for up to **2 top trips** that don't have one yet: the Best pick, the Shortest, and the
+   6 cheapest. It prefers a return to CID. Each lookup costs one search.
 3. The results are committed to `src/data/flights.json`, and the daily cheapest price goes into `src/data/history.json`.
 4. The site is rebuilt and published to the `gh-pages` branch.
 
-If a search fails, that combination keeps its previous prices. Once every departure date has passed, the script stops
-using searches.
+Daily runs attempt at most 6 searches (up to 186 over 31 days), leaving room under the
+[free plan's 250 monthly searches](https://serpapi.com/pricing). A free account check limits searches to the remaining
+quota minus a 10-credit reserve. Other usage and manual refreshes also consume the account's quota. If the account check
+or a search fails, the workflow reports a failure; previously saved prices remain available. Once every departure date
+has passed, the script stops using searches.
 
 To refresh everything now, open **Actions → Update prices and deploy → Run workflow** and tick *Refresh every date
-combination*. That uses about 30 searches.
+combination*. That uses up to 30 outbound searches plus 2 return searches. It only starts if the account has enough
+remaining searches for the full run and the 10-credit reserve.
 
 ## Setup
 
@@ -63,8 +65,8 @@ Node 22+ is required. `node scripts/make-sample.mjs` regenerates the made-up sam
 
 ## Changing the trip
 
-Airports, dates, nights, travelers and the number of combinations refreshed per day are in `src/data/trip.json`.
-Keep `(number of departure days × nights options)` and `refreshPerRun` within your SerpApi plan. Photos are in
+The departure airport, dates, nights, travelers and refresh limits are in `src/data/trip.json`.
+Keep the search limits within your SerpApi plan. Photos are in
 `src/assets/`.
 
 ## Notes

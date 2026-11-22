@@ -1,7 +1,6 @@
 {
-  "origins": [
-    { "code": "CID", "name": "Cedar Rapids", "drive": null, "driveHours": 0 }
-  ],
+  "from": "CID",
+  "fromName": "Cedar Rapids",
   "to": "PSP",
   "toName": "Palm Springs",
   "destinationLabel": "Palm Desert",
@@ -11,8 +10,8 @@
   "adults": 3,
   "travelersLabel": "Becky + 2 teens",
   "currency": "USD",
-  "refreshPerRun": 5,
-  "returnsPerRun": 3,
+  "refreshPerRun": 4,
+  "returnsPerRun": 2,
   "returnTop": 6,
   "optionsPerCombo": 15
 }

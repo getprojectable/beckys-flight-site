@@ -1,107 +1,107 @@
 [
   {
-    "date": "2026-11-01",
-    "cheapest": 803,
-    "comboKey": "2027-03-12_5"
-  },
-  {
     "date": "2026-11-02",
-    "cheapest": 814,
+    "cheapest": 816,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-03",
-    "cheapest": 849,
+    "cheapest": 825,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-04",
-    "cheapest": 856,
+    "cheapest": 817,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-05",
-    "cheapest": 842,
+    "cheapest": 862,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-06",
-    "cheapest": 842,
+    "cheapest": 831,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-07",
-    "cheapest": 847,
+    "cheapest": 849,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-08",
-    "cheapest": 815,
+    "cheapest": 823,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-09",
-    "cheapest": 824,
+    "cheapest": 846,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-10",
-    "cheapest": 799,
+    "cheapest": 808,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-11",
-    "cheapest": 764,
+    "cheapest": 804,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-12",
-    "cheapest": 767,
+    "cheapest": 779,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-13",
-    "cheapest": 739,
+    "cheapest": 757,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-14",
-    "cheapest": 716,
+    "cheapest": 724,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-15",
-    "cheapest": 710,
+    "cheapest": 711,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-16",
-    "cheapest": 731,
+    "cheapest": 727,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-17",
-    "cheapest": 702,
+    "cheapest": 694,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-18",
-    "cheapest": 742,
+    "cheapest": 703,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-19",
-    "cheapest": 745,
+    "cheapest": 722,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-20",
-    "cheapest": 748,
+    "cheapest": 747,
     "comboKey": "2027-03-12_5"
   },
   {
     "date": "2026-11-21",
-    "cheapest": 785,
+    "cheapest": 784,
+    "comboKey": "2027-03-12_5"
+  },
+  {
+    "date": "2026-11-22",
+    "cheapest": 793,
     "comboKey": "2027-03-12_5"
   }
 ]

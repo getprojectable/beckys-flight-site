@@ -21,7 +21,6 @@ import {
 import { makePicks } from '../lib/picks';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
-const originCodes = trip.origins.map((o) => o.code);
 
 // `npm run dev` shows made-up sample prices until real ones have been fetched. Production never does.
 const hasReal = Object.keys((realFlights as FlightsData).combos).length > 0;
@@ -36,21 +35,20 @@ const rows: Row[] = Object.values(flights.combos)
   .filter((c) => c.depart >= today)
   .flatMap((c) =>
     c.options
-      .filter((o) => trip.origins.some((origin) => origin.code === o.origin))
+      .filter((o) => o.origin === trip.from)
       .map(({ departureToken: _token, ...o }) => ({
         ...o,
         depart: c.depart,
         return: c.return,
         nights: c.nights,
         fetchedAt: c.fetchedAt,
-        url: o.returnUrl ?? c.googleFlightsUrl ?? googleFlightsSearchUrl(originCodes, trip.to, c.depart, c.return, trip.adults),
+        url: o.returnUrl ?? googleFlightsSearchUrl([trip.from], trip.to, c.depart, c.return, trip.adults),
       })),
   )
   .sort((a, b) => a.price - b.price);
 
-const picks = makePicks(rows, trip.origins);
+const picks = makePicks(rows);
 const stopsText = (n: number) => (n === 0 ? 'Nonstop' : `${n} stop${n > 1 ? 's' : ''}`);
-const originOf = (code: string | null) => trip.origins.find((o) => o.code === code);
 const airlines = [...new Set(rows.flatMap((r) => r.airlines))].sort();
 const departDays = [...new Set(rows.map((r) => r.depart))].sort();
 
@@ -76,8 +74,7 @@ if (points.length >= 2) {
   };
 }
 
-const json = JSON.stringify({ rows, adults: trip.adults, origins: trip.origins }).replace(/</g, '\\u003c');
-const originsWithFlights = trip.origins.filter((o) => rows.some((r) => r.origin === o.code));
+const json = JSON.stringify({ rows, adults: trip.adults }).replace(/</g, '\\u003c');
 const tripLine = `${formatDay(trip.firstDepart).slice(5)} – ${formatDay(trip.lastDepart).slice(5)}`;
 ---
 
@@ -125,7 +122,7 @@ const tripLine = `${formatDay(trip.firstDepart).slice(5)} – ${formatDay(trip.l
           </div>
         </div>
         <p class="mt-4 text-base font-medium">
-          {originCodes.join(' · ')} → {trip.to} <span class="text-white/80">({trip.destinationLabel})</span>
+          {trip.from} → {trip.to} <span class="text-white/80">({trip.destinationLabel})</span>
         </p>
         <p class="text-sm text-white/85">
           Leave {tripLine} · {trip.nights[0]}–{trip.nights.at(-1)} nights · {trip.travelersLabel}
@@ -149,7 +146,6 @@ const tripLine = `${formatDay(trip.firstDepart).slice(5)} – ${formatDay(trip.l
               {picks.map((p, i) => {
                 const r = p.row;
                 const back = r.returnFlight;
-                const o = originOf(r.origin);
                 return (
                   <article class="flex w-full shrink-0 snap-center flex-col p-4" aria-roledescription="slide" aria-label={`${i + 1} of ${picks.length}: ${p.label}`} data-slide={p.id}>
                     <div class="flex items-center justify-between gap-2">
@@ -182,9 +178,6 @@ const tripLine = `${formatDay(trip.firstDepart).slice(5)} – ${formatDay(trip.l
                         </dd>
                       </div>
                     </dl>
-                    {o && (
-                      <p class="mt-1 text-sm text-gray-600">From {o.name} ({o.code}){o.drive && ` · ${o.drive}`}</p>
-                    )}
                     <div class="h-3 shrink-0" aria-hidden="true" />
                     {p.reasons.length > 0 && (
                       <ul class="-mt-1 mb-3 flex flex-wrap gap-1.5">
@@ -233,7 +226,7 @@ const tripLine = `${formatDay(trip.firstDepart).slice(5)} – ${formatDay(trip.l
 
         {flights.updatedAt && (
           <p class="mt-3 text-sm text-gray-500">
-            Prices checked <time data-ago={flights.updatedAt}>recently</time>. They're updated every day.
+            Prices checked <time data-ago={flights.updatedAt}>recently</time>. Dates are refreshed on a rotating schedule.
           </p>
         )}
         </div>
@@ -268,11 +261,6 @@ const tripLine = `${formatDay(trip.firstDepart).slice(5)} – ${formatDay(trip.l
             </div>
             <div class="no-scrollbar -mx-3 mt-2 flex gap-2 overflow-x-auto px-3" role="group" aria-label="Filters">
               <button type="button" class="chip" data-filter="nonstop" aria-pressed="false">Nonstop</button>
-              {originsWithFlights.length > 1 && originsWithFlights.map((o) => (
-                <button type="button" class="chip" data-filter="origin" data-value={o.code} aria-pressed="false">
-                  From {o.code}
-                </button>
-              ))}
               {trip.nights.map((n) => (
                 <button type="button" class="chip" data-filter="nights" data-value={String(n)} aria-pressed="false">
                   {n} nights
@@ -312,7 +300,7 @@ const tripLine = `${formatDay(trip.firstDepart).slice(5)} – ${formatDay(trip.l
           Only outbound flights from Cedar Rapids (CID) are included.
         </p>
         <p>
-          Return flights are checked for the cheapest trips first, and more are added each day. When a return flight
+          Return flights are checked for the top trips first. When a return flight
           isn't shown yet, you can pick one on Google Flights after you tap Book.
         </p>
       </footer>
