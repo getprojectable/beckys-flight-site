@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T11:07:25.494Z",
+  "updatedAt": "2026-11-24T11:08:11.867Z",
   "combos": {
     "2027-03-12_4": {
       "depart": "2027-03-12",
@@ -475,13 +475,13 @@
       "depart": "2027-03-12",
       "return": "2027-03-18",
       "nights": 6,
-      "fetchedAt": "2026-11-22T17:36:44.066Z",
+      "fetchedAt": "2026-11-24T11:07:55.284Z",
       "googleFlightsUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAzLTEyagcIARIDQ0lEcgcIARIDUFNQGh4SCjIwMjctMDMtMThqBwgBEgNQU1ByBwgBEgNDSURAAUABQAFIAXABmAEB&tfu=EgIIAQ",
       "options": [
         {
           "origin": "CID",
           "destination": "PSP",
-          "price": 2151,
+          "price": 2242,
           "airlines": [
             "United"
           ],
@@ -498,12 +498,12 @@
           "durationMin": 587,
           "departTime": "2027-03-12 09:50",
           "arriveTime": "2027-03-12 17:37",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNXlUR2RDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTME56UTJKeWJqUkJFaFJWUVRRMk56TjhWVUV4TXpZemZGVkJOVFF3TlJvTENMeVFEUkFDR2dOVlUwUTRISEM4a0EwPSIsW1siQ0lEIiwiMjAyNy0wMy0xMiIsIk9SRCIsbnVsbCwiVUEiLCI0NjczIl0sWyJPUkQiLCIyMDI3LTAzLTEyIiwiTEFYIixudWxsLCJVQSIsIjEzNjMiXSxbIkxBWCIsIjIwMjctMDMtMTIiLCJQU1AiLG51bGwsIlVBIiwiNTQwNSJdXV0="
+          "departureToken": "WyJDalJJTTBFeldWaFVVa1Z2ZUZsQlEwdFhTMEZDUnkwdExTMHRMUzB0TFMxNWFYTmlOa0ZCUVVGQlIzTkdZMEZ2UjNFNGFHbEJFaFJWUVRRMk56TjhWVUV4TXpZemZGVkJOVFF3TlJvTENKZlhEUkFDR2dOVlUwUTRISENYMXcwPSIsW1siQ0lEIiwiMjAyNy0wMy0xMiIsIk9SRCIsbnVsbCwiVUEiLCI0NjczIl0sWyJPUkQiLCIyMDI3LTAzLTEyIiwiTEFYIixudWxsLCJVQSIsIjEzNjMiXSxbIkxBWCIsIjIwMjctMDMtMTIiLCJQU1AiLG51bGwsIlVBIiwiNTQwNSJdXV0="
         },
         {
           "origin": "CID",
           "destination": "PSP",
-          "price": 2333,
+          "price": 2339,
           "airlines": [
             "United"
           ],
@@ -518,7 +518,7 @@
           "durationMin": 465,
           "departTime": "2027-03-12 15:21",
           "arriveTime": "2027-03-12 21:06",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNXlUR2RDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTME56UTJKeWJqUkJFZ3hWUVRVeE5IeFZRVEkyTkRRYUN3ajFuUTRRQWhvRFZWTkVPQnh3OVowTyIsW1siQ0lEIiwiMjAyNy0wMy0xMiIsIkRFTiIsbnVsbCwiVUEiLCI1MTQiXSxbIkRFTiIsIjIwMjctMDMtMTIiLCJQU1AiLG51bGwsIlVBIiwiMjY0NCJdXV0="
+          "departureToken": "WyJDalJJTTBFeldWaFVVa1Z2ZUZsQlEwdFhTMEZDUnkwdExTMHRMUzB0TFMxNWFYTmlOa0ZCUVVGQlIzTkdZMEZ2UjNFNGFHbEJFZ3hWUVRVeE5IeFZRVEkyTkRRYUN3ajZvZzRRQWhvRFZWTkVPQnh3K3FJTyIsW1siQ0lEIiwiMjAyNy0wMy0xMiIsIkRFTiIsbnVsbCwiVUEiLCI1MTQiXSxbIkRFTiIsIjIwMjctMDMtMTIiLCJQU1AiLG51bGwsIlVBIiwiMjY0NCJdXV0="
         },
         {
           "origin": "CID",
@@ -538,12 +538,12 @@
           "durationMin": 625,
           "departTime": "2027-03-12 08:55",
           "arriveTime": "2027-03-12 17:20",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNXlUR2RDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTME56UTJKeWJqUkJFZzFWUVRFMU1EQjhWVUV5TmpBeUdnc0lrUDRPRUFJYUExVlRSRGdjY0pEK0RnPT0iLFtbIkNJRCIsIjIwMjctMDMtMTIiLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0xMiIsIlBTUCIsbnVsbCwiVUEiLCIyNjAyIl1dXQ=="
+          "departureToken": "WyJDalJJTTBFeldWaFVVa1Z2ZUZsQlEwdFhTMEZDUnkwdExTMHRMUzB0TFMxNWFYTmlOa0ZCUVVGQlIzTkdZMEZ2UjNFNGFHbEJFZzFWUVRFMU1EQjhWVUV5TmpBeUdnc0lrUDRPRUFJYUExVlRSRGdjY0pEK0RnPT0iLFtbIkNJRCIsIjIwMjctMDMtMTIiLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0xMiIsIlBTUCIsbnVsbCwiVUEiLCIyNjAyIl1dXQ=="
         },
         {
           "origin": "CID",
           "destination": "PSP",
-          "price": 2498,
+          "price": 2807,
           "airlines": [
             "United"
           ],
@@ -558,7 +558,7 @@
           "durationMin": 488,
           "departTime": "2027-03-12 08:55",
           "arriveTime": "2027-03-12 15:03",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNXlUR2RDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTME56UTJKeWJqUkJFZzFWUVRFMU1EQjhWVUUyTURBeUdnc0krSjRQRUFJYUExVlRSRGdjY1BpZUR3PT0iLFtbIkNJRCIsIjIwMjctMDMtMTIiLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0xMiIsIlBTUCIsbnVsbCwiVUEiLCI2MDAyIl1dXQ=="
+          "departureToken": "WyJDalJJTTBFeldWaFVVa1Z2ZUZsQlEwdFhTMEZDUnkwdExTMHRMUzB0TFMxNWFYTmlOa0ZCUVVGQlIzTkdZMEZ2UjNFNGFHbEJFZzFWUVRFMU1EQjhWVUUyTURBeUdnc0lySkFSRUFJYUExVlRSRGdjY0t5UUVRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTIiLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0xMiIsIlBTUCIsbnVsbCwiVUEiLCI2MDAyIl1dXQ=="
         },
         {
           "origin": "CID",
@@ -578,7 +578,29 @@
           "durationMin": 516,
           "departTime": "2027-03-12 06:15",
           "arriveTime": "2027-03-12 12:51",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNXlUR2RDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTME56UTJKeWJqUkJFZzFWUVRReE9EUjhWVUV5TnpJNEdnc0loT0FSRUFJYUExVlRSRGdjY0lUZ0VRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTIiLCJPUkQiLG51bGwsIlVBIiwiNDE4NCJdLFsiT1JEIiwiMjAyNy0wMy0xMiIsIlBTUCIsbnVsbCwiVUEiLCIyNzI4Il1dXQ=="
+          "departureToken": "WyJDalJJTTBFeldWaFVVa1Z2ZUZsQlEwdFhTMEZDUnkwdExTMHRMUzB0TFMxNWFYTmlOa0ZCUVVGQlIzTkdZMEZ2UjNFNGFHbEJFZzFWUVRReE9EUjhWVUV5TnpJNEdnc0loT0FSRUFJYUExVlRSRGdjY0lUZ0VRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTIiLCJPUkQiLG51bGwsIlVBIiwiNDE4NCJdLFsiT1JEIiwiMjAyNy0wMy0xMiIsIlBTUCIsbnVsbCwiVUEiLCIyNzI4Il1dXQ=="
+        },
+        {
+          "origin": "CID",
+          "destination": "PSP",
+          "price": 3042,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 5248",
+            "DL 868",
+            "DL 2585"
+          ],
+          "stops": 2,
+          "layovers": [
+            "MSP",
+            "SEA"
+          ],
+          "durationMin": 591,
+          "departTime": "2027-03-12 06:48",
+          "arriveTime": "2027-03-12 14:39",
+          "departureToken": "WyJDalJJTTBFeldWaFVVa1Z2ZUZsQlEwdFhTMEZDUnkwdExTMHRMUzB0TFMxNWFYTmlOa0ZCUVVGQlIzTkdZMEZ2UjNFNGFHbEJFaE5FVERVeU5EaDhSRXc0TmpoOFJFd3lOVGcxR2dzSTdzY1NFQUlhQTFWVFJEZ2NjTzdIRWc9PSIsW1siQ0lEIiwiMjAyNy0wMy0xMiIsIk1TUCIsbnVsbCwiREwiLCI1MjQ4Il0sWyJNU1AiLCIyMDI3LTAzLTEyIiwiU0VBIixudWxsLCJETCIsIjg2OCJdLFsiU0VBIiwiMjAyNy0wMy0xMiIsIlBTUCIsbnVsbCwiREwiLCIyNTg1Il1dXQ=="
         },
         {
           "origin": "CID",
@@ -598,7 +620,7 @@
           "durationMin": 1083,
           "departTime": "2027-03-12 20:27",
           "arriveTime": "2027-03-13 12:30",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNXlUR2RDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTME56UTJKeWJqUkJFZzFCUVRNME5UaDhRVUV4TVRnd0dnc0krT0FTRUFJYUExVlRSRGdjY1BqZ0VnPT0iLFtbIkNJRCIsIjIwMjctMDMtMTIiLCJPUkQiLG51bGwsIkFBIiwiMzQ1OCJdLFsiT1JEIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiQUEiLCIxMTgwIl1dXQ=="
+          "departureToken": "WyJDalJJTTBFeldWaFVVa1Z2ZUZsQlEwdFhTMEZDUnkwdExTMHRMUzB0TFMxNWFYTmlOa0ZCUVVGQlIzTkdZMEZ2UjNFNGFHbEJFZzFCUVRNME5UaDhRVUV4TVRnd0dnc0krT0FTRUFJYUExVlRSRGdjY1BqZ0VnPT0iLFtbIkNJRCIsIjIwMjctMDMtMTIiLCJPUkQiLG51bGwsIkFBIiwiMzQ1OCJdLFsiT1JEIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiQUEiLCIxMTgwIl1dXQ=="
         },
         {
           "origin": "CID",
@@ -618,7 +640,7 @@
           "durationMin": 426,
           "departTime": "2027-03-12 07:45",
           "arriveTime": "2027-03-12 12:51",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNXlUR2RDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTME56UTJKeWJqUkJFZ3hWUVRJMk0zeFZRVEkzTWpnYUN3ajA3eE1RQWhvRFZWTkVPQnh3OU84VCIsW1siQ0lEIiwiMjAyNy0wMy0xMiIsIk9SRCIsbnVsbCwiVUEiLCIyNjMiXSxbIk9SRCIsIjIwMjctMDMtMTIiLCJQU1AiLG51bGwsIlVBIiwiMjcyOCJdXV0="
+          "departureToken": "WyJDalJJTTBFeldWaFVVa1Z2ZUZsQlEwdFhTMEZDUnkwdExTMHRMUzB0TFMxNWFYTmlOa0ZCUVVGQlIzTkdZMEZ2UjNFNGFHbEJFZ3hWUVRJMk0zeFZRVEkzTWpnYUN3ajA3eE1RQWhvRFZWTkVPQnh3OU84VCIsW1siQ0lEIiwiMjAyNy0wMy0xMiIsIk9SRCIsbnVsbCwiVUEiLCIyNjMiXSxbIk9SRCIsIjIwMjctMDMtMTIiLCJQU1AiLG51bGwsIlVBIiwiMjcyOCJdXV0="
         },
         {
           "origin": "CID",
@@ -638,7 +660,7 @@
           "durationMin": 361,
           "departTime": "2027-03-12 14:39",
           "arriveTime": "2027-03-12 18:40",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNXlUR2RDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTME56UTJKeWJqUkJFZzFCUVRJME1qUjhRVUV4T1RreEdnc0lrTGNWRUFJYUExVlRSRGdjY0pDM0ZRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTIiLCJQSFgiLG51bGwsIkFBIiwiMjQyNCJdLFsiUEhYIiwiMjAyNy0wMy0xMiIsIlBTUCIsbnVsbCwiQUEiLCIxOTkxIl1dXQ=="
+          "departureToken": "WyJDalJJTTBFeldWaFVVa1Z2ZUZsQlEwdFhTMEZDUnkwdExTMHRMUzB0TFMxNWFYTmlOa0ZCUVVGQlIzTkdZMEZ2UjNFNGFHbEJFZzFCUVRJME1qUjhRVUV4T1RreEdnc0lrTGNWRUFJYUExVlRSRGdjY0pDM0ZRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTIiLCJQSFgiLG51bGwsIkFBIiwiMjQyNCJdLFsiUEhYIiwiMjAyNy0wMy0xMiIsIlBTUCIsbnVsbCwiQUEiLCIxOTkxIl1dXQ=="
         },
         {
           "origin": "CID",
@@ -658,7 +680,7 @@
           "durationMin": 348,
           "departTime": "2027-03-12 07:35",
           "arriveTime": "2027-03-12 11:23",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNXlUR2RDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTME56UTJKeWJqUkJFZzFCUVRNMk5qSjhRVUV5TXpjM0dnc0kxSThZRUFJYUExVlRSRGdjY05TUEdBPT0iLFtbIkNJRCIsIjIwMjctMDMtMTIiLCJQSFgiLG51bGwsIkFBIiwiMzY2MiJdLFsiUEhYIiwiMjAyNy0wMy0xMiIsIlBTUCIsbnVsbCwiQUEiLCIyMzc3Il1dXQ=="
+          "departureToken": "WyJDalJJTTBFeldWaFVVa1Z2ZUZsQlEwdFhTMEZDUnkwdExTMHRMUzB0TFMxNWFYTmlOa0ZCUVVGQlIzTkdZMEZ2UjNFNGFHbEJFZzFCUVRNMk5qSjhRVUV5TXpjM0dnc0kxSThZRUFJYUExVlRSRGdjY05TUEdBPT0iLFtbIkNJRCIsIjIwMjctMDMtMTIiLCJQSFgiLG51bGwsIkFBIiwiMzY2MiJdLFsiUEhYIiwiMjAyNy0wMy0xMiIsIlBTUCIsbnVsbCwiQUEiLCIyMzc3Il1dXQ=="
         },
         {
           "origin": "CID",
@@ -678,27 +700,50 @@
           "durationMin": 349,
           "departTime": "2027-03-12 08:55",
           "arriveTime": "2027-03-12 12:44",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNXlUR2RDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTME56UTJKeWJqUkJFZzFWUVRFMU1EQjhWVUV5TVRFeUdnc0l3S3daRUFJYUExVlRSRGdjY01Dc0dRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTIiLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0xMiIsIlBTUCIsbnVsbCwiVUEiLCIyMTEyIl1dXQ=="
+          "departureToken": "WyJDalJJTTBFeldWaFVVa1Z2ZUZsQlEwdFhTMEZDUnkwdExTMHRMUzB0TFMxNWFYTmlOa0ZCUVVGQlIzTkdZMEZ2UjNFNGFHbEJFZzFWUVRFMU1EQjhWVUV5TVRFeUdnc0l3S3daRUFJYUExVlRSRGdjY01Dc0dRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTIiLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0xMiIsIlBTUCIsbnVsbCwiVUEiLCIyMTEyIl1dXQ=="
         },
         {
           "origin": "CID",
           "destination": "PSP",
-          "price": 4178,
+          "price": 4901,
           "airlines": [
             "Delta"
           ],
           "flightNumbers": [
-            "DL 5248",
-            "DL 2565"
+            "DL 4899",
+            "DL 724"
           ],
           "stops": 1,
           "layovers": [
             "MSP"
           ],
-          "durationMin": 360,
-          "departTime": "2027-03-12 06:45",
-          "arriveTime": "2027-03-12 10:45",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNXlUR2RDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTME56UTJKeWJqUkJFZzFFVERVeU5EaDhSRXd5TlRZMUdnc0l1NzhaRUFJYUExVlRSRGdjY0x1L0dRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTIiLCJNU1AiLG51bGwsIkRMIiwiNTI0OCJdLFsiTVNQIiwiMjAyNy0wMy0xMiIsIlBTUCIsbnVsbCwiREwiLCIyNTY1Il1dXQ=="
+          "durationMin": 336,
+          "departTime": "2027-03-12 11:00",
+          "arriveTime": "2027-03-12 14:36",
+          "departureToken": "WyJDalJJTTBFeldWaFVVa1Z2ZUZsQlEwdFhTMEZDUnkwdExTMHRMUzB0TFMxNWFYTmlOa0ZCUVVGQlIzTkdZMEZ2UjNFNGFHbEJFZ3hFVERRNE9UbDhSRXczTWpRYUN3aW45QjBRQWhvRFZWTkVPQnh3cC9RZCIsW1siQ0lEIiwiMjAyNy0wMy0xMiIsIk1TUCIsbnVsbCwiREwiLCI0ODk5Il0sWyJNU1AiLCIyMDI3LTAzLTEyIiwiUFNQIixudWxsLCJETCIsIjcyNCJdXV0="
+        },
+        {
+          "origin": "CID",
+          "destination": "PSP",
+          "price": 9129,
+          "airlines": [
+            "American",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "AA 3963",
+            "AS 325",
+            "AS 342"
+          ],
+          "stops": 2,
+          "layovers": [
+            "ORD",
+            "PDX"
+          ],
+          "durationMin": 733,
+          "departTime": "2027-03-12 10:10",
+          "arriveTime": "2027-03-12 20:23",
+          "departureToken": "WyJDalJJTTBFeldWaFVVa1Z2ZUZsQlEwdFhTMEZDUnkwdExTMHRMUzB0TFMxNWFYTmlOa0ZCUVVGQlIzTkdZMEZ2UjNFNGFHbEJFaEpCUVRNNU5qTjhRVk16TWpWOFFWTXpORElhQ3dpRTNEY1FBaG9EVlZORU9CeHdoTnczIixbWyJDSUQiLCIyMDI3LTAzLTEyIiwiT1JEIixudWxsLCJBQSIsIjM5NjMiXSxbIk9SRCIsIjIwMjctMDMtMTIiLCJQRFgiLG51bGwsIkFTIiwiMzI1Il0sWyJQRFgiLCIyMDI3LTAzLTEyIiwiUFNQIixudWxsLCJBUyIsIjM0MiJdXV0="
         }
       ]
     },
@@ -706,7 +751,7 @@
       "depart": "2027-03-13",
       "return": "2027-03-17",
       "nights": 4,
-      "fetchedAt": "2026-11-22T17:36:50.742Z",
+      "fetchedAt": "2026-11-24T11:08:05.032Z",
       "googleFlightsUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAzLTEzagcIARIDQ0lEcgcIARIDUFNQGh4SCjIwMjctMDMtMTdqBwgBEgNQU1ByBwgBEgNDSURAAUABQAFIAXABmAEB&tfu=EgIIAQ",
       "options": [
         {
@@ -729,7 +774,7 @@
           "durationMin": 912,
           "departTime": "2027-03-13 18:55",
           "arriveTime": "2027-03-14 09:07",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNTBXbmRDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTMFJGVEhWT2NrRkJFaFJWUVRRME5qaDhWVUV5TVRBMmZGVkJOVGt3TkJvTENPS1lDaEFDR2dOVlUwUTRISERpbUFvPSIsW1siQ0lEIiwiMjAyNy0wMy0xMyIsIk9SRCIsbnVsbCwiVUEiLCI0NDY4Il0sWyJPUkQiLCIyMDI3LTAzLTEzIiwiU0ZPIixudWxsLCJVQSIsIjIxMDYiXSxbIlNGTyIsIjIwMjctMDMtMTQiLCJQU1AiLG51bGwsIlVBIiwiNTkwNCJdXV0="
+          "departureToken": "WyJDalJJYlUxVVVERnRNVFpKV0d0QlF6aDVha0ZDUnkwdExTMHRMUzB0TFMxNWJHWXlOMEZCUVVGQlIzTkdZMEpSUkhkd0xXdEJFaFJWUVRRME5qaDhWVUV5TVRBMmZGVkJOVGt3TkJvTENPS1lDaEFDR2dOVlUwUTRISERpbUFvPSIsW1siQ0lEIiwiMjAyNy0wMy0xMyIsIk9SRCIsbnVsbCwiVUEiLCI0NDY4Il0sWyJPUkQiLCIyMDI3LTAzLTEzIiwiU0ZPIixudWxsLCJVQSIsIjIxMDYiXSxbIlNGTyIsIjIwMjctMDMtMTQiLCJQU1AiLG51bGwsIlVBIiwiNTkwNCJdXV0="
         },
         {
           "origin": "CID",
@@ -749,12 +794,12 @@
           "durationMin": 469,
           "departTime": "2027-03-13 15:17",
           "arriveTime": "2027-03-13 21:06",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNTBXbmRDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTMFJGVEhWT2NrRkJFZ3hWUVRVeE5IeFZRVEkyTkRRYUN3am53QXdRQWhvRFZWTkVPQnh3NThBTSIsW1siQ0lEIiwiMjAyNy0wMy0xMyIsIkRFTiIsbnVsbCwiVUEiLCI1MTQiXSxbIkRFTiIsIjIwMjctMDMtMTMiLCJQU1AiLG51bGwsIlVBIiwiMjY0NCJdXV0="
+          "departureToken": "WyJDalJJYlUxVVVERnRNVFpKV0d0QlF6aDVha0ZDUnkwdExTMHRMUzB0TFMxNWJHWXlOMEZCUVVGQlIzTkdZMEpSUkhkd0xXdEJFZ3hWUVRVeE5IeFZRVEkyTkRRYUN3am53QXdRQWhvRFZWTkVPQnh3NThBTSIsW1siQ0lEIiwiMjAyNy0wMy0xMyIsIkRFTiIsbnVsbCwiVUEiLCI1MTQiXSxbIkRFTiIsIjIwMjctMDMtMTMiLCJQU1AiLG51bGwsIlVBIiwiMjY0NCJdXV0="
         },
         {
           "origin": "CID",
           "destination": "PSP",
-          "price": 2200,
+          "price": 2193,
           "airlines": [
             "United"
           ],
@@ -769,12 +814,12 @@
           "durationMin": 589,
           "departTime": "2027-03-13 15:20",
           "arriveTime": "2027-03-13 23:09",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNTBXbmRDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTMFJGVEhWT2NrRkJFZzFWUVRVMk16bDhWVUV4TnpnMkdnc0loYllORUFJYUExVlRSRGdjY0lXMkRRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTMiLCJPUkQiLG51bGwsIlVBIiwiNTYzOSJdLFsiT1JEIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiVUEiLCIxNzg2Il1dXQ=="
+          "departureToken": "WyJDalJJYlUxVVVERnRNVFpKV0d0QlF6aDVha0ZDUnkwdExTMHRMUzB0TFMxNWJHWXlOMEZCUVVGQlIzTkdZMEpSUkhkd0xXdEJFZzFWUVRVMk16bDhWVUV4TnpnMkdnc0lnTEVORUFJYUExVlRSRGdjY0lDeERRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTMiLCJPUkQiLG51bGwsIlVBIiwiNTYzOSJdLFsiT1JEIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiVUEiLCIxNzg2Il1dXQ=="
         },
         {
           "origin": "CID",
           "destination": "PSP",
-          "price": 2445,
+          "price": 2396,
           "airlines": [
             "United"
           ],
@@ -789,12 +834,12 @@
           "durationMin": 349,
           "departTime": "2027-03-13 08:55",
           "arriveTime": "2027-03-13 12:44",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNTBXbmRDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTMFJGVEhWT2NrRkJFZzFWUVRFMU1EQjhWVUV5TVRFeUdnc0l3L1VPRUFJYUExVlRSRGdjY01QMURnPT0iLFtbIkNJRCIsIjIwMjctMDMtMTMiLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiVUEiLCIyMTEyIl1dXQ=="
+          "departureToken": "WyJDalJJYlUxVVVERnRNVFpKV0d0QlF6aDVha0ZDUnkwdExTMHRMUzB0TFMxNWJHWXlOMEZCUVVGQlIzTkdZMEpSUkhkd0xXdEJFZzFWUVRFMU1EQjhWVUV5TVRFeUdnc0kzTThPRUFJYUExVlRSRGdjY056UERnPT0iLFtbIkNJRCIsIjIwMjctMDMtMTMiLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiVUEiLCIyMTEyIl1dXQ=="
         },
         {
           "origin": "CID",
           "destination": "PSP",
-          "price": 2606,
+          "price": 3101,
           "airlines": [
             "American"
           ],
@@ -809,7 +854,7 @@
           "durationMin": 662,
           "departTime": "2027-03-13 14:11",
           "arriveTime": "2027-03-13 23:13",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNTBXbmRDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTMFJGVEhWT2NrRkJFZzFCUVRRM09ESjhRVUV6TVRRekdnc0lxL01QRUFJYUExVlRSRGdjY0t2ekR3PT0iLFtbIkNJRCIsIjIwMjctMDMtMTMiLCJPUkQiLG51bGwsIkFBIiwiNDc4MiJdLFsiT1JEIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiQUEiLCIzMTQzIl1dXQ=="
+          "departureToken": "WyJDalJJYlUxVVVERnRNVFpKV0d0QlF6aDVha0ZDUnkwdExTMHRMUzB0TFMxNWJHWXlOMEZCUVVGQlIzTkdZMEpSUkhkd0xXdEJFZzFCUVRRM09ESjhRVUV6TVRRekdnc0loL1lTRUFJYUExVlRSRGdjY0lmMkVnPT0iLFtbIkNJRCIsIjIwMjctMDMtMTMiLCJPUkQiLG51bGwsIkFBIiwiNDc4MiJdLFsiT1JEIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiQUEiLCIzMTQzIl1dXQ=="
         },
         {
           "origin": "CID",
@@ -829,12 +874,12 @@
           "durationMin": 449,
           "departTime": "2027-03-13 16:17",
           "arriveTime": "2027-03-13 21:46",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNTBXbmRDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTMFJGVEhWT2NrRkJFZzFCUVRNMk1qaDhRVUV5TnpBNUdnc0k1SWdURUFJYUExVlRSRGdjY09TSUV3PT0iLFtbIkNJRCIsIjIwMjctMDMtMTMiLCJERlciLG51bGwsIkFBIiwiMzYyOCJdLFsiREZXIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiQUEiLCIyNzA5Il1dXQ=="
+          "departureToken": "WyJDalJJYlUxVVVERnRNVFpKV0d0QlF6aDVha0ZDUnkwdExTMHRMUzB0TFMxNWJHWXlOMEZCUVVGQlIzTkdZMEpSUkhkd0xXdEJFZzFCUVRNMk1qaDhRVUV5TnpBNUdnc0k1SWdURUFJYUExVlRSRGdjY09TSUV3PT0iLFtbIkNJRCIsIjIwMjctMDMtMTMiLCJERlciLG51bGwsIkFBIiwiMzYyOCJdLFsiREZXIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiQUEiLCIyNzA5Il1dXQ=="
         },
         {
           "origin": "CID",
           "destination": "PSP",
-          "price": 3425,
+          "price": 3278,
           "airlines": [
             "Delta"
           ],
@@ -849,27 +894,7 @@
           "durationMin": 360,
           "departTime": "2027-03-13 06:45",
           "arriveTime": "2027-03-13 10:45",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNTBXbmRDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTMFJGVEhWT2NrRkJFZzFFVERVeU5EaDhSRXd5TlRZMUdnc0lsL01VRUFJYUExVlRSRGdjY0pmekZBPT0iLFtbIkNJRCIsIjIwMjctMDMtMTMiLCJNU1AiLG51bGwsIkRMIiwiNTI0OCJdLFsiTVNQIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiREwiLCIyNTY1Il1dXQ=="
-        },
-        {
-          "origin": "CID",
-          "destination": "PSP",
-          "price": 3518,
-          "airlines": [
-            "American"
-          ],
-          "flightNumbers": [
-            "AA 3662",
-            "AA 2377"
-          ],
-          "stops": 1,
-          "layovers": [
-            "PHX"
-          ],
-          "durationMin": 348,
-          "departTime": "2027-03-13 07:35",
-          "arriveTime": "2027-03-13 11:23",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNTBXbmRDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTMFJGVEhWT2NrRkJFZzFCUVRNMk5qSjhRVUV5TXpjM0dnc0k2THNWRUFJYUExVlRSRGdjY09pN0ZRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTMiLCJQSFgiLG51bGwsIkFBIiwiMzY2MiJdLFsiUEhYIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiQUEiLCIyMzc3Il1dXQ=="
+          "departureToken": "WyJDalJJYlUxVVVERnRNVFpKV0d0QlF6aDVha0ZDUnkwdExTMHRMUzB0TFMxNWJHWXlOMEZCUVVGQlIzTkdZMEpSUkhkd0xXdEJFZzFFVERVeU5EaDhSRXd5TlRZMUdnc0lxNEFVRUFJYUExVlRSRGdjY0t1QUZBPT0iLFtbIkNJRCIsIjIwMjctMDMtMTMiLCJNU1AiLG51bGwsIkRMIiwiNTI0OCJdLFsiTVNQIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiREwiLCIyNTY1Il1dXQ=="
         },
         {
           "origin": "CID",
@@ -889,12 +914,32 @@
           "durationMin": 361,
           "departTime": "2027-03-13 14:39",
           "arriveTime": "2027-03-13 18:40",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNTBXbmRDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTMFJGVEhWT2NrRkJFZzFCUVRJME1qUjhRVUV4T1RreEdnc0k2THNWRUFJYUExVlRSRGdjY09pN0ZRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTMiLCJQSFgiLG51bGwsIkFBIiwiMjQyNCJdLFsiUEhYIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiQUEiLCIxOTkxIl1dXQ=="
+          "departureToken": "WyJDalJJYlUxVVVERnRNVFpKV0d0QlF6aDVha0ZDUnkwdExTMHRMUzB0TFMxNWJHWXlOMEZCUVVGQlIzTkdZMEpSUkhkd0xXdEJFZzFCUVRJME1qUjhRVUV4T1RreEdnc0k2THNWRUFJYUExVlRSRGdjY09pN0ZRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTMiLCJQSFgiLG51bGwsIkFBIiwiMjQyNCJdLFsiUEhYIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiQUEiLCIxOTkxIl1dXQ=="
         },
         {
           "origin": "CID",
           "destination": "PSP",
-          "price": 6585,
+          "price": 3518,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 3662",
+            "AA 2377"
+          ],
+          "stops": 1,
+          "layovers": [
+            "PHX"
+          ],
+          "durationMin": 348,
+          "departTime": "2027-03-13 07:35",
+          "arriveTime": "2027-03-13 11:23",
+          "departureToken": "WyJDalJJYlUxVVVERnRNVFpKV0d0QlF6aDVha0ZDUnkwdExTMHRMUzB0TFMxNWJHWXlOMEZCUVVGQlIzTkdZMEpSUkhkd0xXdEJFZzFCUVRNMk5qSjhRVUV5TXpjM0dnc0k2THNWRUFJYUExVlRSRGdjY09pN0ZRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTMiLCJQSFgiLG51bGwsIkFBIiwiMzY2MiJdLFsiUEhYIiwiMjAyNy0wMy0xMyIsIlBTUCIsbnVsbCwiQUEiLCIyMzc3Il1dXQ=="
+        },
+        {
+          "origin": "CID",
+          "destination": "PSP",
+          "price": 6360,
           "airlines": [
             "American",
             "Alaska"
@@ -912,7 +957,7 @@
           "durationMin": 733,
           "departTime": "2027-03-13 10:10",
           "arriveTime": "2027-03-13 20:23",
-          "departureToken": "WyJDalJJUzFwQmFqWkNSemRhVERCQlUwNTBXbmRDUnkwdExTMHRMUzB0TFc5NWNYRXhNVUZCUVVGQlIzTkVTMFJGVEhWT2NrRkJFaEpCUVRNNU5qTjhRVk16TWpWOFFWTXpORElhQ3dqRW1DZ1FBaG9EVlZORU9CeHd4SmdvIixbWyJDSUQiLCIyMDI3LTAzLTEzIiwiT1JEIixudWxsLCJBQSIsIjM5NjMiXSxbIk9SRCIsIjIwMjctMDMtMTMiLCJQRFgiLG51bGwsIkFTIiwiMzI1Il0sWyJQRFgiLCIyMDI3LTAzLTEzIiwiUFNQIixudWxsLCJBUyIsIjM0MiJdXV0="
+          "departureToken": "WyJDalJJYlUxVVVERnRNVFpKV0d0QlF6aDVha0ZDUnkwdExTMHRMUzB0TFMxNWJHWXlOMEZCUVVGQlIzTkdZMEpSUkhkd0xXdEJFaEpCUVRNNU5qTjhRVk16TWpWOFFWTXpORElhQ3dqZzZDWVFBaG9EVlZORU9CeHc0T2dtIixbWyJDSUQiLCIyMDI3LTAzLTEzIiwiT1JEIixudWxsLCJBQSIsIjM5NjMiXSxbIk9SRCIsIjIwMjctMDMtMTMiLCJQRFgiLG51bGwsIkFTIiwiMzI1Il0sWyJQRFgiLCIyMDI3LTAzLTEzIiwiUFNQIixudWxsLCJBUyIsIjM0MiJdXV0="
         }
       ]
     },
@@ -3445,7 +3490,7 @@
       "depart": "2027-03-17",
       "return": "2027-03-23",
       "nights": 6,
-      "fetchedAt": "2026-11-23T11:07:09.047Z",
+      "fetchedAt": "2026-11-24T11:07:48.599Z",
       "googleFlightsUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAzLTE3agcIARIDQ0lEcgcIARIDUFNQGh4SCjIwMjctMDMtMjNqBwgBEgNQU1ByBwgBEgNDSURAAUABQAFIAXABmAEB&tfu=EgIIAQ",
       "options": [
         {
@@ -3463,10 +3508,10 @@
           "layovers": [
             "DEN"
           ],
-          "durationMin": 442,
-          "departTime": "2027-03-17 15:20",
-          "arriveTime": "2027-03-17 20:42",
-          "departureToken": "WyJDalJJZVc1SFNWQTJaRTFNTVhkQldETXlXSGRDUnkwdExTMHRMUzB0TFMxdmEyeHJNa0ZCUVVGQlIzTkZTR3gzUTJSR09VbEJFZ3hWUVRVeE5IeFZRVEkyTkRRYUN3aW93d1lRQWhvRFZWTkVPQnh3cU1NRyIsW1siQ0lEIiwiMjAyNy0wMy0xNyIsIkRFTiIsbnVsbCwiVUEiLCI1MTQiXSxbIkRFTiIsIjIwMjctMDMtMTciLCJQU1AiLG51bGwsIlVBIiwiMjY0NCJdXV0=",
+          "durationMin": 465,
+          "departTime": "2027-03-17 15:21",
+          "arriveTime": "2027-03-17 21:06",
+          "departureToken": "WyJDalJJWjNGS2RURXlTWE5hTjAxQlJVVjViR2RDUnkwdExTMHRMUzB0TFc5NVlXb3lOa0ZCUVVGQlIzTkdZMEZOU1ZCZmIwVkJFZ3hWUVRVeE5IeFZRVEkyTkRRYUN3aW93d1lRQWhvRFZWTkVPQnh3cU1NRyIsW1siQ0lEIiwiMjAyNy0wMy0xNyIsIkRFTiIsbnVsbCwiVUEiLCI1MTQiXSxbIkRFTiIsIjIwMjctMDMtMTciLCJQU1AiLG51bGwsIlVBIiwiMjY0NCJdXV0=",
           "returnFlight": {
             "origin": "PSP",
             "destination": "CID",
@@ -3491,7 +3536,7 @@
         {
           "origin": "CID",
           "destination": "PSP",
-          "price": 1086,
+          "price": 1179,
           "airlines": [
             "United"
           ],
@@ -3505,10 +3550,50 @@
             "ORD",
             "LAX"
           ],
-          "durationMin": 577,
+          "durationMin": 587,
           "departTime": "2027-03-17 09:50",
-          "arriveTime": "2027-03-17 17:27",
-          "departureToken": "WyJDalJJZVc1SFNWQTJaRTFNTVhkQldETXlXSGRDUnkwdExTMHRMUzB0TFMxdmEyeHJNa0ZCUVVGQlIzTkZTR3gzUTJSR09VbEJFaFJWUVRRMk56TjhWVUV4TXpZemZGVkJOVFF3TlJvTENON1BCaEFDR2dOVlUwUTRISERlendZPSIsW1siQ0lEIiwiMjAyNy0wMy0xNyIsIk9SRCIsbnVsbCwiVUEiLCI0NjczIl0sWyJPUkQiLCIyMDI3LTAzLTE3IiwiTEFYIixudWxsLCJVQSIsIjEzNjMiXSxbIkxBWCIsIjIwMjctMDMtMTciLCJQU1AiLG51bGwsIlVBIiwiNTQwNSJdXV0="
+          "arriveTime": "2027-03-17 17:37",
+          "departureToken": "WyJDalJJWjNGS2RURXlTWE5hTjAxQlJVVjViR2RDUnkwdExTMHRMUzB0TFc5NVlXb3lOa0ZCUVVGQlIzTkdZMEZOU1ZCZmIwVkJFaFJWUVRRMk56TjhWVUV4TXpZemZGVkJOVFF3TlJvTENPV1lCeEFDR2dOVlUwUTRISERsbUFjPSIsW1siQ0lEIiwiMjAyNy0wMy0xNyIsIk9SRCIsbnVsbCwiVUEiLCI0NjczIl0sWyJPUkQiLCIyMDI3LTAzLTE3IiwiTEFYIixudWxsLCJVQSIsIjEzNjMiXSxbIkxBWCIsIjIwMjctMDMtMTciLCJQU1AiLG51bGwsIlVBIiwiNTQwNSJdXV0="
+        },
+        {
+          "origin": "CID",
+          "destination": "PSP",
+          "price": 1217,
+          "airlines": [
+            "Delta"
+          ],
+          "flightNumbers": [
+            "DL 4899",
+            "DL 724"
+          ],
+          "stops": 1,
+          "layovers": [
+            "MSP"
+          ],
+          "durationMin": 336,
+          "departTime": "2027-03-17 11:00",
+          "arriveTime": "2027-03-17 14:36",
+          "departureToken": "WyJDalJJWjNGS2RURXlTWE5hTjAxQlJVVjViR2RDUnkwdExTMHRMUzB0TFc5NVlXb3lOa0ZCUVVGQlIzTkdZMEZOU1ZCZmIwVkJFZ3hFVERRNE9UbDhSRXczTWpRYUN3aVV0Z2NRQWhvRFZWTkVPQnh3bExZSCIsW1siQ0lEIiwiMjAyNy0wMy0xNyIsIk1TUCIsbnVsbCwiREwiLCI0ODk5Il0sWyJNU1AiLCIyMDI3LTAzLTE3IiwiUFNQIixudWxsLCJETCIsIjcyNCJdXV0=",
+          "returnFlight": {
+            "origin": "PSP",
+            "destination": "CID",
+            "price": 1217,
+            "airlines": [
+              "Delta"
+            ],
+            "flightNumbers": [
+              "DL 940",
+              "DL 2626"
+            ],
+            "stops": 1,
+            "layovers": [
+              "ATL"
+            ],
+            "durationMin": 412,
+            "departTime": "2027-03-23 13:35",
+            "arriveTime": "2027-03-23 22:27"
+          },
+          "returnUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhphEgoyMDI3LTAzLTE3IiAKA0NJRBIKMjAyNy0wMy0xNxoDTVNQKgJETDIENDg5OSIfCgNNU1ASCjIwMjctMDMtMTcaA1BTUCoCREwyAzcyNGoHCAESA0NJRHIHCAESA1BTUBoeEgoyMDI3LTAzLTIzagcIARIDUFNQcgcIARIDQ0lEQAFAAUABSAFwAZgBAQ&tfu=EgIIAQ"
         },
         {
           "origin": "CID",
@@ -3528,7 +3613,7 @@
           "durationMin": 366,
           "departTime": "2027-03-17 14:39",
           "arriveTime": "2027-03-17 18:45",
-          "departureToken": "WyJDalJJZVc1SFNWQTJaRTFNTVhkQldETXlXSGRDUnkwdExTMHRMUzB0TFMxdmEyeHJNa0ZCUVVGQlIzTkZTR3gzUTJSR09VbEJFZzFCUVRJME1qUjhRVUV4T1RreEdnc0lsSUVJRUFJYUExVlRSRGdjY0pTQkNBPT0iLFtbIkNJRCIsIjIwMjctMDMtMTciLCJQSFgiLG51bGwsIkFBIiwiMjQyNCJdLFsiUEhYIiwiMjAyNy0wMy0xNyIsIlBTUCIsbnVsbCwiQUEiLCIxOTkxIl1dXQ=="
+          "departureToken": "WyJDalJJWjNGS2RURXlTWE5hTjAxQlJVVjViR2RDUnkwdExTMHRMUzB0TFc5NVlXb3lOa0ZCUVVGQlIzTkdZMEZOU1ZCZmIwVkJFZzFCUVRJME1qUjhRVUV4T1RreEdnc0lsSUVJRUFJYUExVlRSRGdjY0pTQkNBPT0iLFtbIkNJRCIsIjIwMjctMDMtMTciLCJQSFgiLG51bGwsIkFBIiwiMjQyNCJdLFsiUEhYIiwiMjAyNy0wMy0xNyIsIlBTUCIsbnVsbCwiQUEiLCIxOTkxIl1dXQ=="
         },
         {
           "origin": "CID",
@@ -3545,10 +3630,30 @@
           "layovers": [
             "ATL"
           ],
-          "durationMin": 483,
+          "durationMin": 545,
           "departTime": "2027-03-17 05:20",
-          "arriveTime": "2027-03-17 11:23",
-          "departureToken": "WyJDalJJZVc1SFNWQTJaRTFNTVhkQldETXlXSGRDUnkwdExTMHRMUzB0TFMxdmEyeHJNa0ZCUVVGQlIzTkZTR3gzUTJSR09VbEJFZ3hFVERJMU1UaDhSRXc1TkRBYUN3aUVzQWdRQWhvRFZWTkVPQnh3aExBSSIsW1siQ0lEIiwiMjAyNy0wMy0xNyIsIkFUTCIsbnVsbCwiREwiLCIyNTE4Il0sWyJBVEwiLCIyMDI3LTAzLTE3IiwiUFNQIixudWxsLCJETCIsIjk0MCJdXV0="
+          "arriveTime": "2027-03-17 12:25",
+          "departureToken": "WyJDalJJWjNGS2RURXlTWE5hTjAxQlJVVjViR2RDUnkwdExTMHRMUzB0TFc5NVlXb3lOa0ZCUVVGQlIzTkdZMEZOU1ZCZmIwVkJFZ3hFVERJMU1UaDhSRXc1TkRBYUN3aUVzQWdRQWhvRFZWTkVPQnh3aExBSSIsW1siQ0lEIiwiMjAyNy0wMy0xNyIsIkFUTCIsbnVsbCwiREwiLCIyNTE4Il0sWyJBVEwiLCIyMDI3LTAzLTE3IiwiUFNQIixudWxsLCJETCIsIjk0MCJdXV0="
+        },
+        {
+          "origin": "CID",
+          "destination": "PSP",
+          "price": 1460,
+          "airlines": [
+            "American"
+          ],
+          "flightNumbers": [
+            "AA 5587",
+            "AA 2008"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DFW"
+          ],
+          "durationMin": 378,
+          "departTime": "2027-03-17 10:01",
+          "arriveTime": "2027-03-17 14:19",
+          "departureToken": "WyJDalJJWjNGS2RURXlTWE5hTjAxQlJVVjViR2RDUnkwdExTMHRMUzB0TFc5NVlXb3lOa0ZCUVVGQlIzTkdZMEZOU1ZCZmIwVkJFZzFCUVRVMU9EZDhRVUV5TURBNEdnc0lnUFFJRUFJYUExVlRSRGdjY0lEMENBPT0iLFtbIkNJRCIsIjIwMjctMDMtMTciLCJERlciLG51bGwsIkFBIiwiNTU4NyJdLFsiREZXIiwiMjAyNy0wMy0xNyIsIlBTUCIsbnVsbCwiQUEiLCIyMDA4Il1dXQ=="
         },
         {
           "origin": "CID",
@@ -3568,32 +3673,12 @@
           "durationMin": 348,
           "departTime": "2027-03-17 07:35",
           "arriveTime": "2027-03-17 11:23",
-          "departureToken": "WyJDalJJZVc1SFNWQTJaRTFNTVhkQldETXlXSGRDUnkwdExTMHRMUzB0TFMxdmEyeHJNa0ZCUVVGQlIzTkZTR3gzUTJSR09VbEJFZzFCUVRNMk5qSjhRVUV5TXpjM0dnc0lnTDhKRUFJYUExVlRSRGdjY0lDL0NRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTciLCJQSFgiLG51bGwsIkFBIiwiMzY2MiJdLFsiUEhYIiwiMjAyNy0wMy0xNyIsIlBTUCIsbnVsbCwiQUEiLCIyMzc3Il1dXQ=="
+          "departureToken": "WyJDalJJWjNGS2RURXlTWE5hTjAxQlJVVjViR2RDUnkwdExTMHRMUzB0TFc5NVlXb3lOa0ZCUVVGQlIzTkdZMEZOU1ZCZmIwVkJFZzFCUVRNMk5qSjhRVUV5TXpjM0dnc0lnTDhKRUFJYUExVlRSRGdjY0lDL0NRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTciLCJQSFgiLG51bGwsIkFBIiwiMzY2MiJdLFsiUEhYIiwiMjAyNy0wMy0xNyIsIlBTUCIsbnVsbCwiQUEiLCIyMzc3Il1dXQ=="
         },
         {
           "origin": "CID",
           "destination": "PSP",
-          "price": 1556,
-          "airlines": [
-            "American"
-          ],
-          "flightNumbers": [
-            "AA 3628",
-            "AA 2709"
-          ],
-          "stops": 1,
-          "layovers": [
-            "DFW"
-          ],
-          "durationMin": 449,
-          "departTime": "2027-03-17 16:17",
-          "arriveTime": "2027-03-17 21:46",
-          "departureToken": "WyJDalJJZVc1SFNWQTJaRTFNTVhkQldETXlXSGRDUnkwdExTMHRMUzB0TFMxdmEyeHJNa0ZCUVVGQlIzTkZTR3gzUTJSR09VbEJFZzFCUVRNMk1qaDhRVUV5TnpBNUdnc0lnTDhKRUFJYUExVlRSRGdjY0lDL0NRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTciLCJERlciLG51bGwsIkFBIiwiMzYyOCJdLFsiREZXIiwiMjAyNy0wMy0xNyIsIlBTUCIsbnVsbCwiQUEiLCIyNzA5Il1dXQ=="
-        },
-        {
-          "origin": "CID",
-          "destination": "PSP",
-          "price": 1632,
+          "price": 1635,
           "airlines": [
             "United"
           ],
@@ -3605,30 +3690,56 @@
           "layovers": [
             "DEN"
           ],
-          "durationMin": 345,
+          "durationMin": 349,
           "departTime": "2027-03-17 08:55",
-          "arriveTime": "2027-03-17 12:40",
-          "departureToken": "WyJDalJJZVc1SFNWQTJaRTFNTVhkQldETXlXSGRDUnkwdExTMHRMUzB0TFMxdmEyeHJNa0ZCUVVGQlIzTkZTR3gzUTJSR09VbEJFZzFWUVRFMU1EQjhWVUV5TVRFeUdnc0k2UG9KRUFJYUExVlRSRGdjY09qNkNRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTciLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0xNyIsIlBTUCIsbnVsbCwiVUEiLCIyMTEyIl1dXQ=="
+          "arriveTime": "2027-03-17 12:44",
+          "departureToken": "WyJDalJJWjNGS2RURXlTWE5hTjAxQlJVVjViR2RDUnkwdExTMHRMUzB0TFc5NVlXb3lOa0ZCUVVGQlIzTkdZMEZOU1ZCZmIwVkJFZzFWUVRFMU1EQjhWVUV5TVRFeUdnc0lyUDBKRUFJYUExVlRSRGdjY0t6OUNRPT0iLFtbIkNJRCIsIjIwMjctMDMtMTciLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0xNyIsIlBTUCIsbnVsbCwiVUEiLCIyMTEyIl1dXQ=="
         },
         {
           "origin": "CID",
           "destination": "PSP",
-          "price": 2333,
+          "price": 1707,
           "airlines": [
-            "Delta"
+            "American",
+            "Alaska"
           ],
           "flightNumbers": [
-            "DL 5248",
-            "DL 2565"
+            "AA 3963",
+            "AS 407",
+            "AS 1461"
           ],
-          "stops": 1,
+          "stops": 2,
           "layovers": [
-            "MSP"
+            "ORD",
+            "SEA"
           ],
-          "durationMin": 360,
-          "departTime": "2027-03-17 06:45",
-          "arriveTime": "2027-03-17 10:45",
-          "departureToken": "WyJDalJJZVc1SFNWQTJaRTFNTVhkQldETXlXSGRDUnkwdExTMHRMUzB0TFMxdmEyeHJNa0ZCUVVGQlIzTkZTR3gzUTJSR09VbEJFZzFFVERVeU5EaDhSRXd5TlRZMUdnc0lnWjRPRUFJYUExVlRSRGdjY0lHZURnPT0iLFtbIkNJRCIsIjIwMjctMDMtMTciLCJNU1AiLG51bGwsIkRMIiwiNTI0OCJdLFsiTVNQIiwiMjAyNy0wMy0xNyIsIlBTUCIsbnVsbCwiREwiLCIyNTY1Il1dXQ=="
+          "durationMin": 812,
+          "departTime": "2027-03-17 10:05",
+          "arriveTime": "2027-03-17 21:37",
+          "departureToken": "WyJDalJJWjNGS2RURXlTWE5hTjAxQlJVVjViR2RDUnkwdExTMHRMUzB0TFc5NVlXb3lOa0ZCUVVGQlIzTkdZMEZOU1ZCZmIwVkJFaE5CUVRNNU5qTjhRVk0wTURkOFFWTXhORFl4R2dzSXpMVUtFQUlhQTFWVFJEZ2NjTXkxQ2c9PSIsW1siQ0lEIiwiMjAyNy0wMy0xNyIsIk9SRCIsbnVsbCwiQUEiLCIzOTYzIl0sWyJPUkQiLCIyMDI3LTAzLTE3IiwiU0VBIixudWxsLCJBUyIsIjQwNyJdLFsiU0VBIiwiMjAyNy0wMy0xNyIsIlBTUCIsbnVsbCwiQVMiLCIxNDYxIl1dXQ=="
+        },
+        {
+          "origin": "CID",
+          "destination": "PSP",
+          "price": 2604,
+          "airlines": [
+            "American",
+            "Alaska"
+          ],
+          "flightNumbers": [
+            "AA 3963",
+            "AS 325",
+            "AS 342"
+          ],
+          "stops": 2,
+          "layovers": [
+            "ORD",
+            "PDX"
+          ],
+          "durationMin": 738,
+          "departTime": "2027-03-17 10:05",
+          "arriveTime": "2027-03-17 20:23",
+          "departureToken": "WyJDalJJWjNGS2RURXlTWE5hTjAxQlJVVjViR2RDUnkwdExTMHRMUzB0TFc5NVlXb3lOa0ZCUVVGQlIzTkdZMEZOU1ZCZmIwVkJFaEpCUVRNNU5qTjhRVk16TWpWOFFWTXpORElhQ3dpdzhnOFFBaG9EVlZORU9CeHdzUElQIixbWyJDSUQiLCIyMDI3LTAzLTE3IiwiT1JEIixudWxsLCJBQSIsIjM5NjMiXSxbIk9SRCIsIjIwMjctMDMtMTciLCJQRFgiLG51bGwsIkFTIiwiMzI1Il0sWyJQRFgiLCIyMDI3LTAzLTE3IiwiUFNQIixudWxsLCJBUyIsIjM0MiJdXV0="
         }
       ]
     },
@@ -5372,7 +5483,7 @@
       "depart": "2027-03-21",
       "return": "2027-03-25",
       "nights": 4,
-      "fetchedAt": "2026-11-22T17:37:48.264Z",
+      "fetchedAt": "2026-11-24T11:07:46.800Z",
       "googleFlightsUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAzLTIxagcIARIDQ0lEcgcIARIDUFNQGh4SCjIwMjctMDMtMjVqBwgBEgNQU1ByBwgBEgNDSURAAUABQAFIAXABmAEB&tfu=EgIIAQ",
       "options": [
         {
@@ -5393,7 +5504,7 @@
           "durationMin": 336,
           "departTime": "2027-03-21 15:15",
           "arriveTime": "2027-03-21 18:51",
-          "departureToken": "WyJDalJJYUhSZlVTMVNSSFUzYXpSQlN6VndlR2RDUnkwdExTMHRMUzB0TFMxNWJHZDNPRUZCUVVGQlIzTkVTMGR6UkVWYVpGVkJFZ3hWUVRVeE5IeFZRVEl3TkRFYUN3akkwd3NRQWhvRFZWTkVPQnh3eU5NTCIsW1siQ0lEIiwiMjAyNy0wMy0yMSIsIkRFTiIsbnVsbCwiVUEiLCI1MTQiXSxbIkRFTiIsIjIwMjctMDMtMjEiLCJQU1AiLG51bGwsIlVBIiwiMjA0MSJdXV0="
+          "departureToken": "WyJDalJJZGpSTU9XTlBNMVJZZEdOQlJrUkpOV2RDUnkwdExTMHRMUzB0TFMxdmVXRjVNVUZCUVVGQlIzTkdZMEZKU1VGc1RGRkJFZ3hWUVRVeE5IeFZRVEl3TkRFYUN3akkwd3NRQWhvRFZWTkVPQnh3eU5NTCIsW1siQ0lEIiwiMjAyNy0wMy0yMSIsIkRFTiIsbnVsbCwiVUEiLCI1MTQiXSxbIkRFTiIsIjIwMjctMDMtMjEiLCJQU1AiLG51bGwsIlVBIiwiMjA0MSJdXV0="
         },
         {
           "origin": "CID",
@@ -5413,7 +5524,7 @@
           "durationMin": 348,
           "departTime": "2027-03-21 07:35",
           "arriveTime": "2027-03-21 11:23",
-          "departureToken": "WyJDalJJYUhSZlVTMVNSSFUzYXpSQlN6VndlR2RDUnkwdExTMHRMUzB0TFMxNWJHZDNPRUZCUVVGQlIzTkVTMGR6UkVWYVpGVkJFZzFCUVRNMk5qSjhRVUV5TXpjM0dnc0k0TWdNRUFJYUExVlRSRGdjY09ESURBPT0iLFtbIkNJRCIsIjIwMjctMDMtMjEiLCJQSFgiLG51bGwsIkFBIiwiMzY2MiJdLFsiUEhYIiwiMjAyNy0wMy0yMSIsIlBTUCIsbnVsbCwiQUEiLCIyMzc3Il1dXQ=="
+          "departureToken": "WyJDalJJZGpSTU9XTlBNMVJZZEdOQlJrUkpOV2RDUnkwdExTMHRMUzB0TFMxdmVXRjVNVUZCUVVGQlIzTkdZMEZKU1VGc1RGRkJFZzFCUVRNMk5qSjhRVUV5TXpjM0dnc0k0TWdNRUFJYUExVlRSRGdjY09ESURBPT0iLFtbIkNJRCIsIjIwMjctMDMtMjEiLCJQSFgiLG51bGwsIkFBIiwiMzY2MiJdLFsiUEhYIiwiMjAyNy0wMy0yMSIsIlBTUCIsbnVsbCwiQUEiLCIyMzc3Il1dXQ=="
         },
         {
           "origin": "CID",
@@ -5433,7 +5544,7 @@
           "durationMin": 366,
           "departTime": "2027-03-21 14:39",
           "arriveTime": "2027-03-21 18:45",
-          "departureToken": "WyJDalJJYUhSZlVTMVNSSFUzYXpSQlN6VndlR2RDUnkwdExTMHRMUzB0TFMxNWJHZDNPRUZCUVVGQlIzTkVTMGR6UkVWYVpGVkJFZzFCUVRJME1qUjhRVUV4T1RreEdnc0k0TWdNRUFJYUExVlRSRGdjY09ESURBPT0iLFtbIkNJRCIsIjIwMjctMDMtMjEiLCJQSFgiLG51bGwsIkFBIiwiMjQyNCJdLFsiUEhYIiwiMjAyNy0wMy0yMSIsIlBTUCIsbnVsbCwiQUEiLCIxOTkxIl1dXQ=="
+          "departureToken": "WyJDalJJZGpSTU9XTlBNMVJZZEdOQlJrUkpOV2RDUnkwdExTMHRMUzB0TFMxdmVXRjVNVUZCUVVGQlIzTkdZMEZKU1VGc1RGRkJFZzFCUVRJME1qUjhRVUV4T1RreEdnc0k0TWdNRUFJYUExVlRSRGdjY09ESURBPT0iLFtbIkNJRCIsIjIwMjctMDMtMjEiLCJQSFgiLG51bGwsIkFBIiwiMjQyNCJdLFsiUEhYIiwiMjAyNy0wMy0yMSIsIlBTUCIsbnVsbCwiQUEiLCIxOTkxIl1dXQ=="
         },
         {
           "origin": "CID",
@@ -5453,12 +5564,12 @@
           "durationMin": 449,
           "departTime": "2027-03-21 16:17",
           "arriveTime": "2027-03-21 21:46",
-          "departureToken": "WyJDalJJYUhSZlVTMVNSSFUzYXpSQlN6VndlR2RDUnkwdExTMHRMUzB0TFMxNWJHZDNPRUZCUVVGQlIzTkVTMGR6UkVWYVpGVkJFZzFCUVRNMk1qaDhRVUV5TnpBNUdnc0k0TWdNRUFJYUExVlRSRGdjY09ESURBPT0iLFtbIkNJRCIsIjIwMjctMDMtMjEiLCJERlciLG51bGwsIkFBIiwiMzYyOCJdLFsiREZXIiwiMjAyNy0wMy0yMSIsIlBTUCIsbnVsbCwiQUEiLCIyNzA5Il1dXQ=="
+          "departureToken": "WyJDalJJZGpSTU9XTlBNMVJZZEdOQlJrUkpOV2RDUnkwdExTMHRMUzB0TFMxdmVXRjVNVUZCUVVGQlIzTkdZMEZKU1VGc1RGRkJFZzFCUVRNMk1qaDhRVUV5TnpBNUdnc0k0TWdNRUFJYUExVlRSRGdjY09ESURBPT0iLFtbIkNJRCIsIjIwMjctMDMtMjEiLCJERlciLG51bGwsIkFBIiwiMzYyOCJdLFsiREZXIiwiMjAyNy0wMy0yMSIsIlBTUCIsbnVsbCwiQUEiLCIyNzA5Il1dXQ=="
         },
         {
           "origin": "CID",
           "destination": "PSP",
-          "price": 2480,
+          "price": 2210,
           "airlines": [
             "Delta"
           ],
@@ -5470,10 +5581,50 @@
           "layovers": [
             "MSP"
           ],
-          "durationMin": 360,
+          "durationMin": 379,
           "departTime": "2027-03-21 06:45",
-          "arriveTime": "2027-03-21 10:45",
-          "departureToken": "WyJDalJJYUhSZlVTMVNSSFUzYXpSQlN6VndlR2RDUnkwdExTMHRMUzB0TFMxNWJHZDNPRUZCUVVGQlIzTkVTMGR6UkVWYVpGVkJFZzFFVERVeU5EaDhSRXd5TlRZMUdnc0k4NUFQRUFJYUExVlRSRGdjY1BPUUR3PT0iLFtbIkNJRCIsIjIwMjctMDMtMjEiLCJNU1AiLG51bGwsIkRMIiwiNTI0OCJdLFsiTVNQIiwiMjAyNy0wMy0yMSIsIlBTUCIsbnVsbCwiREwiLCIyNTY1Il1dXQ=="
+          "arriveTime": "2027-03-21 11:04",
+          "departureToken": "WyJDalJJZGpSTU9XTlBNMVJZZEdOQlJrUkpOV2RDUnkwdExTMHRMUzB0TFMxdmVXRjVNVUZCUVVGQlIzTkdZMEZKU1VGc1RGRkJFZzFFVERVeU5EaDhSRXd5TlRZMUdnc0krNzBORUFJYUExVlRSRGdjY1B1OURRPT0iLFtbIkNJRCIsIjIwMjctMDMtMjEiLCJNU1AiLG51bGwsIkRMIiwiNTI0OCJdLFsiTVNQIiwiMjAyNy0wMy0yMSIsIlBTUCIsbnVsbCwiREwiLCIyNTY1Il1dXQ=="
+        },
+        {
+          "origin": "CID",
+          "destination": "PSP",
+          "price": 2366,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1500",
+            "UA 2602"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 625,
+          "departTime": "2027-03-21 08:55",
+          "arriveTime": "2027-03-21 17:20",
+          "departureToken": "WyJDalJJZGpSTU9XTlBNMVJZZEdOQlJrUkpOV2RDUnkwdExTMHRMUzB0TFMxdmVXRjVNVUZCUVVGQlIzTkdZMEZKU1VGc1RGRkJFZzFWUVRFMU1EQjhWVUV5TmpBeUdnc0k2N2NPRUFJYUExVlRSRGdjY091M0RnPT0iLFtbIkNJRCIsIjIwMjctMDMtMjEiLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0yMSIsIlBTUCIsbnVsbCwiVUEiLCIyNjAyIl1dXQ=="
+        },
+        {
+          "origin": "CID",
+          "destination": "PSP",
+          "price": 2561,
+          "airlines": [
+            "United"
+          ],
+          "flightNumbers": [
+            "UA 1500",
+            "UA 6002"
+          ],
+          "stops": 1,
+          "layovers": [
+            "DEN"
+          ],
+          "durationMin": 488,
+          "departTime": "2027-03-21 08:55",
+          "arriveTime": "2027-03-21 15:03",
+          "departureToken": "WyJDalJJZGpSTU9XTlBNMVJZZEdOQlJrUkpOV2RDUnkwdExTMHRMUzB0TFMxdmVXRjVNVUZCUVVGQlIzTkdZMEZKU1VGc1RGRkJFZzFWUVRFMU1EQjhWVUUyTURBeUdnc0lsTkFQRUFJYUExVlRSRGdjY0pUUUR3PT0iLFtbIkNJRCIsIjIwMjctMDMtMjEiLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0yMSIsIlBTUCIsbnVsbCwiVUEiLCI2MDAyIl1dXQ=="
         },
         {
           "origin": "CID",
@@ -5493,7 +5644,7 @@
           "durationMin": 349,
           "departTime": "2027-03-21 08:55",
           "arriveTime": "2027-03-21 12:44",
-          "departureToken": "WyJDalJJYUhSZlVTMVNSSFUzYXpSQlN6VndlR2RDUnkwdExTMHRMUzB0TFMxNWJHZDNPRUZCUVVGQlIzTkVTMGR6UkVWYVpGVkJFZzFWUVRFMU1EQjhWVUV5TVRFeUdnc0l0OU1RRUFJYUExVlRSRGdjY0xmVEVBPT0iLFtbIkNJRCIsIjIwMjctMDMtMjEiLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0yMSIsIlBTUCIsbnVsbCwiVUEiLCIyMTEyIl1dXQ=="
+          "departureToken": "WyJDalJJZGpSTU9XTlBNMVJZZEdOQlJrUkpOV2RDUnkwdExTMHRMUzB0TFMxdmVXRjVNVUZCUVVGQlIzTkdZMEZKU1VGc1RGRkJFZzFWUVRFMU1EQjhWVUV5TVRFeUdnc0l0OU1RRUFJYUExVlRSRGdjY0xmVEVBPT0iLFtbIkNJRCIsIjIwMjctMDMtMjEiLCJERU4iLG51bGwsIlVBIiwiMTUwMCJdLFsiREVOIiwiMjAyNy0wMy0yMSIsIlBTUCIsbnVsbCwiVUEiLCIyMTEyIl1dXQ=="
         }
       ]
     },
